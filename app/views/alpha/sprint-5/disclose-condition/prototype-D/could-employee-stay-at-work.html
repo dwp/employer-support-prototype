@@ -1,0 +1,68 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Could {{ data['employeeNameD']|default('your employee', true) }} stay at work with changes and support?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "talked-about-condition"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "couldEmployeeStayAtWorkD",
+        name: "couldEmployeeStayAtWorkD",
+        value: data['couldEmployeeStayAtWorkD'],
+        fieldset: {
+          legend: {
+            text: "Could " + data['employeeNameD']|default('your employee', true) + " stay at work with changes and support?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Things like changes to the work environment, or working hours, can help people to stay at work."
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['couldEmployeeStayAtWorkD'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['couldEmployeeStayAtWorkD'] === 'No'
+          },
+          {
+            value: "I’m not sure~/alpha/sprint-5/disclose-condition/prototype-D/talked-about-changes",
+            text: "I’m not sure",
+            checked: data['couldEmployeeStayAtWorkD'] === 'I’m not sure'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

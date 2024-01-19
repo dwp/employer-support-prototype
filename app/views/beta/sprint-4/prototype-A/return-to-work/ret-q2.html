@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Is your employee likely to return to work in the future? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      {{ govukRadios({
+        idPrefix: "employeeLikelyToReturnA",
+        name: "employeeLikelyToReturnA",
+        fieldset: {
+          legend: {
+            text: "Is your employee likely to return to work in the future?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes~ret-g1",
+            text: "Yes",
+            checked: data['employeeLikelyToReturnA'] === 'Yes'
+          },
+          {
+            value: "No~ret-g2",
+            text: "No",
+            checked: data['employeeLikelyToReturnA'] === 'No'
+          },
+          {
+            value: "I’m not sure~ret-g1",
+            text: "I’m not sure",
+            checked: data['employeeLikelyToReturnA'] === 'I’m not sure'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

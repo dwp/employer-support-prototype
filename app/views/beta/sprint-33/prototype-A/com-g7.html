@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+If you think you cannot make the changes your employee needs {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">If you think you cannot make the changes your employee needs</h1>
+
+      <p class="govuk-body-l">Before you decide that there's nothing you can do for your employee, be careful that you are not discriminating against them.</p>
+
+      <h2 class="govuk-heading-l">The law on making changes</h2>
+
+      <p class="govuk-body">By law, you must make changes if you could be expected to know that your employee is disabled. These are called 'reasonable adjustments'. You would be discriminating against them if you did not make reasonable adjustments.</p>
+
+      <p class="govuk-body">The law defines disability as something physical or mental which has a ‘substantial’ and ‘long-term’ effect on someone’s ability to do normal daily activities.</p>
+      
+      <p class="govuk-body">For more, see the <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">definition of disability under the Equality Act 2010 (opens in new tab)</a>.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q3"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

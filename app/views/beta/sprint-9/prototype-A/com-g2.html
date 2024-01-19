@@ -1,0 +1,55 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Ask your employee what changes they need {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of COM-G2 summary content -->
+
+      <h1 class="govuk-heading-l">Ask your employee what changes they need</h1>
+
+      <p class="govuk-body-l">Your employee’s disability or health condition might mean they need some changes to their role or workplace.</p>
+
+      <!--
+        How to talk to employee
+      -->
+
+      <h2 class="govuk-heading-m">How to talk your employee about what they need</h2>
+
+      <p class="govuk-body">Many people with health conditions want to continue working. Work brings more than just financial benefits – it also gives many people a sense of purpose and community.</p>
+
+      <p class="govuk-body">Ask your employee what changes they need to their role, workplace or ways of working. It’s natural to focus on what might be more difficult for them, but remember to also talk about what they feel capable of doing.</p>
+
+      <p class="govuk-body">Let the employee lead the conversation. If you need to prompt them, use open-ended questions, such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how do you think your condition might change your ability to do your role?</li>
+        <li>is there anything in the workplace that could cause problems for you?</li>
+        <li>are you worried about any part of your work? If so, what specifically are you worried about?</li>
+      </ul>
+
+      <p class="govuk-body">Once you know what challenges your employee faces because of their disability or health condition, you can discuss what changes at work could help them.</p>
+
+      <p class="govuk-body">You might find it helpful to make a note of when you’ve been in touch and what you discussed. It can remind you both of what you agreed to do.</p>
+
+      <!-- End of COM-G2 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-g6"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

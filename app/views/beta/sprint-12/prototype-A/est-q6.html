@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Has your employee been off work for more than a week? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="est-q6-routing">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Has your employee been off work for more than a week?
+              </h1>
+            </legend>
+            <div id="changed-name-hint" class="govuk-hint">
+              Include non-working days, such as weekends.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-off-more-than-week" name="estQ6" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="employee-off-more-than-week">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-less-more-than-week" name="estQ6" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="employee-less-more-than-week">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

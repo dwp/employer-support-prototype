@@ -1,0 +1,60 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What to say to your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">What to say to your employee</h1>
+     
+      <p class="govuk-body">The purpose of getting in touch with an employee is to reassure them that they can return to work when they are better.</p>
+
+      <p class="govuk-body">Helpful things to say include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>we are sorry to hear you are feeling unwell, we are thinking of you</li>
+        <li>take time to look after yourself</li>
+        <li>could we arrange a time to have a quick hand over of outstanding work, that way you can concentrate on getting better and we can cover your work while you are off</li>
+        <li>let us know if there is anything you need and if we can do anything to help you</li>
+        <li>let us know how and through whom you want to communicate with us</li>
+        <li>what, if anything, would you like to be shared with others about your reasons for being absent?</li>
+      </ul>
+
+      <p class="govuk-body">Things you should not say to your employee include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>where did you put x / y / z?</li>
+        <li>I know you are off, but could you just answer this one question...</li>
+        <li>when are you going to be back? (They are unlikely to know at first. This question would be better in week 2 or 3 if they are not yet back.)</li>
+      </ul>
+
+      <!--
+          How to get in touch
+      -->
+
+      <h2 class="govuk-heading-m">How to get in touch</h2>
+
+      <p class="govuk-body">There are no rules about how often you get in touch, but it should be at regular intervals. You and your employee should agree how often you get in contact with each other.</p>
+
+      <p class="govuk-body">Use whatever method feels most comfortable and appropriate for both you and your employee. It could be a text message, social media message, email, letter, phone call, or face to face meeting.</p>
+
+      <p class="govuk-body">The conversations you have should be informal, and focussed on the employee’s wellbeing. However, you should make a note of when you’ve been in touch and what you discussed. This can be helpful in case there is a dispute in the future.</p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../return-to-work/ret-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

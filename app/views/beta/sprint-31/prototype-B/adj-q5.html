@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Do you feel that dismissal of your employee is your only option? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="adj-q5-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Do you feel that dismissal of your employee is your only option?
+              </h1>
+            </legend>
+            <p class="govuk-body">
+              If you answer yes, you will see links to guidance from organisations on your legal responsibilities to your employee. You should consider all of your options before taking dismissal action.
+            </p>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="dismissal-only-option-1" name="adjQ5" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="dismissal-only-option-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="dismissal-only-option-2" name="adjQ5" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="dismissal-only-option-2">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

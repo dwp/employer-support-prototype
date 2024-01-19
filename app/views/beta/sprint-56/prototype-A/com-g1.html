@@ -1,0 +1,167 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Stay in touch with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">This section: Having conversations with your employee</span>
+
+      <h1 class="govuk-heading-xl">Stay in touch with your employee</h1>
+     
+      <p class="govuk-body-l">You can contact your employee while they are off work. You should start a positive conversation as soon as possible. This will make your employee feel supported and more able to return.</p>
+
+     <!--
+          Your duty as an employer
+      -->
+
+      <h2 class="govuk-heading-l">Your duty as an employer</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          As an employer, you have a duty to protect your employee’s health, safety and welfare. This comes under the Health and Safety Law.
+        </strong>
+      </div>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/workers/employers.htm" target="_blank">Check more information about employers' health and safety law responsibilities on the Health and Safety Executive (HSE) website (opens in new tab)</a></p>
+
+      <p class="govuk-body">When talking to your employee, you need to be considerate not to exacerbate their health condition or disability. You should not discriminate against them directly or indirectly. <a href="https://www.equalityhumanrights.com/en/advice-and-guidance/what-direct-and-indirect-discrimination" target="_blank">Check what is classed as direct and indirect discrimination on the Equality and Human Rights Commission (EHRC) website (opens in new tab)</a>.</p>
+      
+      <p class="govuk-body">You should check any policies and procedures you have in place about communicating with your employees whilst they are at work.</p>
+      
+      <p class="govuk-body"> Having regular conversations with your employee will help them to feel comfortable and supported.</p>
+
+      <!--
+          What to say to your employee
+      -->
+
+      <h2 class="govuk-heading-l">What to say to your employee</h2>
+
+      <p class="govuk-body">Before your conversation, you should check any workplace policy you may have on absence management.</p>
+
+
+      <p class="govuk-body">Let your employee know you support them but only talk to them about work when they are ready.</p>
+
+      <p class="govuk-body">Use encouraging and supporting language such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>“Would you be comfortable...”</li>
+        <li>“Let us know...”</li>
+        <li>“Can we arrange...”</li>
+      </ul>
+
+      <!--
+          What not to say
+      -->
+
+      <h2 class="govuk-heading-l">What not to say</h2>
+
+      <p class="govuk-body">Try not to put pressure on your employee. Focus on the support they might need. If they have a long-term condition or disability, take care to ask if their absence is related and what that means for them.</p>
+
+      <p class="govuk-body">You should not use forceful language such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>“Have you done this task?”</li>
+        <li>“When will things be back to normal?”</li>
+        <li>“We need to get you back as quickly as possible”</li>
+      </ul>
+
+      <!--
+          How to stay in touch
+      -->
+
+      <h2 class="govuk-heading-l">How to stay in touch</h2>
+
+      <p class="govuk-body">There are no rules about how often you get in touch, although you should consider whether you have a workplace policy on this, or any sickness absence procedures. You and your employee should agree how often you will contact each other.</p>
+
+      <p class="govuk-body">Use whatever method feels most appropriate for you both. For example, it could be an email, phone call or text message.</p>
+
+      <p class="govuk-body">You should avoid creating extra stress or anxiety for your employee. Do not put pressure on them to return to work before they are ready.</p>
+
+      <h3 class="govuk-heading-m">Keeping a record of meetings and conversations</h3>
+
+      <p class="govuk-body">You should make a note of when you’ve been in touch and what you discussed. This can be a helpful reminder of what you agreed to do. It could also help to protect your business if you need to show evidence of communication with your employee about their health condition or disability.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You must make sure that you are following the GDPR.
+        </strong>
+      </div>
+
+
+      <p class="govuk-body"><a href="[https://www.gov.uk/personal-data-my-employer-can-keep-about-me]" target="_blank">You can find out more about the GDPR on GOV.UK (opens in new tab)</a></p>
+
+      <h2 class="govuk-heading-l">Useful resources</h2>
+
+      <p class="govuk-body"><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">You can access workplace policy templates on the Acas (Advisory, Conciliation and Arbitration Service) website (opens in new tab)</a></p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/equality-act-guidance/disability-equality-act-2010-guidance-on-matters-to-be-taken-into-account-in-determining-questions-relating-to-the-definition-of-disability-html#introduction" target="_blank">Check what is classed as a disability under the Equality Act 2010 on GOV.UK (opens in new tab)</a></p>
+
+      <br>
+
+      <p class="govuk-body"><strong>Next page:</strong> more guidance on having conversations with your employee</p>
+
+
+      {{ govukButton({
+        text: "Continue",
+        href: "est-q3"
+      }) }}
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-5"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

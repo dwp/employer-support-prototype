@@ -1,0 +1,133 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You must pay Statutory Sick Pay if your employee is eligible {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">You must pay Statutory Sick Pay if your employee is eligible</h1>
+
+      <!--
+          If employee is off for 4,5,6, or 7 days display content for EST-G2
+      -->
+
+      {% if (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
+
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You must pay Statutory Sick Pay (SSP) if your employee is eligible.
+          </strong>
+        </div>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility and calculate how much you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim this cost from the government.</p>
+
+        <h2 class="govuk-heading-l">Paying extra sick pay</h2>
+  
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+       <h2 class="govuk-heading-l">Asking for medical evidence</h2>
+
+       <p class="govuk-body">You should not ask your employee to provide proof of their health condition or disability from a medical professional.</p>
+
+      <!--
+          If employee is off for 8 days or more, display content for EST-G3
+      -->
+      {% else %}
+
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You must pay Statutory Sick Pay (SSP) if your employee is eligible.
+          </strong>
+        </div>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility and calculate how much you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim this cost from the government.</p>
+
+        <h2 class="govuk-heading-l">Paying extra sick pay</h2>
+
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+        <h2 class="govuk-heading-l">Asking for medical evidence</h2>
+
+        <p class="govuk-body">You can choose to ask for medical evidence of your employee’s absence before you pay SSP. Examples include a letter from a hospital, or <a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">a fit note (opens in new tab)</a>. Fit notes used to be called sick notes.</p>
+
+        <h2 class="govuk-heading-l">Keeping records of conversations and meetings</h2>
+
+        <p class="govuk-body">If you do ask for medical evidence, remember to keep a record of when you asked and what you received. This could help to protect your business if you need to show evidence of your communication with your employee.</p>
+
+        <h2 class="govuk-heading-l">If your employee is off work for more than 28 days</h2>
+
+        <p class="govuk-body">Work absences of 28 days or more are classed as long-term sickness.</p>
+
+        <p class="govuk-body">SSP is paid up to a period of 28 weeks. Some employers choose to continue to pay their own sick pay after this time.</p>
+
+      {% endif %}
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q1"
+      }) }}
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-4"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

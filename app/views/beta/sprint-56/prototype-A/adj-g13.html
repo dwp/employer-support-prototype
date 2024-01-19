@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+The law around making changes {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G13 summary content -->
+
+      <span class="govuk-caption-l">This section: Considering adjustments and additional help</span>
+
+      <h1 class="govuk-heading-xl">The law around making changes</h1>
+
+      <p class="govuk-body">Before you decide that there’s nothing you can do for your employee, be careful that you are not discriminating against them.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          If your employee has a disability, you must make reasonable adjustments if they would otherwise be substantially disadvantaged in doing their job.
+        </strong>
+      </div>
+
+      <p class="govuk-body">The law defines disability as something physical or mental which has a ‘substantial’ and ‘long-term’ effect on someone’s ability to do normal daily activities.</p>
+
+      <p class="govuk-body">For more, <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">see the definition of disability under the Equality Act 2010 (opens in new tab)</a>.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/the-law.htm" target="_blank">You can find out more on the law around workplace adjustments on the HSE website (opens in new tab)</a></p>
+
+        <!--
+        Unsure if you can make the changes your employee needs
+      -->
+
+      <h2 class="govuk-heading-l">Unsure if you can make the changes your employee needs</h2>
+
+      <p class="govuk-body">Make any changes you can to help your employee. They can often be temporary and more affordable than you might expect.</p>
+
+      <p class="govuk-body">Some changes could seem small to you, but they could make a big difference to your employee.</p>
+    
+
+      <!-- End of ADJ-G13 summary content -->
+
+      <br>
+
+      <p class="govuk-body"><strong>Next section:</strong> Possible changes that could help your employee</p>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q5"
+        }) 
+      }}
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-4"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

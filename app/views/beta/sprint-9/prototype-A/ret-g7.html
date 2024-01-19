@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Support your employee in their first week back at work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- {{ govukBackLink({
+        text: "Back",
+        href: "est-q2"
+      }) }} -->
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of RET-G7 summary content -->
+
+      <h1 class="govuk-heading-l">Support your employee in their first week back at work</h1>
+
+      <p class="govuk-body-l">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+      <!--
+        Before employee's first day
+      -->
+
+      <h2 class="govuk-heading-m">Before your employee’s first day</h2>
+
+      <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+      <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+      
+      <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+      <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+      <!--
+        What to do in the first week
+      -->
+      
+      <h2 class="govuk-heading-m">What to do in the first week</h2>
+
+      <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+      <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+      <!-- End of RET-G7 summary content -->
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-g10"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

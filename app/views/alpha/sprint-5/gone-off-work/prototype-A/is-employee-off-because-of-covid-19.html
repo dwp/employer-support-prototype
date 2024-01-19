@@ -1,0 +1,67 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Is your employee off work sick because of coronavirus (COVID-19)?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "when-did-employee-go-off-work-sick"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "offBecauseCovidA",
+        name: "offBecauseCovidA",
+        value: data['offBecauseCovidA'],
+        fieldset: {
+          legend: {
+            text: "Is your employee off work sick because of coronavirus (COVID-19)?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['offBecauseCovidA'] === 'Yes'
+          },
+          {
+            value: "No~/alpha/sprint-5/gone-off-work/prototype-A/must-pay-ssp",
+            text: "No",
+            checked: data['offBecauseCovidA'] === 'No'
+          },
+          {
+            value: "I'm not sure",
+            text: "I'm not sure",
+            checked: data['offBecauseCovidA'] === 'I’m not sure'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      <!-- </form> -->
+
+      
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

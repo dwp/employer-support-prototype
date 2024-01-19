@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Checklist for deciding on changes at work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Checklist for deciding on changes at work</h1>
+
+      <p class="govuk-body-l">This checklist can help you decide on any changes you can make to support your employee. Working through the three areas together will help you to identify the right changes.</p>
+
+      <br />
+      <hr />
+   <br />
+      <h2 class="govuk-heading-m">Changes to the environment</h2>
+      <p class="govuk-body">This might include things like desk space, equipment and noise levels. How can you make the work environment more suitable?</p>
+      <p class="govuk-hint"><strong>Example:</strong> <em>someone who uses a wheelchair might need an accessible car parking space</em></p>
+      <br />
+        <hr />
+     <br />
+     <h2 class="govuk-heading-m">Ways of working</h2>
+     <p class="govuk-body">Consider changes to hours, shift patterns or other policies that can help your employee do their best at work.</p>
+     <p class="govuk-hint"><strong>Example:</strong> <em>if a condition affects someone's energy in the morning, they might need to start their working day later.</em></p>
+     <br />
+       <hr />
+    <br />
+   <h2 class="govuk-heading-m">Extra help</h2>
+   <p class="govuk-body">It might help your employee to have someone to help with parts of their job or how they access work.</p>
+   <p class="govuk-hint"><strong>Example:</strong> <em>if a condition affects someone's eyesight, they might need someone to read their post for them.</em></p>
+   <br />
+     <hr />
+  <br />
+ 
+<p class="govuk-body">Check in with your employee as often as works for you both. You can update this sheet or start a new one.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Has your employee told you they have a health condition or disability? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="est-q3-routing">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-l">This section: Having conversations with your employee</span>
+              <h1 class="govuk-fieldset__heading">
+                Has your employee told you they have a health condition or disability?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-told-condition-1" name="estQ3" type="radio" value="yesToldMe">
+                <label class="govuk-label govuk-radios__label" for="employee-told-condition-1">
+                  Yes, they have told me
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-told-condition-2" name="estQ3" type="radio" value="notToldMe">
+                <label class="govuk-label govuk-radios__label" for="employee-told-condition-2">
+                  I’ve asked, but they have not told me
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-told-condition-3" name="estQ3" type="radio" value="notAsked">
+                <label class="govuk-label govuk-radios__label" for="employee-told-condition-3">
+                  I have not asked
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+

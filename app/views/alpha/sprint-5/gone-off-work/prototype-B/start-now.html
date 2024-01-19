@@ -1,0 +1,37 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Employee absent due to sickness: what you need to do
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Employee absent due to sickness: what you need to do
+      </h1>
+
+      <p>
+        This guidance is for employers and line managers. It will help you know what to do when your employee goes off sick due to illness or disability.
+      </p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "when-did-employee-go-off-work-sick",
+        isStartButton: true
+      }) }}
+
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype B
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

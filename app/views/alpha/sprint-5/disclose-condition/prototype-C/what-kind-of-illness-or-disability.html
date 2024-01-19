@@ -1,0 +1,68 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What kind of illness or disability does your employee have?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "employee-name"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "typeOfIllnessC",
+        name: "typeOfIllnessC",
+        value: data['typeOfIllnessC'],
+        fieldset: {
+          legend: {
+            text: "What kind of illness or disability does " + data['employeeNameC']|default('your employee', true) + " have?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "You’ll see relevant advice based on their condition."
+        },
+        items: [
+          {
+            value: "Stress or other mental health condition",
+            text: "Stress or other mental health condition",
+            checked: data['typeOfIllnessC'] === 'Stress or other mental health condition'
+          },
+          {
+            value: "Physical injury, strain or disability~/alpha/sprint-5/disclose-condition/prototype-C/talked-about-condition",
+            text: "Physical injury, strain or disability",
+            checked: data['typeOfIllnessC'] === 'Physical injury, strain or disability'
+          },
+          {
+            value: "A disease, heart or breathing problem",
+            text: "A disease, heart or breathing problem",
+            checked: data['typeOfIllnessC'] === 'A disease, heart or breathing problem'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

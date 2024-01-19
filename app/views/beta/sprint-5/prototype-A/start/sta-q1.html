@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is your current situation? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      {{ govukRadios({
+        idPrefix: "currentSituation",
+        name: "currentSituation",
+        fieldset: {
+          legend: {
+            text: "What is your current situation?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "employeeOffWorkSick~/beta/sprint-5/prototype-A/establishing/est-q1",
+            text: "My employee is off work sick",
+            checked: data['currentSituation'] === 'employeeOffWorkSick'
+          },
+          {
+            value: "employeeIllnessDisability~/beta/sprint-5/prototype-A/establishing/est-q3",
+            text: "My employee has told me they have a long-term illness or disability",
+            checked: data['currentSituation'] === 'employeeIllnessDisability'
+          },
+          {
+            value: "employeeReadyToReturn~/beta/sprint-5/prototype-A/establishing/est-q3",
+            text: "My employee is ready to return to work after a long sickness absence",
+            checked: data['currentSituation'] === 'employeeReadyToReturn'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

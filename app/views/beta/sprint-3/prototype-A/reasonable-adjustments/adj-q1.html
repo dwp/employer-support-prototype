@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Could any changes at work help your employee? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "../establishing/est-q2"
+      }) }}
+
+      {{ govukRadios({
+        idPrefix: "couldChangesHelpA",
+        name: "couldChangesHelpA",
+        fieldset: {
+          legend: {
+            text: "Could any changes at work help your employee?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Making changes to someone's job, or giving them extra support, can help them stay at work and be productive"
+        },
+        items: [
+          {
+            value: "Yes~adj-g1",
+            text: "Yes",
+            checked: data['couldChangesHelpA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['couldChangesHelpA'] === 'No'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

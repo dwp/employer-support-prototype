@@ -1,0 +1,132 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Summary of key advice {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Summary of guidance in this service</h1>
+
+        <p class="govuk-body">There are no more questions.</p>
+
+        <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+        <p class="govuk-body">The answers you gave have not been recorded. If you leave this page you will need to answer the questions again to see the guidance information. <a href="#" onclick="frames['sum-4'].print()">save and print the guidance information you’ve seen (opens in a new window)</a> and refer to it when needed in the future.</p>
+
+        <!--
+          Survey link/help us improve
+        -->
+
+        <h2 class="govuk-heading-l">Discussing changes at work</h2>
+
+         <p class="govuk-body">Check the areas to consider when discussing changes:</p>
+         
+         <ul class="govuk-list govuk-list--bullet">
+          <li><a href="rea-c1" target="_blank">to ways of working (opens in new tab)</a></li>
+          <li><a href="rea-c2" target="_blank">to work environment (opens in new tab)</a></li>
+          <li><a href="rea-c3" target="_blank">including extra support and temporary and permanent changes (opens in new tab)</a></li>
+         </ul>
+
+
+
+      <h2 class="govuk-heading-l">Checking policies and keeping information private</h2>
+
+      <p class="govuk-body">There are three policies that businesses are required to have. These are:</p>
+
+         <ul class="govuk-list govuk-list--bullet">
+          <li>Disciplinary and dismissal</li>
+          <li>Grievance</li>
+          <li>Health and safety (if you have more than five employees)</li>
+         </ul>
+
+         <p class="govuk-body">As a minimum, to protect the business and your employees, you should also consider having the following policies that relate to health and disability:</p>
+
+         <ul class="govuk-list govuk-list--bullet">
+          <li>Equality, diversity and inclusion</li>
+          <li>General Data Protection Regulation (GDPR), which covers the management and processing of personal data</li>
+          <li>Sickness absence procedure</li>
+          <li>Dignity at work policy</li>
+         </ul>
+
+         <p class="govuk-body">You can <a href="https://www.acas.org.uk/templates-for-employers" target="_blank">adapt these templates from Acas.org.uk (opens in new tab)</a> for your business</p>
+
+         <p class="govuk-body">Check how to <a href="https://www.hse.gov.uk/simple-health-safety/policy/index.htms" target="_blank">prepare a health and safety policy (opens in new tab)</a> on the HSE website.</p>
+         
+         <p class="govuk-body">Remember that you need to keep a record of any discussions you have with your employee, but you must keep these private. As an employer, you have a duty of care to protect your employees.</p>
+
+
+        <h2 class="govuk-heading-l">Links included in the guidance</h2>
+
+        <p class="govuk-body">These links were included in the guidance. You can review these or save them to read later.</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+
+          <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility and calculate how much you need to pay (opens in a new tab)</a></li>
+
+          <li><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">Workplace policy templates on the Acas website (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/business-support-helpline" target="_blank">Business Support Helpline (opens in new tab)</a></li>
+          <li><a href="https://employeradvice.org/" target="_blank">Employer Advice (opens in new tab)</a></li>
+          <li><a href="https://www.citizensadvice.org.uk/law-and-courts/discrimination/check-if-youre-protected-from-discrimination/what-counts-as-disability/" target="_blank">Equality Act 2010 on the Citizens Advice website (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/guidance/disability-confident-how-to-sign-up-to-the-employer-scheme" target="_blank">The Disability Confident scheme (opens in a new tab)</a></li>
+          <li><a href="https://www.hse.gov.uk/disability/best-practice/workplace-culture.htm" target="_blank">Creating a supportive and enabling workplace on the HSE website (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers" target="_blank">Check more guidance on fit notes (opens in new tab)</a></li>
+          <li><a href="https://www.hse.gov.uk/disability/best-practice/understand-barriers.htm" target="_blank">Best practice guidance on the HSE website (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/personal-data-my-employer-can-keep-about-me" target="_blank">The information employers can keep on their employees on GOV.UK</a></li>
+          <li><a href="https://www.hse.gov.uk/disability/best-practice/sickness-absence.htm" target="_blank">Supporting your employee’s sickness absence and return to work on the HSE website (opens in new tab)</a></li>
+          <li><a href="https://www.hse.gov.uk/disability/best-practice/talking-toolkit.htm" target="_blank">HSE talking toolkit (opens in new tab)</a></li>
+          <li><a href="https://businessdisabilityforum.org.uk/knowledge-hub/resources/tailored-adjustments-plans-passports-and-agreements/" target="_blank">The Business Disability Forum (opens in new tab)</a></li>
+          <li><a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">Using occupational health services on the Acas website (opens in new tab)</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Help us to improve the service</h2>
+
+        <p class="govuk-body">‘Support with employee health and disability’ is a new service. Your <a href="#">feedback</a> will help us to improve it.</p>
+        
+    </div>
+  </div>
+
+{% endblock %}
+
+

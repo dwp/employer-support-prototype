@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What to do when your employee cannot return to work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">What to do when your employee cannot return to work</h1>
+
+      <!-- 
+        Dismissing someone legally
+      -->
+
+      <h2 class="govuk-heading-m">Dismissing someone legally</h2>
+
+      <p class="govuk-body">Dismissing an employee because they cannot work due to long-term illness should only be a final resort. It is usually more cost-effective to retain an employee wherever possible, rather than dismissing them and recruiting and training a new employee.</p>
+
+      <p class="govuk-body">You must use a fair and reasonable procedure if you dismiss someone.</p>
+
+      <!-- 
+        Avoiding unlawful discrimination
+      -->
+
+      <h2 class="govuk-heading-m">Avoiding unlawful discrimination</h2>
+
+      <p class="govuk-body">It is possible to dismiss someone who is disabled, but you must not discriminate against them because of their disability. This is unlawful. Your employee could make a claim to an employment tribunal if they believe they were unfairly dismissed.</p>
+
+      <p class="govuk-body">The Equality Act 2010 defines disability as  ‘a physical or mental impairment which has a substantial and long-term adverse effect on a person’s ability to carry out normal day-to- day activities’.</p>
+
+      <p class="govuk-body">Diagnosing disability can be complex, and you might not know if your employee is disabled.</p>
+
+      <p class="govuk-body">Find more information about <a href="https://www.acas.org.uk/dismissals/dismissing-someone-fairly">dismissing someone fairly</a> on the ACAS website.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../summary/sum-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

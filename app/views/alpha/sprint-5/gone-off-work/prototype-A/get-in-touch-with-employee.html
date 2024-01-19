@@ -1,0 +1,45 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You should get in touch with your employee
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "have-you-contacted-employee"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+      <h1 class="govuk-heading-l">You should get in touch with your employee</h1>
+
+      <p class="govuk-body">Your employee has been off work for 8 days.</p>
+
+      <p class="govuk-body">You should send them an informal message or call them. The purpose of your contact should be to see how they are, not to ask when they are coming back.</p>
+
+      <p class="govuk-body">Staying in regular contact with your employee is the best way to help them come back to work when they are ready.</p>
+
+      <p class="govuk-body">If your employee comes back to work too soon, they might relapse and need more time off work.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Next question",
+        href: "want-help-on-what-to-say-to-employee"
+      }) }}
+      
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

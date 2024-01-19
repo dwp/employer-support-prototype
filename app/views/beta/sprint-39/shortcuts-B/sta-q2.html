@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Is your employee currently at work? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="sta-q2-routing">
+
+      <a href="sta-4" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Is your employee currently at work?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-working" name="staQ2" type="radio" value="yesWorking">
+                <label class="govuk-label govuk-radios__label" for="employee-working">
+                  Yes, they’re working
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-off-work" name="staQ2" type="radio" value="noOffWork">
+                <label class="govuk-label govuk-radios__label" for="employee-off-work">
+                  No, they’re off work
+                </label>
+                <div id="f-employeeCurrentWorkSituation-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Your employee is absent from work (not including planned holidays)
+                </div>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Tips on talking to your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="adj-g5-routing">
+
+      <!-- Start of ADJ-G5 summary content -->
+
+      <h1 class="govuk-heading-xl">Tips on talking to your employee</h1>
+     
+      <p class="govuk-body-l">It's important to talk to your employee as soon as you can. These topics can help you have an open and useful conversation.</p>
+
+      <p class="govuk-body">Review the following prompts and add notes as you discuss things with your employee.</p>
+      
+      <img src="../../../../public/images/tips.png" width="100%" />
+
+      <br />
+      
+      <p class="govuk-body">Check in with your employee as often as works for you both. You can update this sheet or start a new one.</p>
+    </form>
+    </div>
+  </div>
+
+{% endblock %}

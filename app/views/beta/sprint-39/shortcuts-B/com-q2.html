@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Have you talked to your employee about any changes they need? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="com-q2-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Have you talked to your employee about any changes they need?
+              </h1>
+            </legend>
+            <p class="govuk-body">
+              If you answer no, you will see advice on talking to your employee about changes that could help them.
+            </p>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="talked-about-changes-3" name="comQ2" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="talked-about-changes-3">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="talked-about-changes-4" name="comQ2" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="talked-about-changes-4">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

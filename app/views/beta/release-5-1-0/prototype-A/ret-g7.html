@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Support your employee as they get back to work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of RET-G7 summary content -->
+
+      <h1 class="govuk-heading-xl">Support your employee as they get back to work</h1>
+
+      <p class="govuk-body-l">You should make any changes you agreed before your employee returns to work. There are also some things you can do to help them settle in.</p>
+
+      <!--
+        Before employee's first day
+      -->
+
+      <h2 class="govuk-heading-l">Before their first day back at work</h2>
+
+      <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+      <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+      
+      <p class="govuk-body">If your employee isn't working from home, they could find it helpful to make a short visit before their first day back at work.</p>
+
+      <!--
+        Sharing information
+      -->
+
+      <h2 class="govuk-heading-l">Sharing information and following GDPR</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You must follow the General Data Protection Regulation (GDPR).
+        </strong>
+      </div>
+
+      <p class="govuk-body">This covers the management and processing of your employee's personal data, including their health information.</p>
+
+      <p class="govuk-body">Ask your employee if they want other people to know about their condition.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/personal-data-my-employer-can-keep-about-me" target="_blank">You can find out more about the information employers can keep on their employees on GOV.UK (opens in new tab)</a></p>
+
+      <p class="govuk-body">If they prefer not to share, agree how you will answer questions from colleagues.</p>
+
+      <p class="govuk-body">You must get your employee’s consent before sharing anything that is discussed at your meetings.</p>
+
+      <!--
+        What to do in the first week
+      -->
+      
+      <h2 class="govuk-heading-l">What to do in the first week when your employee returns</h2>
+
+      <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This conversation will help your employee feel prepared to do their job again.</p>
+
+      <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+      <p class="govuk-body">You can find out more guidance on the best practice of <a href="https://www.hse.gov.uk/disability/best-practice/sickness-absence.htm" target="_blank">supporting your employee’s sickness absence and return to work on the HSE website (opens in new tab)</a>.</p>
+
+      <!-- End of RET-G7 summary content -->
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-g10"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

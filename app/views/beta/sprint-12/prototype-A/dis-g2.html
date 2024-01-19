@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Dismiss someone fairly {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of DIS-1 summary content -->
+
+      <h1 class="govuk-heading-xl">Dismiss someone fairly</h1>
+     
+      <p class="govuk-body-l">As a last resort, you can dismiss someone if you cannot make changes to accommodate them. But only based on their ability to do their job.</p>
+
+      <!--
+        Fair dismissals involving a health condition or disability
+      -->
+
+      <h2 class="govuk-heading-l">Fair dismissals involving a health condition or disability</h2>
+
+      <p class="govuk-body">If your employee cannot do their job because no reasonable adjustments can be made, it may be fair for you to dismiss them, even if they’re disabled.</p>
+
+      <p class="govuk-body">For a dismissal to be fair, you must have a good reason and behave reasonably.</p>
+
+      <p class="govuk-body">Before you dismiss someone with a heath condition or disability, you might want to ensure you have:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>talked to your employee about their condition</li>
+        <li>tried to make changes to help them stay at work</li>
+        <li>asked for an occupational health assessment or medical report</li>
+      </ul>
+
+      <p class="govuk-body">See <a href="https://www.gov.uk/dismiss-staff" target="_blank">GOV.UK guidance on dismissing staff (opens in a new tab)</a></p>
+
+      <!--
+        Capability procedures
+      -->
+
+      <h2 class="govuk-heading-l">Capability procedures</h2>
+
+      <p class="govuk-body">It’s important to investigate the situation and make sure your employee is no longer able to do their job.</p>
+
+      <p class="govuk-body">ACAS has <a href="https://www.acas.org.uk/capability-procedures" target="_blank">information on capability procedures (opens in a new tab)</a> that can help you to do this.</p>
+
+      <!-- End of DIS-1 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "sum-3"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

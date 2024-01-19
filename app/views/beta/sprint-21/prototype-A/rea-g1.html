@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You might need to make changes for a disabled employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">You might need to make changes for a disabled employee</h1>
+     
+      <p class="govuk-body">A disabled employee should have the same opportunity to do their job as someone who is not disabled.</p>
+
+      <p class="govuk-body">If your employee’s disability puts them at a substantial disadvantage, you might need to make changes to their role, environment, or the way they do their job.</p>
+
+      <p class="govuk-body">These changes are called ‘reasonable adjustments’.</p>
+
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "rea-g2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

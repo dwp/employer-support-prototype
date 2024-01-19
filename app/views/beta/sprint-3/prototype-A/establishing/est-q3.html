@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you know what kind of illness your employee has? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "../start/sta-3"
+      }) }}
+
+      {{ govukRadios({
+        idPrefix: "knowWhatIllnessA",
+        name: "knowWhatIllnessA",
+        fieldset: {
+          legend: {
+            text: "Do you know what kind of illness your employee has?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "You’ll see relevant advice based on your employee’s condition."
+        },
+        items: [
+          {
+            value: "Yes",
+            value: "Yes~/beta/sprint-3/prototype-A/establishing/est-q2",
+            text: "Yes",
+            checked: data['knowWhatIllnessA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['knowWhatIllnessA'] === 'No'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

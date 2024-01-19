@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Contents  {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Contents</h1>
+     
+      <p class="govuk-body-l">You can go to guidance on specific topic areas by selecting the links below:</p>
+
+     <!--
+        If employee is in work
+    -->  
+
+    {% if (data['staQ2'] == 'yesWorking') %}
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li id="start-links-3" name="sta4" value="conversions"><a href="../shortcuts-B/com-g3">having conversations with your employee</a></li>
+      <li id="start-links-4" name="sta4" value="discussing-changes"><a href="../shortcuts-B/com-q2">discussing changes to help your employee at work</a></li>
+  </ul>
+
+    <!--
+        If employee is off work
+    -->
+    {% elif data['staQ2'] == 'noOffWork' %}
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li id="start-links-1" name="sta4" value="SSP"><a href="../shortcuts-B/est-q1" >paying Statutory Sick Pay (SSP)</a></li>
+        <li id="start-links-2" name="sta4" value="managing-absences"><a href="../shortcuts-B/com-g1">managing absences and keeping in touch</a></li>
+        <li id="start-links-4" name="sta4" value="discussing-changes"><a href="../shortcuts-B/com-q2">discussing changes to help your employee at work</a></li>
+    </ul>
+
+    {% endif %}
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Back to start",
+        href: "../prototype-B/sta-4"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

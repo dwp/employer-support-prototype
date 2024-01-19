@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What to do if your employee has not told you about a disability or health condition {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">What to do if your employee has not told you about a disability or health condition</h1>
+
+      <p class="govuk-body-l">It can be helpful for you to know why your employee is off work, but they do not have to tell you.</p>
+      
+      <p class="govuk-body">It's important to create a culture where employees are happy to talk about their health.</p>
+
+      <p class="govuk-body">Avoid judgements when you talk about disabilities or health conditions. This is especially important for mental health conditions.</p>
+
+      <p class="govuk-body">Explain that you will keep health information private, and only use it to make changes to help them do their job.</p>
+    
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q3"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

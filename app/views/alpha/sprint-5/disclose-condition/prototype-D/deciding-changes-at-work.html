@@ -1,0 +1,76 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have you talked to {{ data['employeeNameD']|default('your employee', true) }} to decide on the changes you will make?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "talked-about-changes"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      <!-- Deciding on changes section -->
+
+      <h1 class="govuk-heading-l">Deciding on changes at work (reasonable adjustments)</h1>
+
+      <p class="govuk-body">Changes to how {{ data['employeeNameD']|default('your employee', true) }} works could be needed. Things like reduced hours, different shifts or avoiding some duties can help.</p>
+
+      <p class="govuk-body">Changes that might help physical conditions include:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>wheelchair access</li>
+        <li>a different desk or chair</li>
+        <li>specialist equipment, like a keyboard for people with arthritis</li>
+      </ul>
+
+      <p class="govuk-body">You should ask {{ data['employeeNameD']|default('your employee', true) }} if any of these changes would help them. You can make suggestions, but it’s important to let them take the lead if possible.</p>
+
+      <!-- Make changes section -->
+
+      <h2 class="govuk-heading-m">Make the changes if you can</h2>
+
+      <p class="govuk-body">Changes to the workplace are called reasonable adjustments. This means you must make the changes if they are reasonable for your business.</p>
+
+      <p class="govuk-body">Changes might be reasonable if they are practical, affordable for your business and they won’t harm anyone else.</p>
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice">Examples of workplace adjustments - Equality and Human Rights Commision</a></p>
+
+      <!-- If changes aren't reasonable section -->
+
+      <h2 class="govuk-heading-m">If you do not think the changes are reasonable</h2>
+
+      <p class="govuk-body">If the changes are too expensive, there might be help available. Employees can use the Access to Work scheme to pay for some things, but only if you cannot provide them.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/access-to-work">Access to Work - support for your employees</a></p>
+
+      <p class="govuk-body">If changes are not practical for your business or the type of job, you should try to agree another option together.</p>
+
+      <p class="govuk-body"><a href="https://www.acas.org.uk/reasonable-adjustments/when-an-employer-must-consider-making-reasonable-adjustments">Acas - if an employer does not make reasonable adjustments</a></p>
+      
+      <!-- Checklist section -->
+
+      <h2 class="govuk-heading-m">Checklist: deciding on adjustments</h2>
+
+      <div class="govuk-inset-text">
+        Use <a href="checklist-deciding-changes-at-work">this checklist</a> to talk to your employee about any changes they might need.
+      </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

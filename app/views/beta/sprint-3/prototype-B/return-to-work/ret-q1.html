@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Is your employee ready to return to work? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "../reasonable-adjustments/adj-g4"
+      }) }}
+
+      {{ govukRadios({
+        idPrefix: "employeeReadyToReturnA",
+        name: "employeeReadyToReturnA",
+        fieldset: {
+          legend: {
+            text: "Is your employee ready to return to work?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes~ret-g4",
+            text: "Yes",
+            checked: data['employeeReadyToReturnA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['employeeReadyToReturnA'] === 'No'
+          },
+          {
+            value: "I’m not sure",
+            text: "I’m not sure",
+            checked: data['employeeReadyToReturnA'] === 'I’m not sure'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

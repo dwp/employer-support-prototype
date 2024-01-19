@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have regular meetings with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of ADJ-G10 summary content -->
+
+      <h1 class="govuk-heading-xl">Have regular meetings with your employee</h1>
+
+      <p class="govuk-body-l">It's important to keep checking that your employee feels supported and any changes are still right for them.</p>
+
+      <!--
+        Keep talking with employee
+      -->
+
+      <h2 class="govuk-heading-l">Keep talking with your employee</h2>
+
+      <p class="govuk-body">Talk regularly to your employee about what they need. The changes you put in place now might not always be right for them.</p>
+
+      <p class="govuk-body">Some conditions will vary over the long term, and others will have good and bad days. Try to accommodate this kind of change.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/talking-toolkit.htm" target="_blank">A talking toolkit based on principles of good practices that go beyond what the law requires is available on the HSE website (opens in new tab)</a></p>
+      
+      <!--
+        Record and update a plan
+      -->
+
+      <h2 class="govuk-heading-l">Record and update a plan</h2>
+
+      <p class="govuk-body">You should keep a record of the changes or reasonable adjustments you have agreed. Review it together regularly.</p>
+
+      <p class="govuk-body">A reasonable adjustment plan is useful for this. <a href="https://businessdisabilityforum.org.uk/knowledge-hub/resources/tailored-adjustments-plans-passports-and-agreements/" target="_blank">The Business Disability Forum (opens in new tab)</a> has guidance on reasonable adjustment plans.</p>
+
+      <!--
+        Support from occupational health
+      -->
+
+      <h2 class="govuk-heading-l">Support from occupational health</h2>
+
+      <p class="govuk-body">The changes you put in place should support your employee as much as possible. If the situation has changed, you can get useful advice from an occupational health provider. These services are paid for but can help your business by keeping your employees healthy and productive.</p>
+
+      <p class="govuk-body"><a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">Find more about using occupational health services at Acas (Advisory, Conciliation and Arbitration Service) (opens in new tab)</a></p>      
+     
+      <!-- End of ADJ-G10 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue to summary",
+        href: "sum-5"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

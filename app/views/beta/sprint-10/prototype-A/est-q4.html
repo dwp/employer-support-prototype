@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What are your employee’s main activities at work? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="est-q4-routing" method="POST">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                What are your employee’s main activities at work?
+            </h1>
+          </legend>
+          <div id="employeeActivity-hint" class="govuk-hint">
+            Select everything your employee does in a typical work day
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="employeeActivity" name="employeeActivity" type="checkbox" value="walkingStanding">
+                <label class="govuk-label govuk-checkboxes__label" for="employeeActivity">
+                Walking and standing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="employeeActivity-2" name="employeeActivity" type="checkbox" value="carryingObjects">
+              <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-2">
+                Carrying or moving objects
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="employeeActivity-3" name="employeeActivity" type="checkbox" value="usingComputer">
+              <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-3">
+                Using a computer
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="employeeActivity-4" name="employeeActivity" type="checkbox" value="driving">
+              <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-4">
+                Driving
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="employeeActivity-5" name="employeeActivity" type="checkbox" value="speakingToCustomers">
+              <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-5">
+                Speaking to colleagues or customers
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="employeeActivity-6" name="employeeActivity" type="checkbox" value="teachingTraining">
+              <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-6">
+                Teaching or training
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="employeeActivity-7" name="employeeActivity" type="checkbox" value="operatingMachines">
+              <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-7">
+                Operating machines or equipment
+              </label>
+            </div>
+
+            <div class="govuk-radios__divider">or</div>
+
+
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="employeeActivity-8" name="employeeActivity" type="checkbox" value="somethingElse" data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="employeeActivity-8">
+                    Something else
+                </label>
+              </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

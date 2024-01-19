@@ -1,0 +1,164 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Prepare for a conversation with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Having conversations with your employee</span>
+
+      <h1 class="govuk-heading-xl">Prepare for a conversation with your employee</h1>
+
+      <p class="govuk-body-l">You do not need to know the details of your employee's condition before you talk to them about support. But learning more can help you prepare for the conversation.</p>
+
+      <h2 class="govuk-heading-l">Listen to your employee</h2>
+      
+      <p class="govuk-body">It's very important to listen to your employee and not make assumptions. Everyone has a different experience of any health condition or disability.</p>
+
+      <p class="govuk-body">However, many people appreciate it if you learn a little about their condition. This shows that you want to support them. Remember that they are still the expert in their own situation.</p>
+
+      <!--
+          If employee is off work
+      -->
+
+      {% if data['staQ2'] == 'noOffWork' %}
+
+      <h2 class="govuk-heading-l">Agreeing a level of contact when your employee is not in work</h2>
+      
+      <p class="govuk-body">You should check any workplace sickness policies or procedures you have in place. These should set the level and type of contact, but you need to agree with your employee how often they will be contacted during their absence. This could be through:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>calls</li>
+        <li>messages</li>
+        <li>home or workplace visits</li>
+        <li>letters or emails</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">If an employee requests no contact</h3>
+
+      <p class="govuk-body">As an employer you might need to have some contact to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>understand if the reason for this is that the employee is too unwell or incapacitated to maintain contact</li>
+        <li>understand if the absence is due to work-related issues or triggers</li>
+        <li>understand the up-to-date medical position or request a fit note</li>
+        <li>discuss a return to work plan, when appropriate</li>
+      </ul>
+
+      <p class="govuk-body">You could agree to reduce contact or to communicate in writing only for a set period.</p>
+
+      <p class="govuk-body">Excessive contact could give an employee grounds to complain of harassment <a href="https://www.legislation.gov.uk/ukpga/1997/40/contents" target="_blank">under the Protection From Harassment Act 1997 (opens in new tab)</a>.</p>
+
+      {% endif %}
+
+      <!--
+          End of If statement
+      -->
+
+      <h2 class="govuk-heading-l">Mental health</h2>
+
+      <p class="govuk-body">People with mental health conditions can feel their condition is less understood than more visible physical conditions. It's important not to trivialise things like depression and anxiety. Take time to learn from and listen to your employee.</p>
+
+      <p class="govuk-body">Physical conditions can also affect mental health.</p>
+
+      <p class="govuk-body">Long-term conditions like depression can affect people very differently over time. Your employee is likely to have good and bad days, with different needs for each.</p>
+
+      <!--
+          If employee is off work
+      -->
+
+      {% if data['staQ2'] == 'noOffWork' %}
+
+      <p class="govuk-body">Make sure you do not put pressure on your employee to return to work before they are ready. This could create extra stress and anxiety.</p>
+
+      {% endif %}
+
+      <!--
+          End of If statement
+      -->
+
+      <p class="govuk-body"><a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in new tab)</a> is a collection of work-related guides from mental health experts.</p>
+
+      <h2 class="govuk-heading-l">Further help with common conditions and disabilities</h2>
+
+      <p class="govuk-body">These websites can help you to learn more about your employee's condition.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/collections/disability-confident-campaign" target="_blank">Disability Confident (opens in new tab)</a> has guidance on recruiting, managing and developing people with a disability or long-term condition.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/employing-disabled-people-and-people-with-health-conditions/employing-disabled-people-and-people-with-health-conditions" target="_blank">Employing disabled people and people with health conditions (opens in new tab)</a> includes advice on specific conditions.</p>
+
+      <p class="govuk-body"><a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in new tab)</a> has details of many conditions and the most common symptoms.</p>
+
+      <p class="govuk-body">You could also get advice and support from health or disability charities.</p>
+
+      <br />
+      <p class="govuk-body"><strong>Next section:</strong> Possible changes that could help your employee</p>
+
+      {% if data['staQ2'] == 'noOffWork' %}
+        {{ govukButton({
+          text: "Continue",
+          href: "com-g2"
+          }) 
+        }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue",
+          href: "com-g3"
+          }) 
+        }}
+      {% endif %}
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-5"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

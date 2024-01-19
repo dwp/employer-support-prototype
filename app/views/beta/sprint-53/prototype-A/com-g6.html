@@ -1,0 +1,115 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Decide on changes to support your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Decide on changes to support your employee</h1>
+
+      <p class="govuk-body-l">Make any changes you can to help your employee. They can often be temporary and more affordable than you might expect. If your employee is disabled, some changes might be legally required.</p>
+
+      <p class="govuk-body">The changes you make will depend on your employee’s needs. For example, you could provide:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a closer car parking space for someone who struggles to walk longer distances</li>
+        <li>more breaks for someone with fatigue</li>
+        <li>reduced public-facing tasks if that environment makes someone’s mental health worse</li>
+      </ul>
+      
+      <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people prefer to do different tasks or fewer hours when their condition is worse.</p>
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice" target="_blank">See more examples of changes on the Equality and Human Rights Commission website (opens in new tab)</a></p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/the-law.htm" target="_blank">You can find out more on the law around workplace adjustments on the HSE website (opens in new tab)</a></p>
+
+      <h2 class="govuk-heading-l">Help with costs from Access to Work</h2>
+
+      <p class="govuk-body">If adjustments are more expensive than is reasonable for you, your employee can <a href="https://www.gov.uk/access-to-work" target="_blank">apply to Access to Work (opens in new tab)</a> to help with the costs.</p>
+
+      <h2 class="govuk-heading-l">The law on making changes</h2>
+
+      <p class="govuk-body">By law, you must make changes if you could be expected to know that your employee is disabled. These are called 'reasonable adjustments'. You would be discriminating against them if you did not make reasonable adjustments.</p>
+
+      <p class="govuk-body">The law defines disability as something physical or mental which has a ‘substantial’ and ‘long-term’ effect on someone’s ability to do normal daily activities.</p>
+      
+      <p class="govuk-body">For more, <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">see the definition of disability under the Equality Act 2010 (opens in new tab)</a>.</p>
+
+      <h2 class="govuk-heading-l">What is reasonable?</h2>
+
+      <p class="govuk-body">What is ‘reasonable’ will depend on your business. It would be helpful for you to consider the extent to which any change could help overcome the disadvantage faced by your employee.</p>
+
+      <p class="govuk-body">You can also consider things such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how practical and effective it is to make an adjustment</li>
+        <li>the cost of the adjustment</li>
+        <li>the size of your business</li>
+        <li>the resources available to you</li>
+        <li>the benefit to your employee</li>
+      </ul>
+
+      <p class="govuk-body">If an employee uses a wheelchair and you do not have space for a lift, you would not need to change premises. But you would need to consider other ways for them to be able to do their job, such as working from somewhere else.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-g5"
+        }) 
+      }}
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

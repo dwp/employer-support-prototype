@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What to do if your employee has not told you about a health condition or disability {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What to do if your employee has not told you about a health condition or disability</h1>
+
+      <p class="govuk-body-l">If your employee is off work because of a health condition or disability, you should be considerate when asking questions about their absence. The employee might find it difficult to discuss the details.</p>
+      
+      <p class="govuk-body">It's important to create a culture where employees are happy to talk about their health.</p>
+
+      <p class="govuk-body">Avoid judgements when you talk about health conditions or disabilities. This is especially important for mental health conditions.</p>
+
+      <p class="govuk-body">Not all employees who meet the definition of disability will think of themselves as a ‘disabled person’. Even if your employee has not told you that they have a disability, you should consider any circumstances which suggest that they may be disabled and need support.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/equality-act-guidance/disability-equality-act-2010-guidance-on-matters-to-be-taken-into-account-in-determining-questions-relating-to-the-definition-of-disability-html#introduction" target="_blank">Check what is classed as a disability under the Equality Act 2010 on GOV.UK (opens in new tab)</a></p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You must make sure that you are following the GDPR.
+        </strong>
+      </div>
+
+      <p class="govuk-body">Explain that you will keep health information private, and only use it to make changes to help them do their job. <a href="https://www.gov.uk/personal-data-my-employer-can-keep-about-me
+        " target="_blank">You can find out more about the GDPR on GOV.UK (opens in new tab)</a>.</p>
+    
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-g3"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

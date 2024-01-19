@@ -1,0 +1,42 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You do not need to pay Statutory Sick Pay yet {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "est-q2"
+      }) }}
+
+      <span class="govuk-caption-l">Service name A</span>
+
+      <h1 class="govuk-heading-l">Support employees with disabilities and health conditions</h1>
+
+      <br>
+      <br>
+      <br>
+
+      <span class="govuk-caption-l">Service name B</span>
+
+      <h1 class="govuk-heading-l">Support, recruit and retain a healthy workforce</h1>
+
+      
+
+      <!-- {{ govukButton({
+        text: "Next question",
+        href: "have-you-contacted-employee"
+      }) }} -->
+      
+    </div>
+  </div>
+
+  
+
+{% endblock %}

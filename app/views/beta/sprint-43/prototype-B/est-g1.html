@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You do not need to pay Statutory Sick Pay yet {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">You do not need to pay Statutory Sick Pay yet</h1>
+
+      <!--
+          If employee is off for 1 day, content needs to say day instead of 'days'
+      -->
+
+      <p class="govuk-body">Your employee has been off work for  
+        {% if data['daysEmployeeOffSick'] == '1'  %}
+         {{ data['daysEmployeeOffSick'] }} day.
+        {% else  %}
+          {{ data['daysEmployeeOffSick'] }} days. 
+        {% endif  %}
+      This includes non-working days, such as weekends.
+      </p>
+
+      <p class="govuk-body">You do not need to pay Statutory Sick Pay (SSP).</p>
+
+      <p class="govuk-body">You might need to pay SSP if your employee is off work for 4 or more days. <a href="https://www.gov.uk/employers-sick-pay" target="_blank">Find out more on GOV.UK (opens in new tab)</a>.</p>
+
+      <h2 class="govuk-heading-l">Paying extra sick pay</h2>
+
+      <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+      <h2 class="govuk-heading-l">Asking for medical evidence</h2>
+
+      <p class="govuk-body">You should not ask your employee to provide proof of their health condition or disability from a medical professional.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

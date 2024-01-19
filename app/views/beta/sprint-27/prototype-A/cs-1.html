@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Case study 1 {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Case study 1</h1>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Version A
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">An employee found their desk chair very uncomfortable. They mentioned several times in team meetings that their back was hurting.</p>
+
+          <p class="govuk-body">After a couple of weeks they told their employer that they had been suffering from a bad back for over month.</p>
+   
+          <p class="govuk-body">The employee found a new desk chair online that would look great in their room at home, but it was very expensive. They asked their manager for the cost of the chair to be expensed.</p>
+   
+          <p class="govuk-body">The company couldn't afford the cost of chair and they were worried that it wouldn't meet the Display Screen Equipment (DSE) assessment requirements. </p>
+     
+          <p class="govuk-body"> The employer was worried that the DSE assessment had been missed when the employee first joined the company.</p>
+   
+          <p class="govuk-body">The manager and employee met to discuss options.</p>
+   
+          <p class="govuk-body">The employer needed to know if:</p>
+   
+          <ul class="govuk-list govuk-list--bullet">
+            <li>another suitable chair was available to use at home</li>
+            <li>the employee carry out the DSE assessment when they first joined the company</li>
+            <li>they have been advised by a medical professional to get new equipment</li>
+          </ul>
+   
+          <p class="govuk-body">It was agreed that a DSE assessment would be carried out. The employer could now see that their employees chair was not suitable for long periods of working.</p>
+   
+          <p class="govuk-body">A new chair was supplied that that suits their needs and was within the company allocated budget allowance.</p>
+   
+          <p class="govuk-body">They agreed to meet in a months time to check if the pain had improved and to discuss if any next steps were needed.</p>
+        </div>
+      </details>
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Version B
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">An employee was suffering from a bad back for a month.</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>they found a new stylish chair online and asked for it to be expensed</li>
+            <li>the employer couldn't afford the cost</li>
+            <li>the employer was worried that the Display Screen Equipment (DSE) assessment had been missed when the employee first joined the company</li>
+            <li>they both met to discuss what the employee had already tried - a cushion, different chair, stretching, have they seen a doctor?</li>
+          </ul>
+
+          <p class="govuk-body">Following the conversation:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>it was agreed that the employee would carry out an Display Screen Equipment (DSE) assessment at home</li>
+            <li>it was agreed that the employee needed a new chair that would suit their needs, was within the company allocated budget allowance</li>
+            <li>they met a month later to check if the pain had improved</li>
+          </ul>
+
+        </div>
+      </details>
+
+
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Version C
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">An employee with a bad back asked for a new stylish chair to be expensed.</p>
+
+          <p class="govuk-body">The employer couldn't afford the cost and it doesn't meet the Display Screen Equipment (DSE) assessment requirements.</p>
+
+          <p class="govuk-body">It's agreed they can get a new chair that suits their needs and is within the company allocated budget allowance.</p>
+
+          <p class="govuk-body">They met a month later to check if the pain has improved.</p>
+
+          
+        </div>
+      </details>
+
+
+      
+
+   <br />
+   
+
+      <br>
+           
+    </div>
+  </div>
+
+{% endblock %}

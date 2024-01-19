@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You must Statutory Sick Pay {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">You must Statutory Sick Pay</h1>
+
+      <!--
+          If employee is off for 4,5,6, or 7 days display content for EST-G2
+      -->
+
+      {% if (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
+
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a>. You pay SSP instead of your employee’s normal pay. You cannot claim SSP back from the government.</p>
+
+        <p class="govuk-body">Some businesses also choose to pay additional sick pay. If you offer extra sick pay you can decide when to start and stop paying it, and how much extra to pay. You can pay it from the first day your employee is sick.</p>
+
+        <p class="govuk-body">Your employee does not need to give you proof of their sickness, such as a fit note from their doctor. To get SSP, your employee must complete the 
+            <a href="https://public-online.hmrc.gov.uk/lc/content/xfaforms/profiles/forms.html?contentRoot=repository:///Applications/PersonalTax_iForms/1.0/SC2&template=SC2.xdp">Employee’s statement of sickness (SC2)</a>.
+        </p>
+
+        <p class="govuk-body">If your employee remains off work sick for 8 or more days, you can ask for proof of their sickness. You can decide on the proof you need - it could be a fit note or another form of medical evidence.</p>
+
+      <!--
+          If employee is off for 8 days or more, display content for EST-G3
+      -->
+      {% else %}
+
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a>. You pay SSP instead of a normal salary.</p>
+
+        <p class="govuk-body">You cannot reclaim SSP from the government for most illnesses. You can reclaim 2 weeks of SSP <a href="https://www.gov.uk/employers-sick-pay">if the absence is due to coronavirus (COVID-19).</a>.</p>
+
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+        <p class="govuk-body">You can choose to ask for medical evidence of your employee’s sickness before you pay SSP. Examples of medical evidence are a letter from a hospital, or a fit note. Fit notes used to be called sick notes.</p>
+
+      {% endif %}
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../communicating/com-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

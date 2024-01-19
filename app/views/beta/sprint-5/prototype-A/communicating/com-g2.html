@@ -1,0 +1,85 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Ask your employee what changes they need {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">Ask your employee what changes they need</h1>
+
+      <p class="govuk-body-l">Your employee’s health condition might mean they need some changes to their role or workplace.</p>
+
+      <!--
+        How to talk to employee
+      -->
+
+      <h2 class="govuk-heading-m">How to talk your employee about what they need</h2>
+
+      <p class="govuk-body">Many people with health conditions want to continue working. Work brings more than just financial benefits – it also gives many people a sense of purpose and community.</p>
+
+      <p class="govuk-body">Ask your employee what changes they need to their role, workplace or ways of working. It’s natural to focus on what might be more difficult for them, but remember to also talk about what they feel capable of doing.</p>
+
+      <p class="govuk-body">Let the employee lead the conversation. If you need to prompt them, use open-ended questions, such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how do you think your condition might change your ability to do your role?</li>
+        <li>is there anything in the workplace that could cause problems for you?</li>
+        <li>are you worried about any part of your work? If so, what specifically are you worried about?</li>
+      </ul>
+
+      <!--
+        Making changes
+      -->
+
+      <h2 class="govuk-heading-m">Making changes to the role or workplace</h2>
+
+      <p class="govuk-body">As an employer you must make ‘reasonable adjustments’ for disabled employees. This means you must change an employee’s role or workplace so their disability does not disadvantage them from doing their job.</p>
+
+      <p class="govuk-body">The adjustments you make will depend on your employee’s needs. For example, you could provide:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a closer car parking space for someone who struggles to walk longer distances</li>
+        <li>more breaks for someone with fatigue</li>
+        <li>reduced public-facing tasks, if that environment makes someone’s mental health worse</li>
+      </ul>
+
+      <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people find it easier to work reduced hours when their condition is worse, or only take on some of their previous tasks. Your employee does not have to wait until they are fully better to be able to do meaningful work.</p>
+
+      <!--
+        Avoiding discrimination
+      -->
+
+      <h2 class="govuk-heading-m">Avoiding discrimination</h2>
+
+      <p class="govuk-body">If you do not make reasonable adjustments for a disabled employee you might be unlawfully discriminating against them. You might not know if your employee is disabled, so you should make reasonable adjustments for all employees with health conditions.</p>
+
+      <p class="govuk-body">The adjustments you make must be ‘reasonable’ for your business. For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+      <!--
+        Support for you
+      -->
+
+      <h2 class="govuk-heading-m">Support for you</h2>
+
+      <p class="govuk-body">If you’re not sure what adjustments you need to make, you may find it helpful to hire an occupational health adviser. An occupation health adviser can assess your situation and give you practical steps to take to help your employee and avoid discrimination. <a href="https://www.acas.org.uk/using-occupational-health-at-work">Find information on the ACAS website about using occupational health at work</a>.</p>
+
+      <p class="govuk-body">Your employee might also be eligible for a government grant to help cover the costs of adjustments, through a scheme called <a href="https://www.gov.uk/access-to-work">Access to Work</a>.</p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../summary/sum-3"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

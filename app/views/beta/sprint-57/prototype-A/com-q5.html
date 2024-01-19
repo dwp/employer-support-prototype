@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Would you like examples of changes at work to put into practice? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="POST" action="com-q5-checklist-routing">
+
+          <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="checklist-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-l">This section: possible changes that could help your employee</span>
+            <h1 class="govuk-fieldset__heading">
+              Would you like examples of changes at work to put into practice?
+            </h1>
+          </legend>
+          <div id="changes-hint" class="govuk-hint">
+            Select the topics you would like examples of
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="checklist" name="comQ5" type="checkbox" value="waysOfWorking">
+              <label class="govuk-label govuk-checkboxes__label" for="checklist">
+                Ways of working                
+              </label>
+              <div id="waysofworking-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  includes changes to hours, shift patterns or policies
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="checklist-2" name="comQ5" type="checkbox" value="workEnvironment">
+              <label class="govuk-label govuk-checkboxes__label" for="checklist-2">
+                Work environment
+              </label>
+              <div id="workenvironment-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  includes things like desk space, equipment and noise levels
+                </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="checklist-3" name="comQ5" type="checkbox" value="extraSupport">
+              <label class="govuk-label govuk-checkboxes__label" for="checklist-3">
+                Extra support
+              </label>
+              <div id="extrasupport-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  to help your employee to have extra support with parts of their job or how they access work
+                </div>
+            </div>
+            <div class="govuk-checkboxes__divider">or</div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="checklist-4" name="comQ5" type="checkbox" value="noneOfThese">
+                <label class="govuk-label govuk-checkboxes__label" for="checklist-4">
+                  None of these
+                </label>
+              </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

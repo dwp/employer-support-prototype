@@ -1,0 +1,66 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Does your employee need changes to their workplace or their ways of working before they can return to work safely?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "want-help-on-what-to-say-to-employee"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "doesEmployeeNeedChangesB",
+        name: "doesEmployeeNeedChangesB",
+        fieldset: {
+          legend: {
+            text: "Does your employee need changes to their workplace or their ways of working before they can return to work safely?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['doesEmployeeNeedChangesB'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['doesEmployeeNeedChangesB'] === 'No'
+          },
+          {
+            value: "I’m not sure~/alpha/sprint-5/gone-off-work/prototype-B/recommendations-for-you",
+            text: "I’m not sure",
+            checked: data['doesEmployeeNeedChangesB'] === 'I’m not sure'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype B
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

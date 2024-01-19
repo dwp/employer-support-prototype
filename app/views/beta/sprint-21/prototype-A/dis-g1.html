@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Your employee can take sick leave {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of DIS-1 summary content -->
+
+      <h1 class="govuk-heading-xl">Your employee can take sick leave</h1>
+     
+      <p class="govuk-body-l">If you cannot make changes to help your employee stay at work, they might benefit from some time off.</p>
+
+      <p class="govuk-body">If you cannot identify any changes to help your employee, or the changes are not reasonable for your business, the situation may still improve over time.</p>
+
+      <p class="govuk-body">Your employee can take sick leave to see if their condition improves.</p>
+
+      <p class="govuk-body">After 7 days, you can ask for proof of their condition, like a Fit Note. If they stay off for over 4 weeks, they may be considered long-term sick.</p>
+
+      <p class="govuk-body">Get <a href="https://www.gov.uk/taking-sick-leave" target="_blank">more advice on sick leave (opens in a new tab)</a>.</p>
+
+      <!-- End of DIS-1 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "dis-g2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

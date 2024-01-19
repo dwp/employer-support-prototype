@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Putting additional policy and procedures in place  {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Putting additional policy and procedures in place</h1>
+
+      <p class="govuk-body-l">There are other policies and procedures that could support your business and employees.</p>
+
+      <h2 class="govuk-heading-l">Recruitment policy</h2>
+      
+      <p class="govuk-body">A recruitment policy should cover:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>encouraging the recruitment of employees with health conditions or disabilities</li>
+        <li>that reasonable adjustments are considered at all stages of the recruitment process</li>
+        <li>that you will hire the best person for the job based on their application, assessments, and interview, and not to fill a quota</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Dignity at work policy </h2>
+
+      <p class="govuk-body">A Dignity at work policy will make sure that employees are treated in a consistent and fair manner.</p>
+
+      <h2 class="govuk-heading-l">Sickness absence procedure </h2>
+      
+      <p class="govuk-body">A Sickness absence procedure will support employees to maintain an acceptable level of attendance so they can carry out their work. </p>      
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "pol-g3"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

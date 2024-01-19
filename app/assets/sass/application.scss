@@ -1,0 +1,44 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+.govuk-header__logo {
+    display: none;
+  }
+  
+  .govuk-heading-xl, .govuk-heading-l, .govuk-heading-m, .govuk-heading-s, .govuk-table, .govuk-table__caption--m, .govuk-link, p, a, .govuk-body, .govuk-body-m, .govuk-footer__link, .govuk-footer, .govuk-header__service-name, .govuk-list, .app-task-list__items, .govuk-caption-m, .govuk-button, .govuk-fieldset__heading, .govuk-back-link, .govuk-radios__label, .govuk-hint, .govuk-label, .govuk-body-l, .govuk-details {
+      font-family: Helvetica, Arial, sans-serif;
+  }
+
+
+  .dwp-language-toggle {
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+  }
+  
+  .dwp-language-toggle__list {
+    margin-top: 1em;
+    text-align: right;
+  }
+  
+  .dwp-language-toggle__list-item {
+    display: inline-block;
+  }
+  
+  .dwp-language-toggle__list-item:first-child:after {
+    content: "";
+    display: inline-block;
+    border-right: 1px solid #0b0c0c;
+    position: relative;
+    top: .1875em;
+    height: 1em;
+  }
+  .govuk-phase-banner {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+    margin-top: -30px;
+  }
+

@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Has your employee told you about their health condition? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      {{ govukRadios({
+        idPrefix: "knowWhatIllnessA",
+        name: "knowWhatIllnessA",
+        fieldset: {
+          legend: {
+            text: "Has your employee told you about their health condition?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Your employee does not have to tell you, but you’re allowed to ask. Knowing about the condition can help you support your employee to return to work when they’re ready."
+        },
+        items: [
+          {
+            value: "Yes",
+            value: "Yes~/beta/sprint-5/prototype-A/establishing/est-q2",
+            text: "Yes",
+            checked: data['knowWhatIllnessA'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['knowWhatIllnessA'] === 'No'
+          },
+          {
+            value: "I have not asked",
+            text: "I have not asked",
+            checked: data['knowWhatIllnessA'] === 'I have not asked'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

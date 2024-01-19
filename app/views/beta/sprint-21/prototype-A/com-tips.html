@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Tips on talking to your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Tips on talking to your employee</h1>
+
+      <p class="govuk-body-l">It's important to talk to your employee as soon as you can. These topics can help you have an open and useful conversation.</p>
+
+      <p class="govuk-body">Review the following prompts. You may want to add notes as you discuss things with your employee.</p>
+
+      <p class="govuk-body">You can return to this website later for more advice on supporting your employee by making any changes they need.</p>
+      <br />
+      <hr />
+   <br />
+      <h2 class="govuk-heading-m">Ask about them first</h2>
+      
+      <p class="govuk-body">Start by asking about your employee in general - find out how they're doing.</p>
+      <p class="govuk-hint"><em>"Thanks for letting me know..."</em></p>
+      <p class="govuk-hint"><em>"How are you in general?"</em></p>
+      <br />
+        <hr />
+     <br />
+     <h2 class="govuk-heading-m">Talk about a plan to keep in touch</h2>
+      
+     <p class="govuk-body">Agree when you will get in touch next, and how often you will speak. Choose a method of communication that works for you both.</p>
+     <p class="govuk-hint"><em>"When should we talk again?"</em></p>
+
+     <br />
+     <hr />
+  <br />
+  <h2 class="govuk-heading-m">Your employee's situation</h2>
+   
+  <p class="govuk-body">You can start to ask about your employee's experience, and share anything you have already learned.</p>
+  <p class="govuk-hint"><em>"What are you comfortable sharing right now?"</em></p>
+  <p class="govuk-hint"><em>"Here's what I have found out, does that apply to you?"</em></p>
+
+  <br />
+  <hr />
+<br />
+<h2 class="govuk-heading-m">Job and workplace</h2>
+
+<p class="govuk-body">When it feels appropriate, talk about how the job or work environment might be making things difficult. You could arrange a time to talk about support in more detail.</p>
+<p class="govuk-hint"><em>"How is work making things difficult?"</em></p>
+<p class="govuk-hint"><em>"When you're ready we can talk about changes..."</em></p>
+<br />
+<hr />
+<br />
+<p class="govuk-body">Check in with your employee as often as works for you both. We can email a copy of this document to your email address if you would like to save or print it.</p>
+      <br>
+
+      {% if data['staQ2'] == 'noOffWork' %}
+        {{ govukButton({
+          text: "Continue",
+          href: "est-q3"
+          }) 
+        }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue",
+          href: "com-q2"
+          }) 
+        }}
+      {% endif %}
+      
+    </div>
+  </div>
+
+{% endblock %}

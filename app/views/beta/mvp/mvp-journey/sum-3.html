@@ -1,0 +1,175 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Details of what you need to do {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-l">
+            Details of what you need to do
+        </h1>
+
+        <!--
+            Look into this and maybe add icon
+            !!!!!!!!!!!!!
+        -->
+        <p class="govuk-body"><a href="javascript:window.print()">Print your results</a></p>
+
+        <br>
+        <br>
+
+    </div>
+   </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <!-- <p class="govuk-body govuk-!-font-weight-bold">Because you said your employee:</p> -->
+        <!-- <h2 class="govuk-heading-s">Because you said your employee:</h2> -->
+
+        <p class="govuk-body govuk-!-font-weight-bold">Because you said your employee:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            {% if (data['currentSituation'] == "employeeIllnessDisability") %}
+            <li>has a long-term illness or disability</li>
+            {% endif %}
+
+            {% if (data['currentSituation'] == "employeeReadyToReturn") %}
+            <li>is ready to return to work after a long sickness absence</li>
+            {% endif %}
+
+            <li>has told you about their health condition</li>
+            <li>has a physical condition</li>
+        </ul>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Because you said:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            {% if (data['wantHelpOnWhatToSayA'] == "Yes") %}
+            <li>you have talked to your employee about their condition and support they need</li>
+            {% endif %}
+
+            {% if (data['wantHelpOnWhatToSayA'] == "No") %}
+            <li>you have not talked to your employee about their condition and support they need</li>
+            {% endif %}
+           </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+
+      <!--
+        EST-G4 Content
+      -->
+
+
+      <h1 class="govuk-heading-m">Learn about your employee’s condition</h1>
+
+      <p class="govuk-body">You do not have to know the details of your employee’s condition before you talk to them.</p>
+
+      <p class="govuk-body">However, knowing how your employee might be affected can help to prepare for your conversation with them and any changes at work they might need.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/">NHS Health A to Z</a> has details of many conditions and the most common symptoms.</p>
+      
+      <h2 class="govuk-heading-s">Mental health</h2>
+
+      <p class="govuk-body">If your employee has a mental health condition it’s especially important to be patient to be patient and let them lead the conversation.</p>
+
+      <p class="govuk-body">Physical conditions like back pain or a disability can have effect mental health. They can cause stress, anxiety and affect everyday life.</p>
+
+      <p class="govuk-body">Mental health conditions caused by something outside of work can affect someone’s ability to do their job.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhs.uk/mental-health/">NHS mental health website</a> has advice to help you support someone facing difficult issues or life events.</p>
+
+      <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/">Mind Mental Health at Work</a> website is a collection of work-related guides from mental health experts.</p>
+      
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+       
+        {% if (data['wantHelpOnWhatToSayA'] == "No") %}
+      <!--
+        COM-G2 Content
+      -->
+
+      <h2 class="govuk-heading-m">Ask your employee what changes they need</h2>
+
+      <p class="govuk-body-l">Your employee’s health condition might mean they need some changes to their role or workplace.</p>
+
+      <!--
+        How to talk to employee
+      -->
+
+      <h2 class="govuk-heading-m">How to talk your employee about what they need</h2>
+
+      <p class="govuk-body">Many people with health conditions want to continue working. Work brings more than just financial benefits – it also gives many people a sense of purpose and community.</p>
+
+      <p class="govuk-body">Ask your employee what changes they need to their role, workplace or ways of working. It’s natural to focus on what might be more difficult for them, but remember to also talk about what they feel capable of doing.</p>
+
+      <p class="govuk-body">Let the employee lead the conversation. If you need to prompt them, use open-ended questions, such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how do you think your condition might change your ability to do your role?</li>
+        <li>is there anything in the workplace that could cause problems for you?</li>
+        <li>are you worried about any part of your work? If so, what specifically are you worried about?</li>
+      </ul>
+
+      <!--
+        Making changes
+      -->
+
+      <h2 class="govuk-heading-m">Making changes to the role or workplace</h2>
+
+      <p class="govuk-body">As an employer you must make ‘reasonable adjustments’ for disabled employees. This means you must change an employee’s role or workplace so their disability does not disadvantage them from doing their job.</p>
+
+      <p class="govuk-body">The adjustments you make will depend on your employee’s needs. For example, you could provide:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a closer car parking space for someone who struggles to walk longer distances</li>
+        <li>more breaks for someone with fatigue</li>
+        <li>reduced public-facing tasks, if that environment makes someone’s mental health worse</li>
+      </ul>
+
+      <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people find it easier to work reduced hours when their condition is worse, or only take on some of their previous tasks. Your employee does not have to wait until they are fully better to be able to do meaningful work.</p>
+
+      <!--
+        Avoiding discrimination
+      -->
+
+      <h2 class="govuk-heading-m">Avoiding discrimination</h2>
+
+      <p class="govuk-body">If you do not make reasonable adjustments for a disabled employee you might be unlawfully discriminating against them. You might not know if your employee is disabled, so you should make reasonable adjustments for all employees with health conditions.</p>
+
+      <p class="govuk-body">The adjustments you make must be ‘reasonable’ for your business. For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+      <!--
+        Support for you
+      -->
+
+      <h2 class="govuk-heading-m">Support for you</h2>
+
+      <p class="govuk-body">If you’re not sure what adjustments you need to make, you may find it helpful to hire an occupational health adviser. An occupation health adviser can assess your situation and give you practical steps to take to help your employee and avoid discrimination. <a href="https://www.acas.org.uk/using-occupational-health-at-work">Find information on the ACAS website about using occupational health at work</a>.</p>
+
+      <p class="govuk-body">Your employee might also be eligible for a government grant to help cover the costs of adjustments, through a scheme called <a href="https://www.gov.uk/access-to-work">Access to Work</a>.</p>
+    
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      {% endif %}
+
+
+
+       <!--
+            Look into this and maybe add icon
+            !!!!!!!!!!!!!
+        -->
+        <br>
+        <p class="govuk-body"><a href="javascript:window.print()">Print your results</a></p>
+        
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,776 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Summary of what you should do {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-xl">Summary of what you should do</h1>
+
+        
+
+        <p class="govuk-body-l">Based on your answers, this is a summary of the guidance you’ve seen. You might find it useful to save or print this page.</p>
+
+
+        <!--
+          If COM-Q2 = No
+        -->
+        {% if (data['comQ2'] == "no") %}
+        <!-- 
+          Print COM-G2 (1)
+          Print COM-G6 (2)
+          Print DIS-1 (3)
+          Print FIN-1 (5)
+          Print ADJ-G5 (6) 
+        -->
+
+        <!-- Start of COM-G2 summary content -->
+
+        <h2 class="govuk-heading-l">Ask your employee what changes they need</h2>
+
+        <p class="govuk-body">Your employee’s disability or health condition might mean they need some changes to their role or workplace.</p>
+
+        <!--
+          How to talk to employee
+        -->
+
+        <h3 class="govuk-heading-m">How to talk your employee about what they need</h3>
+
+        <p class="govuk-body">Many people with health conditions want to continue working. Work brings more than just financial benefits – it also gives many people a sense of purpose and community.</p>
+
+        <p class="govuk-body">Ask your employee what changes they need to their role, workplace or ways of working. It’s natural to focus on what might be more difficult for them, but remember to also talk about what they feel capable of doing.</p>
+
+        <p class="govuk-body">Let the employee lead the conversation. If you need to prompt them, use open-ended questions, such as:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>how do you think your condition might change your ability to do your role?</li>
+          <li>is there anything in the workplace that could cause problems for you?</li>
+          <li>are you worried about any part of your work? If so, what specifically are you worried about?</li>
+        </ul>
+
+        <p class="govuk-body">Once you know what challenges your employee faces because of their disability or health condition, you can discuss what changes at work could help them.</p>
+
+        <p class="govuk-body">You might find it helpful to make a note of when you’ve been in touch and what you discussed. It can remind you both of what you agreed to do.</p>
+
+        <!-- End of COM-G2 summary content -->
+
+        <!-- Start of COM-G6 summary content -->
+
+        <h2 class="govuk-heading-l">Make changes to the role or workplace</h2>
+            
+        <p class="govuk-body">You will need to make ‘reasonable adjustments’ to make sure workers with disabilities, or physical or mental health conditions, are not substantially disadvantaged when doing their jobs.</p>
+
+        <p class="govuk-body">The adjustments you make will depend on your employee’s needs.</p>
+
+        <!--
+          Printing adjustments based on checkbox selection in EST-Q4
+        -->
+
+        {% set employeeActivitys = data['employeeActivity'] %}
+
+        {% for item in employeeActivitys %}
+
+          {% if item == 'walkingStanding' %}
+            <h3 class="govuk-heading-m">Because your employee’s role involves walking and standing</h3>
+
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a chair for tasks which involve a lot of standing</li>
+              <li>ramps over steps, if your employee uses a wheelchair</li>
+              <li>a closer car parking space, if your employee drives</li>
+            </ul>
+          {% endif %}
+
+          {% if item == 'carryingObjects' %}
+
+            <h3 class="govuk-heading-m">Because your employee’s role involves carrying or moving objects</h3>
+
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a trolley to help your employee move objects without carrying them</li>
+              <li>more breaks, if your employee’s health condition or disability causes them to get tired more easily</li>
+              <li>a change of role, if your employee’s health condition or disability means they can’t carry or move objects safely</li>
+            </ul>
+          {% endif %}
+
+          {% if item == 'usingComputer' %}
+            <h3 class="govuk-heading-m">Because your employee’s role involves using a computer</h3>
+          
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>screen-reading software, if your employee is blind or partially sighted</li>
+              <li>a more supportive chair, if your employee has pain in their back or neck</li>
+              <li>more screen breaks, if your employee’s health condition or disability causes them to get tired more easily</li>
+            </ul>
+          {% endif %}
+
+          {% if item == 'driving' %}
+            <h3 class="govuk-heading-m">Because your employee’s role involves driving</h3>
+
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a closer car parking space, if your employee finds it difficult to walk long distances</li>
+              <li>more time to make journeys, if your employee’s health condition or disability causes them to get tired more easily</li>
+              <li>different tasks, if your employee takes medication which makes them unable to drive safely</li>
+            </ul>
+          {% endif %}
+
+          {% if item == 'speakingToCustomers' %}
+            <h3 class="govuk-heading-m">Because your employee’s role involves speaking to colleagues or customers</h3>
+
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>different tasks, if the work causes your employee anxiety or stress</li>
+              <li>more breaks, if your employee finds it difficult to speak for long periods of time</li>
+              <li>a quiet place to take breaks, if busy environments make your employee’s health condition or disability worse</li>
+            </ul>
+          {% endif %}
+
+          {% if item == 'teachingTraining' %}
+            <h3 class="govuk-heading-m">Because your employee’s role involves teaching or training</h3>
+
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>different tasks, if your employee finds it difficult to speak for long periods of time</li>
+              <li>a colleague to help them at the busiest or most difficult moments</li>
+              <li>more breaks, if your employee’s health condition or disability causes them to get tired more easily</li>
+            </ul>
+          {% endif %}
+
+          {% if item == 'operatingMachines' %}
+            <h3 class="govuk-heading-m">Because your employee’s role involves operating machines or equipment</h3>
+
+            <p class="govuk-body">You should consider adjustments such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>different tasks, if your employee takes medication which makes them unable to operate machinery safely</li>
+              <li>more safety equipment such as ear protectors, if noisy environments make your employee’s health condition or disability worse</li>
+              <li>different areas to work in, if your employee’s health condition or disability is made worse by hot or cold environments</li>
+            </ul>
+          {% endif %}
+
+        {% endfor %}
+
+        <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice" target="_blank">See more examples of reasonable adjustments on the Equality and Human Rights Commission website (opens in a new tab)</a></p>
+
+        <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people find it easier to work reduced hours when their condition is worse, or only take on some of their previous tasks.</p>
+
+        <p class="govuk-body">Your employee does not have to wait until they are fully better to be able to do meaningful work.</p>
+
+        <p class="govuk-body">Over time your employee’s disability or health condition might affect them differently, get better, or get worse. You might need to make different adjustments to their role, workplace, or ways of working.</p>
+
+        <!-- End of COM-G6 summary content -->
+
+        <!-- Start of DIS-1 summary content -->
+
+        <h2 class="govuk-heading-l">Avoid discrimination</h2>
+      
+        <p class="govuk-body">You must make sure disabled employees are not substantially disadvantaged when doing their jobs.</p>
+
+        <!--
+          Unlawful discrimination
+        -->
+
+        <h3 class="govuk-heading-m">Unlawful discrimination</h3>
+
+        <p class="govuk-body">If you do not make reasonable adjustments for a disabled employee you would be unlawfully discriminating against them. Your employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+
+        <p class="govuk-body">By law you must make reasonable adjustments if you could be expected to know that your employee is disabled. This can be difficult to be sure about, so you might decide to make adjustments for all employees with health conditions.</p>
+
+        <p class="govuk-body">The law applies to all workers, including trainees, apprentices, contract workers and business partners.</p>
+
+        <!--
+          Understanding what is reasonable
+        -->
+
+        <h3 class="govuk-heading-m">Understanding what is reasonable</h3>
+
+        <p class="govuk-body">What is considered ‘reasonable’ will depend on your business.</p>
+
+        <p class="govuk-body">For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+        <!-- End of DIS-1 summary content -->
+
+        <!-- Start of FIN-1 summary content -->
+
+        <h2 class="govuk-heading-l">Tell your employee about possible financial support</h2>
+
+        <p class="govuk-body">Your employee might be able to get a government grant to help pay for adjustments. The scheme is called <a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in a new tab)</a>.</p>
+
+        <p class="govuk-body">Access to Work grants do not have to be paid back, and they will not affect any benefits your employee gets.</p>
+
+        <!-- End of FIN-1 summary content -->
+
+        <!-- Start of ADJ-G5 summary content -->
+
+        <h2 class="govuk-heading-l">Get help from occupational health</h2>
+      
+        <p class="govuk-body">Occupational health professionals can help you and your employees to talk about health at work and decide any changes you will make.</p>
+
+        <!--
+          What they do
+        -->
+        
+        <h3 class="govuk-heading-m">What they do</h3>
+
+        <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>providing health assessments for your employees</li>
+          <li>helping you decide on any changes you might need to make at work</li>
+          <li>supporting your employees to manage their health</li>
+        </ul>
+
+        <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>helping you monitor the health of your employees</li>
+          <li>managing cases over time and supporting employees to return to work</li>
+          <li>helping you to create policies for your business</li>
+        </ul>
+
+        <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+
+        <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+
+        <!--
+          Finding occupational health services
+        -->
+        
+        <h3 class="govuk-heading-m">Finding occupational health services</h3>
+
+        <p class="govuk-body">The following links open in a new tab.</p>
+
+        <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
+        <a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
+        </p>
+
+        
+        <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+
+        <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+
+        <!-- End of ADJ-G5 summary content -->
+
+          <!-- If journey = red or green -->
+          {% if (data['staQ1'] == "offWork") or (data['staQ1'] == "returnToWork") %}
+
+            <!-- Print RET-G7 (7) -->
+
+            <!-- Start of RET-G7 summary content -->
+
+            <h2 class="govuk-heading-l">Support your employee in their first week back at work</h2>
+
+            <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+            <!--
+              Before employee's first day
+            -->
+
+            <h3 class="govuk-heading-m">Before your employee’s first day</h3>
+
+            <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+            <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+            
+            <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+            <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+            <!--
+              What to do in the first week
+            -->
+            
+            <h3 class="govuk-heading-m">What to do in the first week</h3>
+
+            <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+            <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+            <!-- End of RET-G7 summary content -->
+
+          {% endif %}
+
+        {% endif %}
+
+        <!-- If COM-Q2 = Yes -->
+        {% if (data['comQ2'] == "yes") %}
+
+          <!-- Start of DIS-1 summary content -->
+
+          <h2 class="govuk-heading-l">Avoid discrimination</h2>
+        
+          <p class="govuk-body">You must make sure disabled employees are not substantially disadvantaged when doing their jobs.</p>
+
+          <!--
+            Unlawful discrimination
+          -->
+
+          <h3 class="govuk-heading-m">Unlawful discrimination</h3>
+
+          <p class="govuk-body">If you do not make reasonable adjustments for a disabled employee you would be unlawfully discriminating against them. Your employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+
+          <p class="govuk-body">By law you must make reasonable adjustments if you could be expected to know that your employee is disabled. This can be difficult to be sure about, so you might decide to make adjustments for all employees with health conditions.</p>
+
+          <p class="govuk-body">The law applies to all workers, including trainees, apprentices, contract workers and business partners.</p>
+
+          <!--
+            Understanding what is reasonable
+          -->
+
+          <h3 class="govuk-heading-m">Understanding what is reasonable</h3>
+
+          <p class="govuk-body">What is considered ‘reasonable’ will depend on your business.</p>
+
+          <p class="govuk-body">For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+          <!-- End of DIS-1 summary content -->
+
+            <!-- If ADJ-Q2 = I'm not sure -->
+            {% if (data['adjQ2'] == "notSure") %}
+              <!--
+                Print ADJ-G7 (4)
+                Print FIN-1 (5)
+                Print ADJ-G5 (6)
+              -->
+
+              <!-- Start of ADJ-G7 summary content -->
+
+              <h2 class="govuk-heading-l">Decide what is reasonable for your business</h2>
+            
+              <p class="govuk-body">You must make 'reasonable adjustments' to make sure workers with disabilities, or physical or mental health conditions, are not substantially disadvantaged when doing their jobs.</p>
+
+              <p class="govuk-body">What is considered ‘reasonable’ will depend on your business.</p>
+
+              <p class="govuk-body">For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+              <!-- End of ADJ-G7 summary content -->
+              
+              <!-- Start of FIN-1 summary content -->
+
+              <h2 class="govuk-heading-l">Tell your employee about possible financial support</h2>
+
+              <p class="govuk-body">Your employee might be able to get a government grant to help pay for adjustments. The scheme is called <a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in a new tab)</a>.</p>
+
+              <p class="govuk-body">Access to Work grants do not have to be paid back, and they will not affect any benefits your employee gets.</p>
+
+              <!-- End of FIN-1 summary content -->
+
+              <!-- Start of ADJ-G5 summary content -->
+
+              <h2 class="govuk-heading-l">Get help from occupational health</h2>
+                  
+              <p class="govuk-body">Occupational health professionals can help you and your employees to talk about health at work and decide any changes you will make.</p>
+
+              <!--
+                What they do
+              -->
+
+              <h3 class="govuk-heading-m">What they do</h3>
+
+              <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>providing health assessments for your employees</li>
+                <li>helping you decide on any changes you might need to make at work</li>
+                <li>supporting your employees to manage their health</li>
+              </ul>
+
+              <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>helping you monitor the health of your employees</li>
+                <li>managing cases over time and supporting employees to return to work</li>
+                <li>helping you to create policies for your business</li>
+              </ul>
+
+              <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+
+              <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+
+              <!--
+                Finding occupational health services
+              -->
+
+              <h3 class="govuk-heading-m">Finding occupational health services</h3>
+
+              <p class="govuk-body">The following links open in a new tab.</p>
+
+              <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
+              <a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
+              </p>
+
+              
+              <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+
+              <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+
+              <!-- End of ADJ-G5 summary content -->
+
+                <!-- If journey = red or green -->
+                {% if (data['staQ1'] == "offWork") or (data['staQ1'] == "returnToWork") %}
+
+                  <!-- Print RET-G7 (7) -->
+
+                  <!-- Start of RET-G7 summary content -->
+
+                  <h2 class="govuk-heading-l">Support your employee in their first week back at work</h2>
+
+                  <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+                  <!--
+                    Before employee's first day
+                  -->
+
+                  <h3 class="govuk-heading-m">Before your employee’s first day</h3>
+
+                  <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+                  <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+                  
+                  <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+                  <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+                  <!--
+                    What to do in the first week
+                  -->
+                  
+                  <h3 class="govuk-heading-m">What to do in the first week</h3>
+
+                  <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+                  <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+                  <!-- End of RET-G7 summary content -->
+
+                {% endif %}
+
+            {% endif %}
+
+            <!-- If ADJ-Q2 = No and ADJ-Q3 = Yes -->
+            {% if (data['adjQ2'] == "notSure") or (data['adjQ3'] == "yes") %}
+                <!-- Print FIN-1 (5) -->
+                <!-- Start of FIN-1 summary content -->
+
+                <h2 class="govuk-heading-l">Tell your employee about possible financial support</h2>
+
+                <p class="govuk-body">Your employee might be able to get a government grant to help pay for adjustments. The scheme is called <a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in a new tab)</a>.</p>
+
+                <p class="govuk-body">Access to Work grants do not have to be paid back, and they will not affect any benefits your employee gets.</p>
+
+                <!-- End of FIN-1 summary content -->
+
+                <!-- If ADJ-Q4 = Yes -->
+                {% if (data['adjQ4'] == "Yes") %}
+                  <!-- Print ADJ-G5 (6) -->
+
+                  <!-- Start of ADJ-G5 summary content -->
+
+                  <h2 class="govuk-heading-l">Get help from occupational health</h2>
+                
+                  <p class="govuk-body">Occupational health professionals can help you and your employees to talk about health at work and decide any changes you will make.</p>
+
+                  <!--
+                    What they do
+                  -->
+                  
+                  <h3 class="govuk-heading-m">What they do</h3>
+
+                  <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>providing health assessments for your employees</li>
+                    <li>helping you decide on any changes you might need to make at work</li>
+                    <li>supporting your employees to manage their health</li>
+                  </ul>
+
+                  <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>helping you monitor the health of your employees</li>
+                    <li>managing cases over time and supporting employees to return to work</li>
+                    <li>helping you to create policies for your business</li>
+                  </ul>
+
+                  <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+
+                  <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+
+                  <!--
+                    Finding occupational health services
+                  -->
+                  
+                  <h3 class="govuk-heading-m">Finding occupational health services</h3>
+
+                  <p class="govuk-body">The following links open in a new tab.</p>
+
+                  <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
+                  <a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
+                  </p>
+
+                  
+                  <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+
+                  <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+
+                  <!-- End of ADJ-G5 summary content -->
+
+                    <!-- If journey = red or green -->
+                    {% if (data['staQ1'] == "offWork") or (data['staQ1'] == "returnToWork") %}
+
+                      <!-- Start of RET-G7 summary content -->
+
+                      <h2 class="govuk-heading-l">Support your employee in their first week back at work</h2>
+
+                      <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+                      <!--
+                        Before employee's first day
+                      -->
+
+                      <h3 class="govuk-heading-m">Before your employee’s first day</h3>
+
+                      <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+                      <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+                      
+                      <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+                      <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+                      <!--
+                        What to do in the first week
+                      -->
+                      
+                      <h3 class="govuk-heading-m">What to do in the first week</h3>
+
+                      <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+                      <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+                      <!-- End of RET-G7 summary content -->
+
+                    {% endif %}
+
+                <!-- Else ADJ-Q4 = No and journey = red or green -->
+                {% else %}
+
+                  <!-- Print RET-G7 -->
+
+                  <!-- Start of RET-G7 summary content -->
+
+                  <h2 class="govuk-heading-l">Support your employee in their first week back at work</h2>
+
+                  <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+                  <!--
+                    Before employee's first day
+                  -->
+
+                  <h3 class="govuk-heading-m">Before your employee’s first day</h3>
+
+                  <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+                  <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+                  
+                  <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+                  <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+                  <!--
+                    What to do in the first week
+                  -->
+                  
+                  <h3 class="govuk-heading-m">What to do in the first week</h3>
+
+                  <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+                  <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+                  <!-- End of RET-G7 summary content -->
+
+                {% endif %}
+
+            {% endif %}
+
+            <!-- IF ADJ-Q2 = No and ADJ-Q3 = No -->
+            {% if (data['adjQ2'] == "notSure") or (data['adjQ3'] == "yes") %}
+
+              <!-- Print ADJ-G5 (6) -->
+
+              <!-- Start of ADJ-G5 summary content -->
+
+              <h2 class="govuk-heading-l">Get help from occupational health</h2>
+            
+              <p class="govuk-body">Occupational health professionals can help you and your employees to talk about health at work and decide any changes you will make.</p>
+
+              <!--
+                What they do
+              -->
+              
+              <h3 class="govuk-heading-m">What they do</h3>
+
+              <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>providing health assessments for your employees</li>
+                <li>helping you decide on any changes you might need to make at work</li>
+                <li>supporting your employees to manage their health</li>
+              </ul>
+
+              <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>helping you monitor the health of your employees</li>
+                <li>managing cases over time and supporting employees to return to work</li>
+                <li>helping you to create policies for your business</li>
+              </ul>
+
+              <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+
+              <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+
+              <!--
+                Finding occupational health services
+              -->
+              
+              <h3 class="govuk-heading-m">Finding occupational health services</h3>
+
+              <p class="govuk-body">The following links open in a new tab.</p>
+
+              <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
+              <a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
+              </p>
+
+              
+              <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+
+              <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+
+              <!-- End of ADJ-G5 summary content -->
+
+                <!-- If journey = red or green -->
+                {% if (data['staQ1'] == "offWork") or (data['staQ1'] == "returnToWork") %}
+
+                  <!-- Print RET-G7 (7) -->
+
+                  <!-- Start of RET-G7 summary content -->
+
+                  <h2 class="govuk-heading-l">Support your employee in their first week back at work</h2>
+
+                  <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+                  <!--
+                    Before employee's first day
+                  -->
+
+                  <h3 class="govuk-heading-m">Before your employee’s first day</h3>
+
+                  <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+                  <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+                  
+                  <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+                  <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+                  <!--
+                    What to do in the first week
+                  -->
+                  
+                  <h3 class="govuk-heading-m">What to do in the first week</h3>
+
+                  <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+                  <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+                  <!-- End of RET-G7 summary content -->
+
+                {% endif %}
+
+            {% endif %}
+            
+              
+            <!-- IF ADJ-Q2 = YES and STA-Q1 = red or green -->
+            {% if (data['adjQ2'] == "yes") and (data['staQ1'] == "offWork" or data['staQ1'] == "returnToWork") %}
+
+              <!-- Print RET-G7 (7) -->
+
+              <!-- Start of RET-G7 summary content -->
+
+              <h2 class="govuk-heading-l">Support your employee in their first week back at work</h2>
+
+              <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+              <!--
+                Before employee's first day
+              -->
+
+              <h3 class="govuk-heading-m">Before your employee’s first day</h3>
+
+              <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+              <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+              
+              <p class="govuk-body">Ask your employee if they want other people to know about their disability or health condition. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+              <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+              <!--
+                What to do in the first week
+              -->
+              
+              <h3 class="govuk-heading-m">What to do in the first week</h3>
+
+              <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+              <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+              <!-- End of RET-G7 summary content -->
+
+            {% endif %}
+
+        {% endif %}
+
+        <!-- ADJ-G10 (8) = always printed out as it's the last page for every journey -->
+
+        <!-- Start of ADJ-G10 summary content -->
+
+        <h2 class="govuk-heading-l">Have regular meetings with your employee</h2>
+
+        <p class="govuk-body">It’s important to keep checking that your employee feel supported. If their condition changes, you might need to make more changes.</p>
+
+        <!--
+          Keep talking with employee
+        -->
+
+        <h3 class="govuk-heading-m">Keep talking with your employee</h3>
+
+        <p class="govuk-body">After you’ve made adjustments to your employee’s role, workplace, or ways of working you will need to regularly check they are still appropriate.</p>
+
+        <p class="govuk-body">It’s important to keep talking to your employee about what they need. The changes you put in place might not be right for them, or your employee’s disability or health condition might change.</p>
+
+        <!--
+          Support from occupational health
+        -->
+
+        <h3 class="govuk-heading-m">Support from occupational health</h3>
+
+        <p class="govuk-body">If the changes you put in place are not supporting your employee as much as they should, or if the employee’s situation has changed, you might find it useful to hire an occupational health provider.</p>
+
+        <p class="govuk-body">Find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> on the ACAS website.</p>      
+      
+        <!-- End of ADJ-G10 summary content -->
+        
+    </div>
+  </div>
+
+{% endblock %}
+
+

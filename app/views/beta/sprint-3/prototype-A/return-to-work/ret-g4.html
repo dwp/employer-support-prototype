@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Talk to your employee about returning to work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="is-employee-off-because-of-covid-19" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "ret-q1"
+      }) }}
+
+      <h1 class="govuk-heading-l">Talk to your employee about returning to work</h1>
+
+      <p class="govuk-body">You should have a conversation with your employee about how you can help them return to work.</p>
+
+      <p class="govuk-body">Your employee may be nervous about returning, so reassure them they will be welcomed back. You could also help them feel more connected by telling them news about their colleagues, or updates about the business.</p>
+
+        <h2 class="govuk-heading-m">What to say</h2>
+
+        <p class="govuk-body">Your employee should lead the conversation, but there are some questions you could ask as prompts:</p>
+
+          <h3 class="govuk-heading-s">“Do you need any more changes to your workplace?”</h3>
+
+          <p class="govuk-body">Your employee might need more adjustments to their work environment or ways of working to help them do their job, or to avoid them relapsing with the same condition.</p>
+
+          <h3 class="govuk-heading-s">“Can you do the same job as before?”</h3>
+
+          <p class="govuk-body">You may need to modify your employee’s job to accommodate any changes due to their illness or disability. There might also be another role which suits them better now.</p>
+
+          <h3 class="govuk-heading-s">“Are you able to work the same hours as before?”</h3>
+
+          <p class="govuk-body">Some employees benefit from a phased return. For example, if someone used to work full time Monday to Friday, they might start with just 3 days a week, and increase it over time.</p>
+
+        <h2 class="govuk-heading-m">Make notes about the conversation</h2>
+
+        <p class="govuk-body">Keep the conversation relaxed and informal, but it’s also a good idea to make notes of what you and the employee have agreed, and next steps. If you’re not sure how to make the changes your employee needs, you may need to speak to an Occupational Health specialist.</p>
+
+        <h2 class="govuk-heading-m">What to do when they’re back at work</h2>
+
+        <p class="govuk-body">Arrange regular meetings with your employee when they’re back at work. Be clear that the purpose of the meetings is to help them, not to judge their progress.</p>
+
+        <p class="govuk-body">The meetings are a good time to check if your employee needs any more changes to their workplace, job role, or working patterns.</p>
+
+        <p class="govuk-body">More information about <a href="https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence">returning to work after absence </a> can be found on the ACAS website.</p>
+
+        <br>
+        
+      <!--
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+      -->
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

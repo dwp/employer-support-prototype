@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What to do if your employee does not want to tell you about their disability or health condition {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">What to do if your employee does not want to tell you about their disability or health condition</h1>
+
+      <p class="govuk-body-l">It can be helpful for you to know why your employee is off work, but they do not have to tell you.</p>
+      
+      <p class="govuk-body">You can help create a culture in your workplace that encourages employees to share relevant health information with you.</p>
+
+      <p class="govuk-body">Explain to employees how you keep health information private, and only use it to make positive changes to help them do their job. Be non-judgemental when you talk about disabilities or health conditions, and encourage colleagues to do the same. This is especially important for mental health conditions.</p>
+
+      <h2 class="govuk-heading-m">When you can ask for medical evidence</h2>
+
+      <p class="govuk-body">If your employee is off work due to a disability or health condition for 8 or more days you can ask for medical evidence. Examples of medical evidence are a letter from a hospital, or a fit note from a doctor. Fit notes used to be called sick notes.</p>
+
+      <p class="govuk-body">A fit note will usually include a brief summary of the disability or health condition, and the medical professional’s recommendation about the employee’s ability to work.</p>
+
+      <p class="govuk-body">If your employee does not give you medical evidence after 8 days’ absence you do not have to pay Statutory Sick Pay.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers" target="_blank">Find out more about fit notes (opens in a new tab)</a></p>
+
+      
+      <br>
+
+<!-- red -->
+   {% if (data['staQ1'] == "offWork") %}   
+      {{ govukButton({
+        text: "Continue",
+        href: "est-q1"
+      }) 
+    }}
+
+<!-- blue -->
+    {% elseif (data['staQ1'] == "ongoingCondition") %}    
+      {{ govukButton({
+        text: "Continue",
+        href: "est-q4"
+      }) 
+    }}
+
+<!-- green -->
+    {% else %}  
+      {{ govukButton({
+        text: "Continue",
+        href: "est-q4"
+      }) 
+    }}
+      
+    {% endif %}
+      
+    </div>
+  </div>
+
+{% endblock %}

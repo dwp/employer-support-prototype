@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have regular meetings with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G10 summary content -->
+
+      <span class="govuk-caption-l">This section: Keeping a record of changes</span>
+
+      <h1 class="govuk-heading-xl">Have regular meetings with your employee</h1>
+
+      <p class="govuk-body-l">It's important to keep checking that your employee feels supported and any changes are still right for them.</p>
+
+      <!--
+        Keep talking with employee
+      -->
+
+      <h2 class="govuk-heading-l">Keep talking with your employee</h2>
+
+      <p class="govuk-body">Talk regularly to your employee about what they need. The changes you put in place now might not always be right for them.</p>
+
+      <p class="govuk-body">Some conditions will vary over time, and others will have good and bad days. Try to accommodate this kind of change.</p>
+
+      <p class="govuk-body">You should agree how often you will talk together. Choose a method of communication that works for both of you.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/talking-toolkit.htm" target="_blank">A talking toolkit based on principles of good practices is available on the HSE website (opens in new tab)</a></p>
+
+      
+      <!--
+        Record and update a plan
+      -->
+
+      <h2 class="govuk-heading-l">Record and update a plan</h2>
+
+      <p class="govuk-body">You should keep a record of the changes or reasonable adjustments you have agreed. Review it together regularly.</p>
+
+      <p class="govuk-body">A reasonable adjustment plan or Health Adjustment Passport is useful for this. <a href="https://www.gov.uk/government/publications/health-adjustment-passport" target="_blank">Check the guidance on GOV.UK (opens in new tab)</a>.</p>
+
+
+      <!--
+       Keeping information private
+      -->
+
+      <h2 class="govuk-heading-l">Keeping information private</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You have a duty of care as an employer to protect your employee.
+        </strong>
+      </div>
+
+      <p class="govuk-body">Everyone responsible for using personal data must comply with data protection laws. You must make sure that your employee's personal data is used properly and lawfully.</p>
+
+      <p class="govuk-body">Your employee might ask you not to share details of sensitive personal information (such as details of health conditions). You can ask for their consent to share their information. However, explain that you might need to use this information to put adjustments in place or to keep them safe in the workplace.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/data-protection" target="_blank">Check more guidance on the General Data Protection Regulation (GDPR) (opens in new tab)</a></p>
+
+
+      <!--
+        Support from occupational health
+      -->
+
+      <h2 class="govuk-heading-l">Support from occupational health</h2>
+
+      <p class="govuk-body">The changes you put in place should support your employee as much as possible. If the situation has changed, you can get useful advice from an occupational health provider. You will have to pay for these services but they can help your business by keeping your employees healthy and productive.</p>
+
+      <p class="govuk-body"><a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">Find more about using occupational health services on the Acas website (opens in new tab)</a></p>      
+     
+      <!-- End of ADJ-G10 summary content -->
+
+      <br>
+      <p class="govuk-body"><strong>Next page:</strong> Your summary of guidance in this service</p>
+
+      {{ govukButton({
+        text: "Continue to my summary",
+        href: "sum-5"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Ask your employee about a health condition or disability {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Ask your employee about a health condition or disability</h1>
+
+      <p class="govuk-body">You should ask your employee about any health condition or disability they have. Start with a general chat about how they are and how any condition might affect them.</p>
+
+      <p class="govuk-body">Your employee does not have to tell you about their health condition or disability. You should avoid asking for too many details, or pushing them to be certain about things too soon.</p>
+
+      <p class="govuk-body">When you talk to your employee about their health condition or disability, make sure you consider their dignity and privacy. Their personal information should be handled confidentially.</p>
+
+      <p class="govuk-body">Not all employees who meet the definition of disability will think of themselves as a ‘disabled person’. Even if your employee has not told you that they have a disability, you should consider any circumstances which suggest that they may be disabled and need support.</p>
+
+      <p class="govuk-body">You can come back to this website at any time. This will help you with continued support for your employee with the changes they need.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue to summary",
+        href: "sum-5"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

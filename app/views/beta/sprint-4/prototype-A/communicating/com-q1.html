@@ -1,0 +1,52 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you want help on what to say to your employee while they are off sick? {{ data['pageTitleAddOn'] }} 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      {{ govukRadios({
+        idPrefix: "wantHelpOnWhatToSayA",
+        name: "wantHelpOnWhatToSayA",
+        value: data['wantHelpOnWhatToSayA'],
+        fieldset: {
+          legend: {
+            text: "Do you want help on what to say to your employee while they are off sick?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Staying in touch can make your employee feel supported and help you understand the effect on your business."
+        },
+        items: [
+          {
+            value: "Yes~/beta/sprint-4/prototype-A/communicating/com-g1",
+            text: "Yes",
+            checked: data['wantHelpOnWhatToSayA'] === 'Yes'
+          },
+          {
+            value: "No~/beta/sprint-4/prototype-A/return-to-work/ret-q1",
+            text: "No",
+            checked: data['wantHelpOnWhatToSayA'] === 'No'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

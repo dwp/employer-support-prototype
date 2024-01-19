@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You do not need to pay Statutory Sick Pay yet {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">You do not need to pay Statutory Sick Pay yet</h1>
+
+      <!--
+          If employee is off for 1 day, content needs to say day instead of 'days'
+      -->
+
+      {% if data['daysEmployeeOffSick'] == '1'  %}
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} day. This includes non-working days, such as weekends.
+        </p>
+      {% else  %}
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.
+        </p>
+      {% endif  %}
+
+      <p class="govuk-body">You do not need to pay Statutory Sick Pay (SSP). You might need to pay Statutory Sick Pay if your employee continues to be off sick for 4 or more days. Find out more about <a href="https://www.gov.uk/calculate-statutory-sick-pay">Statutory Sick Pay</a>.</p>
+
+      <p class="govuk-body">Some businesses choose to pay their own sick pay. If you offer sick pay you can decide when to start and stop paying it, and how much to pay. You can pay it from the first day your employee is sick.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../communicating/com-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

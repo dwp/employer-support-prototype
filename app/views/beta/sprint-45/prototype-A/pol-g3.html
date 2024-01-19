@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Preparing policy and procedure documents {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Preparing policy and procedure documents</h1>
+    
+      <p class="govuk-body">There are several ways that you can prepare the documents for your business. These include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>creating them yourself from scratch </li>
+        <li>creating them yourself from a set template</li>
+        <li>using the services of a third party such as an HR or legal company</li>
+      </ul>
+
+      <p class="govuk-body">There will be pros and cons to each of these options. You will have to decide which is best for your business.</p>
+
+      <p class="govuk-body">You can <a href="https://www.acas.org.uk/templates-for-employers" target="_blank">adapt these templates from Acas.org.uk (opens in new tab)</a> for your business.  </p>
+
+      <p class="govuk-body">Check how to <a href="https://www.hse.gov.uk/simple-health-safety/policy/index.htm" target="_blank">prepare a health and safety policy (opens in new tab)</a> on the HSE website.  </p>
+
+      <p class="govuk-body">Read further <a href="https://www.unbiased.co.uk/discover/tax-business/running-a-business/small-business-compliance-uk-what-you-need-to-know " target="_blank">guidance on regulations and legal obligations for small businesses on Unbiased.co.uk</a>.</p>
+
+      <h2 class="govuk-heading-l">Supplying accessible policies</h2>
+      
+      <p class="govuk-body">Policies should be accessible to all employees. Supplying them in different formats could help employees with certain health conditions or disabilities. Consider having a printed, digital or easy-read version. Remember to update all formats when adding any changes in legislation or when there are changes to your procedures.</p>      
+
+      <p class="govuk-body">You should make the wording of any policies or procedure documents clear and concise.</p> 
+          
+      <p class="govuk-body">You could consider supplying policies to new employees before their start date. This will give them an idea of the company processes. It could save time in their first week if they have done mandatory reading before their start date.</p>      
+      
+      <h2 class="govuk-heading-l">Addressing capability concerns</h2>
+
+      <p class="govuk-body">Before addressing any concerns, you should understand what is and is not a disability. <a href="https://www.citizensadvice.org.uk/law-and-courts/discrimination/check-if-youre-protected-from-discrimination/what-counts-as-disability/" target="_blank">You can read an explanation of the definition in the Equality Act 2010 on the Citizens Advice website (opens in new tab)</a>.</p>
+
+      <p class="govuk-body">If you have capability concerns about an employee and identify a health condition or disability could be the possible cause, you should <a href="https://www.acas.org.uk/capability-procedures" target="_blank">check the guidance on the Acas website (opens in new tab)</a>.</p>
+
+      <p class="govuk-body">For further support on managing performance <a href="https://www.gov.uk/government/publications/disability-confident-and-cipd-guide-for-line-managers-on-employing-people-with-a-disability-or-health-condition/guide-for-line-managers-recruiting-managing-and-developing-people-with-a-disability-or-health-condition#managing-performance-and-development" target="_blank">read the guidance on GOV.UK (opens in new tab)</a>.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Back to start",
+        href: "sta-4"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

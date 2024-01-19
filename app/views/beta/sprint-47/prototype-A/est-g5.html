@@ -1,0 +1,101 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What to do if your employee has not told you about a health condition or disability {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">What to do if your employee has not told you about a health condition or disability</h1>
+
+      <p class="govuk-body-l">Your employee does not have to give you details of their condition, but there are some things you can do to help.</p>
+
+      <h2 class="govuk-heading-l">Reassure your employee</h2>
+      
+      <p class="govuk-body">Explain that you will keep health information private, and only use it to make changes to help your employee do their job.</p>
+
+      <p class="govuk-body">Avoid judgements when you talk about health conditions or disabilities. This is especially important for mental health conditions.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You should understand what is and is not a disability. This could help you avoid possible disability discrimination if you have any concerns around employee performance or capability.
+        </strong>
+      </div>
+
+      <p class="govuk-body"><a href="https://www.citizensadvice.org.uk/law-and-courts/discrimination/check-if-youre-protected-from-discrimination/what-counts-as-disability/" target="_blank">You can read an explanation of the definition of disability in the Equality Act 2010 on the Citizens Advice website (opens in new tab)</a></p>
+      
+      <p class="govuk-body">Do not put pressure on your employee to return to work quickly. Come back to the conversation later if they are not ready to talk.</p>
+
+      <h2 class="govuk-heading-l">Company culture</h2>
+
+      <p class="govuk-body">It's important to create a culture where employees are happy to talk about about their health. Treating each employee with care will help to create this culture over time.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/guidance/disability-confident-how-to-sign-up-to-the-employer-scheme" target="_blank">The Disability Confident scheme (opens in a new tab)</a> can help you become more comfortable with employing and managing people with long-term health conditions and disabilities. </p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/workplace-culture.htm" target="_blank">Find more best practice guidance on creating a supportive and enabling workplace on the HSE website (opens in new tab)</a></p>
+
+      <h2 class="govuk-heading-l">Medical evidence and sick pay</h2>
+
+      <p class="govuk-body">You can choose to ask for medical evidence of your employee’s condition if they have been off work for 8 days or more. Examples of medical evidence include a letter from a hospital, or a fit note.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers" target="_blank">Check more guidance on fit notes (opens in new tab)</a></p>
+
+      <p class="govuk-body">You would not have to pay Statutory Sick Pay if they do not provide this evidence.</p>
+
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q2"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

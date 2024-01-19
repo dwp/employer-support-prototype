@@ -1,0 +1,60 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have you talked to {{ data['employeeNameD']|default('your employee', true) }} about how their condition might affect them?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "what-kind-of-illness-or-disability"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukRadios({
+        idPrefix: "talkedToEmployeeD",
+        name: "talkedToEmployeeD",
+        value: data['talkedToEmployeeD'],
+        fieldset: {
+          legend: {
+            text: "Have you talked to " + data['employeeNameD']|default('your employee', true) + " about how their condition might affect them?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes~/alpha/sprint-5/disclose-condition/prototype-D/could-employee-stay-at-work",
+            text: "Yes",
+            checked: data['talkedToEmployeeD'] === 'Yes'
+          },
+          {
+            value: "No",
+            text: "No",
+            checked: data['talkedToEmployeeD'] === 'No'
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

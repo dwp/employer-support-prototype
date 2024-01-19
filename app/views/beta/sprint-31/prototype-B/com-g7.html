@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+If you think you cannot make the changes your employee needs {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">If you think you cannot make the changes your employee needs</h1>
+
+      <p class="govuk-body-l">Before you decide that there's nothing you can do for your employee, be careful that you are not discriminating against them.</p>
+
+      <h2 class="govuk-heading-l">The law on making changes</h2>
+
+      <p class="govuk-body">By law, you must make changes if you could be expected to know that your employee is disabled. These are called 'reasonable adjustments'. You would be discriminating against them if you did not make reasonable adjustments.</p>
+
+      <p class="govuk-body">The law defines disability as something physical or mental which has a ‘substantial’ and ‘long-term’ effect on someone’s ability to do normal daily activities.</p>
+      
+      <p class="govuk-body">For more, see the <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">definition of disability under the Equality Act 2010 (opens in new tab)</a>.</p>
+
+      <h2 class="govuk-heading-l">What is reasonable?</h2>
+
+      <p class="govuk-body">What is ‘reasonable’ will depend on your business. It would be helpful for you to consider the extent to which any change could help overcome the disadvantage faced by your employee. </p>
+
+      <p class="govuk-body">You can also consider things such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how practical and effective it is to make an adjustment</li>
+        <li>the cost of the adjustment</li>
+        <li>the size of your business</li>
+        <li>the resources available to you</li>
+        <li>the benefit to your employee</li>
+      </ul>
+      
+      <p class="govuk-body">If an employee uses a wheelchair and you do not have space for a lift, you would not need to change premises. But you would need to consider other ways for them to be able to do their job, such as working from somewhere else.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q3"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

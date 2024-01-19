@@ -1,0 +1,79 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What kind of illness does your employee have? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+
+    <!--
+        Full section may need renaming
+        
+        Delete comment once renaming complete
+    -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="../reasonable-adjustments/adj-q1" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "est-q3"
+      }) }}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+                What kind of illness does your employee have?
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            You’ll see relevant advice based on your employee’s condition.
+          </div>
+          <div id="waste-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                A mental health condition
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                A physical condition
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Coronavirus (COVID-19)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Something else
+                </label>
+              </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

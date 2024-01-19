@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  How many employees does your company have? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="est-q5-routing">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                How many employees does your company have?
+              </h1>
+            </legend>
+            <div id="changed-name-hint" class="govuk-hint">
+              Include yourself and any other permanent or contract employees
+            </div>
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Why we ask this question
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                This helps us know who is using this service
+              </div>
+            </details>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-1" name="numberOfEmployees" type="radio" value="1to9">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-1">
+                  1 to 9
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-2" name="numberOfEmployees" type="radio" value="10to49">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-2">
+                  10 to 49
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-3" name="numberOfEmployees" type="radio" value="50to249">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-3">
+                  50 to 249
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-4" name="numberOfEmployees" type="radio" value="250plus">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-4">
+                  250 or more
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-5" name="numberOfEmployees" type="radio" value="notSure">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-5">
+                  I’m not sure
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

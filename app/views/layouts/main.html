@@ -1,0 +1,27 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/beta/release-7-0-0/release-7-0-0-index",
+    serviceName: serviceName,
+    serviceUrl: "/beta/release-7-0-0/release-7-0-0-index",
+    containerClasses: "govuk-width-container"
+  }) }}
+  
+{% endblock %}
+
+<header>
+  <header class="govuk-header dwp-header" data-module="govuk-header">
+  <div class="">
+      <div class="govuk-header__link--service-name dwp-header__container--service-name service-name-default">
+          Apply for a benefit
+      </div>
+  </div>
+  </header>
+  </header>

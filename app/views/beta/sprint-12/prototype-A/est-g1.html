@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You do not need to pay Statutory Sick Pay yet {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">You do not need to pay Statutory Sick Pay yet</h1>
+
+      <!--
+          If employee is off for 1 day, content needs to say day instead of 'days'
+      -->
+
+      <p class="govuk-body">Your employee went off work on {{ data['employeeLeaveDateDayA'] | int }} {{ data['employeeLeaveDateMonthA'] | formatMonth }} {{ data['employeeLeaveDateYearA'] }}.
+        This means your employee has been off work for 
+        {% if data['daysEmployeeOffSick'] == '1'  %}
+         {{ data['daysEmployeeOffSick'] }} day.
+        {% else  %}
+          {{ data['daysEmployeeOffSick'] }} days. 
+        {% endif  %}
+      This includes non-working days, such as weekends.
+      </p>
+
+      <p class="govuk-body">You do not need to pay Statutory Sick Pay (SSP). You might need to pay Statutory Sick Pay if your employee continues to be off sick for 4 or more days. Find out more about <a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Statutory Sick Pay (opens in a new tab)</a>.</p>
+
+      <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+      <p class="govuk-body">You should not ask your employee to provide proof of their disability or health condition from a medical professional. If your employee is off work for 8 or more days you can choose to ask for proof before you pay SSP.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Talking about the condition
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "talked-about-condition"
+    }) }}
+
+    <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+    <h1 class="govuk-heading-l">Talking about the condition</h1>
+
+    <p class="govuk-body">It’s important to talk to {{ data['employeeNameC']|default('your employee', true) }} as early as you can.</p>
+
+    <p class="govuk-body">There’s no perfect way to do it, but it is important to be open to suggestions and let {{ data['employeeNameC']|default('your employee', true) }} tell you what would help. Start with how {{ data['employeeNameC']|default('your employee', true) }} is generally, then move on to work.</p>
+       
+    <p class="govuk-body">You can ask things like:</p>
+    
+    <!--
+         How is their condition affecting them?
+    -->
+      
+    <h2 class="govuk-heading-m">How is their condition affecting them?</h2>
+
+    <p class="govuk-body">The first step is to talk about how then condition affects them. Physical conditions can affect people in many different ways.</p>
+
+    <p class="govuk-body">Examples of how a physical condition might affect someone include: </p>
+    
+    <ul class="govuk-list govuk-list--bullet">
+      <li>if they can get to work, such as if driving is difficult</li>
+      <li>how they can do their job, if sitting for a long time is harder</li>
+      <li>the kind of work they can do, if lifting or carrying causes pain</li>
+    </ul>
+
+    <!--
+         Will they stay at work or take sick leave?
+    -->
+      
+    <h2 class="govuk-heading-m">Will they stay at work or take sick leave?</h2>
+
+    <p class="govuk-body">Staying at work can be good for many people, sometimes with changes to their job. Others will need to take time off.</p>
+    <p class="govuk-body">You can ask {{ data['employeeNameC']|default('your employee', true) }} if they think they would benefit from staying at work, or if they need some sick leave at first.</p>
+    <p class="govuk-body">If you need advice, you can get help from an occupational health expert. They can help your business to maintain a healthy workforce.</p>
+      
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="https://www.gov.uk/taking-sick-leave">Taking sick leave - GOV.UK</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="https://www.gov.uk/statutory-sick-pay">Statutory Sick Pay (SSP)  - GOV.UK</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="https://www.acas.org.uk/using-occupational-health-at-work">Using occupational health at work - Acas</a>
+      </li>
+    </ul>
+
+    <!--
+         Are there any changes at work that would help?
+    -->
+      
+    <h2 class="govuk-heading-m">Are there any changes at work that would help?</h2>
+
+    <p class="govuk-body">Changes could be needed to help {{ data['employeeNameC']|default('your employee', true) }} stay at work. Things like reduced hours, different shifts or avoiding some duties can help.</p>
+    <p class="govuk-body">You should ask {{ data['employeeNameC']|default('your employee', true) }} about changes that would help them. You can make suggestions, but it’s important to let them take the lead.</p>
+
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">Reasonable adjustments for workers with disabilities or health conditions - GOV.UK</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice">Examples of reasonable adjustments in practice | Equality and Human Rights Commission</a>
+      </li>
+    </ul>
+
+    <!-- 
+      Checklist section 
+    -->
+
+    <h2 class="govuk-heading-m">Checklist: talking about condition</h2>
+
+    <div class="govuk-inset-text">
+      Use <a href="checklist-talking-about-the-condition">this checklist</a> in your conversation with your employee.
+    </div>
+
+  </div>
+</div>
+
+<div class="unbrandedFooter">
+  <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
+    <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+  </p>
+</div>
+
+{% endblock %}

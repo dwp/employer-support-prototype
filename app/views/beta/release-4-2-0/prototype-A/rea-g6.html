@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You might need to make changes for your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+    <h1 class="govuk-heading-xl">You might need to make changes for your employee</h1>
+   
+    <p class="govuk-body-l">You must be sure your disabled employee is not substantially disadvantaged when doing their job. If they are, you might need to make changes for them. These changes are called ‘reasonable adjustments’.</p>
+
+    <h2 class="govuk-heading-l">Talk to your employee</h2>
+
+    <p class="govuk-body">Do not guess if your employee is at a disadvantage. Ask them about their experiences at work.</p>
+
+    <p class="govuk-body">It may be helpful to show your employee this page. You will be able to save and print all guidance information when you reach the end of the questions.</p>
+
+    <p class="govuk-body">If your employee does not feel disadvantaged at the moment, check again in the future. The workplace might be different, or your employee’s disability might change.</p>
+
+    <h2 class="govuk-heading-l">How a disabled employee might be disadvantaged</h2>
+
+    <p class="govuk-body">A disabled employee could be disadvantaged by:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the way things are done in your business, such as policies or working conditions</li>
+      <li>physical barriers in the workplace, such as heavy doors or steps</li>
+      <li>a lack of specialist equipment or assistance, such as screen-reading software or a support worker</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">What is a ‘substantial’ disadvantage</h2>
+
+    <p class="govuk-body">A disabled employee is at a ‘substantial’ disadvantage when they are affected in a way that is not ‘minor or trivial’.</p>
+
+    <p class="govuk-body">For example, an employee with hearing loss finds it difficult to hear in meetings which take place in an open plan office. They are at a substantial disadvantage compared to other employees who can hear everything said in the meeting.</p>
+
+    <p class="govuk-body">In this example the employer could make a reasonable adjustment by changing the location of the meeting.</p>
+
+    <h2 class="govuk-heading-l">What is ‘reasonable’</h2>
+
+    <p class="govuk-body">What is ‘reasonable’ will be different for each business.</p>
+
+    <p class="govuk-body"></p>You can consider how practical it is to make an adjustment, the cost, and the benefit to your employee. All this will help you decide what is reasonable.</p>
+
+    <p class="govuk-body">For example, an employee uses a wheelchair and their workplace does not have space for a lift. The employer would not be forced to change premises. However, they would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+    <p class="govuk-body">See more information about <a href="https://www.equalityhumanrights.com/en/multipage-guide/what-do-we-mean-reasonable/" target="_blank">what we mean by reasonable (opens in a new tab)</a> on the EHRC website.</p>
+
+    <h2 class="govuk-heading-l">Your legal obligations</h2>
+
+    <p class="govuk-body">You could be unlawfully discriminating against a disabled employee if you do not make the reasonable adjustments they need.</p>
+
+    <p class="govuk-body">The employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+
+    <p class="govuk-body">The law applies to all workers. This includes trainees, apprentices, contract workers and business partners.</p>
+
+    <h2 class="govuk-heading-l">Supporting all your employees</h2>
+
+    <p class="govuk-body">The law about reasonable adjustments only applies to employees who are disabled. However, you can also choose to make reasonable adjustments for all employees with health conditions.</p>
+
+    <p class="govuk-body">Many adjustments are low cost and simple to do, and can help your employee continue in their role.</p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

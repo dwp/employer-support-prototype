@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Ask your employee about a health condition or disability {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">This section: having conversations with your employee</span>
+
+      <h1 class="govuk-heading-xl">Ask your employee about a health condition or disability</h1>
+
+      <p class="govuk-body">You should ask your employee about any health condition or disability they have. Start with a general chat about how they are and how any condition might affect them.</p>
+
+      <p class="govuk-body">Your employee does not have to tell you about their health condition or disability. You should avoid asking for too many details or pushing them to be certain about things too soon.</p>
+
+      <p class="govuk-body">When you talk to your employee about their health condition or disability, make sure you consider their dignity and privacy. Their personal information should be handled confidentially.</p>
+
+      <p class="govuk-body">Not all employees who meet the definition of disability will think of themselves as a ‘disabled person’. Even if your employee has not told you that they have a disability, you should consider any circumstances which suggest that they may be disabled and need support.</p>
+
+      <p class="govuk-body">You can come back to this website at any time. This will help you with continued support for your employee with the changes they need.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/equality-act-guidance/disability-equality-act-2010-guidance-on-matters-to-be-taken-into-account-in-determining-questions-relating-to-the-definition-of-disability-html#introduction" target="_blank">Check what is classed as a disability under the Equality Act 2010 on GOV.UK (opens in new tab)</a></p>
+
+      <h2 class="govuk-heading-l">If an employee requests no contact</h2>
+
+      <p class="govuk-body">As an employer you might need to have some contact to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>understand if the reason for this is that the employee is too unwell or incapacitated to maintain contact</li>
+        <li>understand if the absence is due to work-related issues or triggers</li>
+        <li>understand the up-to-date medical position or request a fit note</li>
+        <li>discuss a return to work plan, when appropriate</li>
+      </ul>
+
+      <p class="govuk-body">You could agree to reduce contact or to communicate in writing only for a set period.</p>
+
+      <p class="govuk-body">Excessive contact could give an employee grounds to complain of harassment <a href="https://www.legislation.gov.uk/ukpga/1997/40/contents" target="_blank">under the Protection From Harassment Act 1997 (opens in new tab)</a>.</p>
+      
+      <br />
+      <p class="govuk-body"><strong>Next page:</strong> your summary of guidance in this service</p>
+
+      {{ govukButton({
+        text: "Continue to my summary",
+        href: "sum-5"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

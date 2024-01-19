@@ -1,0 +1,47 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You must pay Statutory Sick Pay
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "is-employee-off-because-of-covid-19"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+      <h1 class="govuk-heading-l">You must pay Statutory Sick Pay</h1>
+
+      <p class="govuk-body">Your employee has been off work for 8 calendar days. Calendar days include non-working days, such as weekends.</p>
+
+      <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a>. You pay SSP instead of a normal salary. You cannot claim SSP back from the government.</p>
+
+      <p class="govuk-body">Some employers also choose to pay additional sick pay. If you offer extra sick pay you can decide when to start and stop paying it, and how much extra to pay.</p>
+
+      <p class="govuk-body">Before you pay SSP you can ask your employee for proof of their sickness. A fit note is an example of proof. Fit notes used to be called sick notes.</p>
+
+      <p class="govuk-body">Your employee can ask their doctor for a free fit note, because they've been off sick for 8 or more days. <a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers">Find out what to do when you’re given a fit note</a>.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Next question",
+        href: "have-you-contacted-employee"
+      }) }}
+      
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

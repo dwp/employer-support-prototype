@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Making changes for an employee with a disability or health condition {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="adj-g3" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "adj-q1"
+      }) }}
+
+      <h1 class="govuk-heading-l">Making changes for an employee with a disability or health condition</h1>
+
+      <h2 class="govuk-heading-s">Discuss possible changes together</h2>
+
+        <p class="govuk-body">You should ask your employee which changes at work might help them. You can make suggestions, but it is important to listen and let them take the lead.</p>
+
+        <p class="govuk-body">Talk to your employee about possible changes such as:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>changes to the workplace, or anywhere they work</li>
+          <li>different ways of working</li>
+          <li>giving them extra support</li>
+        </ul>
+
+        <p class="govuk-body">These changes are called reasonable adjustments. This means you should make any changes if they are reasonable and affordable for your business.</p>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">More about reasonable adjustments on GOV.UK</a></p>
+
+        <h2 class="govuk-heading-s">Help with reasonable adjustments</h2>
+
+        <p class="govuk-body">Help with costs might be available if you cannot make the changes your employee needs.</p>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/access-to-work">Access to Work</a> is a free government service where your employee can apply for help with the costs of changes. They can also provide a workplace assessment to decide which changes are needed.</p>
+
+        <h2 class="govuk-heading-s">If your employee is disabled</h2>
+
+        <p class="govuk-body">The law says that you must make reasonable adjustments if your employee is a disabled person. You must take care not to discriminate against them.</p>
+
+        <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/finding-out-if-someone-disabled-person">Finding out if someone is a disabled person: EHRC</a></p>
+
+        <br>
+        
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

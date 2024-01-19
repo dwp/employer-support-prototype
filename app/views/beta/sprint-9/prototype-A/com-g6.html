@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Make changes to the role or workplace {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of COM-G6 summary content -->
+
+      <h1 class="govuk-heading-l">Make changes to the role or workplace</h1>
+     
+      <p class="govuk-body-l">You will need to make ‘reasonable adjustments’ to make sure workers with disabilities, or physical or mental health conditions, are not substantially disadvantaged when doing their jobs.</p>
+
+
+      <!--
+        Printing adjustments based on checkbox selection in EST-Q4
+      -->
+
+      {% set employeeActivitys = data['employeeActivity'] %}
+      
+      {% for item in employeeActivitys %}
+
+        {% if item != 'somethingElse' %}
+          <p class="govuk-body">The adjustments you make will depend on your employee’s needs.</p>
+        {% else %}
+          <p class="govuk-body">The adjustments you make will depend on your employee’s needs. For example, you could provide:</p>
+        {% endif %}
+
+        {% if item == 'walkingStanding' %}
+
+          <h2 class="govuk-heading-m">Because your employee’s role involves walking and standing</h2>
+
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a chair for tasks which involve a lot of standing</li>
+            <li>ramps over steps, if your employee uses a wheelchair</li>
+            <li>a closer car parking space, if your employee drives</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'carryingObjects' %}
+
+          <h2 class="govuk-heading-m">Because your employee’s role involves carrying or moving objects</h2>
+
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a trolley to help your employee move objects without carrying them</li>
+            <li>more breaks, if your employee’s health condition or disability causes them to get tired more easily</li>
+            <li>a change of role, if your employee’s health condition or disability means they can’t carry or move objects safely</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'usingComputer' %}
+          <h2 class="govuk-heading-m">Because your employee’s role involves using a computer</h2>
+        
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>screen-reading software, if your employee is blind or partially sighted</li>
+            <li>a more supportive chair, if your employee has pain in their back or neck</li>
+            <li>more screen breaks, if your employee’s health condition or disability causes them to get tired more easily</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'driving' %}
+          <h2 class="govuk-heading-m">Because your employee’s role involves driving</h2>
+
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a closer car parking space, if your employee finds it difficult to walk long distances</li>
+            <li>more time to make journeys, if your employee’s health condition or disability causes them to get tired more easily</li>
+            <li>different tasks, if your employee takes medication which makes them unable to drive safely</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'speakingToCustomers' %}
+          <h2 class="govuk-heading-m">Because your employee’s role involves speaking to colleagues or customers</h2>
+
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>different tasks, if the work causes your employee anxiety or stress</li>
+            <li>more breaks, if your employee finds it difficult to speak for long periods of time</li>
+            <li>a quiet place to take breaks, if busy environments make your employee’s health condition or disability worse</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'teachingTraining' %}
+          <h2 class="govuk-heading-m">Because your employee’s role involves teaching or training</h2>
+
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>different tasks, if your employee finds it difficult to speak for long periods of time</li>
+            <li>a colleague to help them at the busiest or most difficult moments</li>
+            <li>more breaks, if your employee’s health condition or disability causes them to get tired more easily</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'operatingMachines' %}
+          <h2 class="govuk-heading-m">Because your employee’s role involves operating machines or equipment</h2>
+
+          <p class="govuk-body">You could consider adjustments such as:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>different tasks, if your employee takes medication which makes them unable to operate machinery safely</li>
+            <li>more safety equipment such as ear protectors, if noisy environments make your employee’s health condition or disability worse</li>
+            <li>different areas to work in, if your employee’s health condition or disability is made worse by hot or cold environments</li>
+          </ul>
+        {% endif %}
+
+        {% if item == 'somethingElse' %}
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a closer car parking space for someone who struggles to walk longer distances</li>
+          <li>more breaks for someone with fatigue</li>
+          <li>reduced public-facing tasks, if that environment makes someone’s mental health worse</li>
+        </ul>
+
+        {% endif %}
+
+      {% endfor %}
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice" target="_blank">See more examples of reasonable adjustments on the Equality and Human Rights Commission website (opens in a new tab)</a></p>
+      
+      <p class="govuk-body">As well as changing your employee’s role or work environment, you can change the way they work. For example, some people find it easier to work reduced hours when their condition is worse, or only take on some of their previous tasks.</p>
+
+      <p class="govuk-body">Your employee does not have to wait until they are fully better to be able to do meaningful work.</p>
+
+      <p class="govuk-body">Over time your employee’s disability or health condition might affect them differently, get better, or get worse. You might need to make different adjustments to their role, workplace, or ways of working.</p>
+
+      <!-- End of COM-G6 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "dis-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

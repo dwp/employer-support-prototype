@@ -1,0 +1,52 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have you talked to your employee about their condition and any support they need? {{ data['pageTitleAddOn'] }} 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      {{ govukRadios({
+        idPrefix: "wantHelpOnWhatToSayA",
+        name: "wantHelpOnWhatToSayA",
+        value: data['wantHelpOnWhatToSayA'],
+        fieldset: {
+          legend: {
+            text: "Have you talked to your employee about their condition and any support they need?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "If not, you will see advice about how to discuss any changes you can make."
+        },
+        items: [
+          {
+            value: "Yes~/beta/sprint-5/prototype-A/summary/sum-3",
+            text: "Yes",
+            checked: data['wantHelpOnWhatToSayA'] === 'Yes'
+          },
+          {
+            value: "No~/beta/sprint-5/prototype-A/communicating/com-g2",
+            text: "No",
+            checked: data['wantHelpOnWhatToSayA'] === 'No'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

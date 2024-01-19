@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Case study 3 {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Case study 3</h1>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Version A
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">Naz is deaf and works in an open plan office. Their desk backs onto the kitchen area. This makes it difficult to concentrate in video meetings, colleagues are constantly going behind their desk. When an interpreter is in the office with Naz there is no space and they feel in the way.</p>
+          <p class="govuk-body">Naz’s employer suggests moving desks to quieter area for a trial period. Although it wasn’t as distracting, Naz felt separated from the rest of their team and awkward. They felt it was unfair that they had to be moved and the rest of the team did not.</p>
+          <p class="govuk-body">Naz met with their employer again and it was decided that a a temporary partition screen would be added to the office to create a more private area and separate walkway to the kitchen area. This was put in place for a 2 week trial period.</p>
+          <p class="govuk-body">The partition helped a little but there was still not enough space for the interpreter when needed.</p>
+          <p class="govuk-body">The employer decides to swap the team areas around and also leave the partition screen in place permanently.</p>    
+          <p class="govuk-body">They agree to meet up in a fortnight and check with the rest of their team if everyone is happy with the new team location.</p>         
+        </div>
+      </details>
+
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Version B
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">Naz is deaf and works in an open-plan office with their desk backing onto the kitchen area.</p>
+
+          <h2 class="govuk-heading-m">This makes it:</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>difficult to concentrate on video calls</li>
+            <li>distracting when colleagues are constantly going behind their desk</li>
+            <li>difficult fitting in an interpreter into the space when needed</li>
+            <li>awkward and draws attention to Naz’s disability</li>
+          </ul>
+
+          <h2 class="govuk-heading-m">First meeting</h2>
+          <p class="govuk-body">Naz’s employer suggests moving to a quieter area for a trial period.</p>
+          <p class="govuk-body">It was less distracting, but Naz:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>felt separated from their team</li>
+            <li>missed out on team discussions</li>
+            <li>wasted time going to and from their team area</li>
+            <li>felt awkward and that it was unfair they had been separated</li>
+          </ul>
+
+          <h2 class="govuk-heading-m">Second meeting</h2>
+          <p class="govuk-body">A partition screen was added for a 2-week trial period for more privacy and will create a separate walkway to the kitchen area.</p>
+          <p class="govuk-body">This offers more privacy and less distractions but there is still not enough space for the interpreter when needed.</p>
+
+          <h2 class="govuk-heading-m">Third meeting</h2>
+          <p class="govuk-body">The employer decides to swap the team areas around and leave the partition screen in place permanently.</p>
+
+          <h2 class="govuk-heading-m">Regular catch ups</h2>
+          <p class="govuk-body">They meet fortnightly to check on the situation and that if the new team location is working.</p>
+
+        </div>
+      </details>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Version C
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">Naz is deaf and works in an open plan office. It’s difficult for them to concentrate and there’s no space for their interpreter when needed. </p>
+          <p class="govuk-body">The employer adds a partition to the office to separate the kitchen area and swap where teams sit.
+          </p>
+          <p class="govuk-body">There is less distraction for Naz and room to accommodate when their interpreter is needed.</p>    
+        </div>
+      </details>
+     
+
+   <br />
+   
+
+      <br>
+           
+    </div>
+  </div>
+
+{% endblock %}

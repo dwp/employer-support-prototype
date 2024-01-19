@@ -1,0 +1,74 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+When did your employee go off work sick?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="is-employee-off-because-of-covid-19" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "start-now"
+      }) }}
+
+      <!-- <br><br> -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-employee-left-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+             <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+              When did your employee go off work sick?
+            </h1>
+          </legend>
+          <div id="employeeLeaveDate-hint" class="govuk-hint">
+            For example, 31 3 2021
+          </div>
+          <div class="govuk-date-input" id="employeeLeaveDate">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="employeeLeaveDateDayA">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="employeeLeaveDateDayA" name="employeeLeaveDateDayA" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['employeeLeaveDateDayA']}}"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="employeeLeaveDateMonthA">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="employeeLeaveDateMonthA" name="employeeLeaveDateMonthA" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['employeeLeaveDateMonthA']}}"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="employeeLeaveDateYearA">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="employeeLeaveDateYearA" name="employeeLeaveDateYearA" type="text" pattern="[0-9]*" inputmode="numeric" value="{{data['employeeLeaveDateYearA']}}"></div>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

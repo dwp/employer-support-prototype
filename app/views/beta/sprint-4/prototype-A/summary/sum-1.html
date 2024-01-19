@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Summary of what you need to {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">
+        Summary of what you need to
+      </h1>
+
+      <!--
+        Statutory Sick Pay
+      -->
+
+      <h2 class="govuk-heading-m">Statutory Sick Pay</h2>
+
+        <p>Because you said your employee has been sick for 8 calendar days,
+            <span class="govuk-body govuk-!-font-weight-bold">you must pay Statutory Sick Pay (SSP) if your employee is eligible</span>.
+        </p> 
+        
+        <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a></p>
+
+        <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers">Find out what to do when you’re given a fit note</a></p>
+        
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <!--
+            What to say to your employee
+        -->
+
+      <h2 class="govuk-heading-m">What to say to your employee</h2>
+
+        <p class="govuk-body">You should get in touch with your employee regularly. Use whatever method feels most comfortable for you and your employee. It could be anything from a text message to a face-to-face meeting.</p>
+
+        <p class="govuk-body">Conversations should be informal and focused on the employee’s wellbeing. You should make a note of when you’ve been in touch and what you discussed.</p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <!--
+            Returning to work
+        -->
+
+      <h2 class="govuk-heading-m">Returning to work</h2>
+
+        <p class="govuk-body">Because you said your employee will return to work eventually, you should keep in regular contact to make it easy for them to tell you if they are ready to return to work.</p>
+
+        <p class="govuk-body">When your employee has told you they are ready to return, you might find it helpful to come back to this website. Answer some more questions for guidance on what you should say and do to help your employee return to work.</p>
+
+        <p class="govuk-body">Find more information about <a class="govuk-link" href="https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence">returning to work after absence</a> on the ACAS website.</p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+         <!--
+            Full summary
+        -->
+
+        <div class="govuk-inset-text">
+            <a href="sum-2">Read the full details of your results</a>
+        </div>
+
+    </div>
+  </div>
+
+{% endblock %}

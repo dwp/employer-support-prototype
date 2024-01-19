@@ -1,0 +1,144 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Checklist: talking about the condition
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-column-full">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "talking-about-condition"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      <!-- Deciding on changes section -->
+
+      <h1 class="govuk-heading-l">Checklist: talking about the condition</h1>
+
+      <p class="govuk-body">It’s important to talk to your employee as soon as you can. These topics can help you have an open and useful conversation.</p>
+
+      <!-- test - Extra - third card -->
+
+      <!-- Large diff to hold all 3 cards -->
+
+        <!-- 
+          Ask about them first card 
+        -->
+        <div class="checklistCardSpacing">
+        <div class="checklistCard">
+
+        <div class="checklistCheckbox"></div>
+
+          <h2 class="govuk-heading-m">Ask about them first</h2>
+          <p class="govuk-body">Start by asking about your employee in general - find out how they’re feeling.</p>
+        </div>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Example: 
+          <span class="govuk-body">“Thanks for letting me know...”</span>
+          <span class="govuk-body">“How are you in general?”</span>
+        </p>
+  
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      </div>
+
+        <!-- 
+            will they stay at work card      
+        -->
+        <div class="checklistCardSpacing">
+        <div class="checklistCard">
+          <div class="checklistCheckbox"></div>
+            <h2 class="govuk-heading-m">Will they stay at work?</h2>
+            <p class="govuk-body">Discuss if staying at work would help, or if they might need sick leave.</p>
+        </div>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Example: 
+            <span class="govuk-body">“Would it help to take some time off?”</span>
+            <span class="govuk-body">“If you’d rather stay, we can work something out”</span>
+          </p>
+  
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        </div>
+
+        <!-- 
+          Job and workplace card
+        -->
+        <div class="checklistCardSpacing">
+        <div class="checklistCard">
+          <div class="checklistCheckbox"></div>
+          <h2 class="govuk-heading-m">Job and workplace</h2>
+          <p class="govuk-body">Ask how the condition will affect their job, work environment and ways of working.</p>
+        </div>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Example: 
+            <span class="govuk-body">“Has your job made things worse?”</span>
+            <span class="govuk-body">“What do you think you’ll be able to do for the next few weeks?”</span>
+          </p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        </div>
+  
+        <!-- 
+            Changes to help     
+        -->
+        <div class="checklistCardSpacing">
+            <div class="checklistCard">
+              <div class="checklistCheckbox"></div>
+                <h2 class="govuk-heading-m">Changes to help</h2>
+                <p class="govuk-body">Talk about any changes to their job or workplace that might help. They could be short or long-term.</p>
+            </div>
+    
+            <p class="govuk-body govuk-!-font-weight-bold">Example: 
+                <span class="govuk-body">“What kind of changes can we make together?”</span>
+                <span class="govuk-body">“Tell me what would help you, we’re listening...”</span>
+              </p>
+      
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
+          </div>
+
+
+        <p class="govuk-body">Check in with your employee as often as works for you both. You can update this sheet or start a new one.</p>
+
+      <!-- <p class="govuk-body">For more information on managing employees with health conditions and disabilities, see gov.uk/healthywork</a>.</p> -->
+
+        
+
+        <br><br>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+  
+{% endblock %}

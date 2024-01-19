@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Considering dismissing an employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Considering dismissing an employee</h1>
+
+      <p class="govuk-body">Dismissals should always be the last resort. You might feel that you have considered all possible options available to you as an employer to support your employee.
+      </p>
+
+      <p class="govuk-body">If you still feel that dismissal is required, you should check your legal responsibilities before taking any action. There are organisations that can help you, including those listed below. The following links all open in new tabs:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.acas.org.uk/disability-discrimination" target="_blank">Acas (Advisory, Conciliation and Arbitration Service) has guidance on avoiding unlawful discrimination when dismissing an employee</a></li>
+        <li><a href="https://www.equalityhumanrights.com/en/multipage-guide/avoiding-unlawful-discrimination-when-dismissing-worker" target="_blank">EHRC (Equality and Human Rights Commission) has information on avoiding unlawful discrimination when dismissing a worker</a></li>
+        <li><a href="https://www.hse.gov.uk/disability/adjustments.htm" target="_blank">HSE (Health and Safety Executive) has information on your duties in protecting disabled employees</a></li>
+      </ul>
+    
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-g5"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

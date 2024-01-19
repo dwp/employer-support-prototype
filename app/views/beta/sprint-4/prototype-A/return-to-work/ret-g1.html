@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+How to help your employee return to work when they’re ready {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">How to help your employee return to work when they’re ready</h1>
+
+      <p class="govuk-body">You should keep in contact with your employee. Staying in touch will make it easier for your employee to tell you if they feel ready to return to work.</p>
+
+      <p class="govuk-body">Find more information about <a href="https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence">dismissing someone fairly</a> on the ACAS website.</p>
+
+      <p class="govuk-body">You might find it helpful to come back to this website when your employee has told you they are ready to return. You will be able to answer these questions again, and see guidance on what you should say and do to help your employee return to work.</p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../summary/sum-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

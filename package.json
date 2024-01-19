@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "govuk-prototype-kit dev",
+    "serve": "govuk-prototype-kit serve",
+    "start": "govuk-prototype-kit start"
+  },
+  "dependencies": {
+    "dayjs": "1.11.7",
+    "express": "4.18.2",
+    "govuk-frontend": "4.4.1",
+    "govuk-prototype-kit": "^13.16.0",
+    "radio-button-redirect": "1.2.0"
+  }
+}

@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What would you like help with? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <form method="POST" action="sta-q3-routing">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              What would you like help with?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="inclusive-recruitment" name="staQ3" type="radio"
+                value="inclusiveRecruitment">
+              <label class="govuk-label govuk-radios__label" for="inclusive-recruitment">
+                Recruiting and onboarding employees in an inclusive way
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="policies-procedures" name="staQ3" type="radio"
+                value="policesProcedures">
+              <label class="govuk-label govuk-radios__label" for="policies-procedures">
+                Preparing and implementing policies and procedures for your business
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="employee-off-work" name="staQ3" type="radio" value="offWork">
+              <label class="govuk-label govuk-radios__label" for="employee-off-work">
+                Knowing what to do when an employee is off work
+              </label>
+              <div id="f-employeeCurrentWorkSituation-2-item-hint" class="govuk-hint govuk-radios__hint">
+                Your employee is absent from work (not including planned holidays)
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="employee-at-work" name="staQ3" type="radio" value="atWork">
+              <label class="govuk-label govuk-radios__label" for="employee-at-work">
+                Supporting and managing an employee with a health condition or disability that is still at work
+              </label>
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Learn more about your employee’s disability or health condition {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Learn more about your employee’s disability or health condition</h1>
+
+      <p class="govuk-body-l">Some employers find it helpful to find out more about their employee’s disability or health condition.</p>
+      
+      <p class="govuk-body">Do not make assumptions about your employee’s abilities when you learn about your employee's disability or health condition. It’s important to talk to your employee about what they feel able to do at work.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in a new tab)</a> has details of many conditions and the most common symptoms. Many of the health conditions listed on the NHS website also have links to support organisations for that condition.</p>
+      
+      <h2 class="govuk-heading-l">Consider mental health</h2>
+
+      <p class="govuk-body">Physical conditions can also affect mental health. They can cause stress, anxiety and affect everyday life.</p>
+
+      <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in a new tab)</a> website is a collection of work-related guides from mental health experts.</p>
+
+      <h2 class="govuk-heading-l">If your employee is disabled or has a long-term health condition</h2>
+
+      <p class="govuk-body">You must not discriminate unlawfully on the grounds of a health condition or disability. When you agree next steps with your employee, keep in mind that the law requires you to make reasonable adjustments in some cases.</p>
+
+      <p class="govuk-body">You should seek advice if you and your employee are not sure if this disability law applies in your situation.</p>
+
+      <p class="govuk-body">ACAS has <a href="https://www.acas.org.uk/disability-discrimination/what-disability-means" target="_blank">advice on what disability means (opens in a new tab)</a>.</p>
+
+      <br>
+
+      {% if data['staQ2'] == 'stillWorking' %}
+        {{ govukButton({
+          text: "Continue",
+          href: "rea-g1"
+          }) 
+        }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue",
+          href: "est-q6"
+          }) 
+        }}
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}

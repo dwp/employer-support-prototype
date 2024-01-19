@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+<!-- Conditional page title to match changing H1 -->
+
+{% block pageTitle %}
+    {% if data['daysEmployeeOffSick'] <= '3'  %}
+        You do not need to pay Statutory Sick Pay yet
+    {% else%}
+        You must pay Statutory Sick Pay
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="date-test-answer" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "date-test"
+      }) }}
+
+      <!--
+          If employee has been off sick 1-3 calendar days, you do not need to pay statutory sick pay yet
+      -->
+      {% if data['daysEmployeeOffSick'] <= '3'  %}
+
+        <h1 class="govuk-heading-l">You do not need to pay Statutory Sick Pay yet</h1>
+
+        <p>Your employee has been sick for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <p>You do not need to pay Statutory Sick Pay. You might need to pay Statutory Sick Pay if your employee continues to be off sick for 4 or more days. Find out more about <a href="https://www.gov.uk/employers-sick-pay">Statutory Sick Pay</a>.</p>
+
+        <p>Some businesses choose to pay their own sick pay. If you offer sick pay you can decide when to start and stop paying it, and how much to pay. You can pay it from the first day your employee is sick.</p>
+
+      <!--
+          If employee has been off sick 4,5,6,7 calendar days, you must pay statutory sick pay (no proof of sickness required)
+      -->
+
+      {% elif (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
+
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay</h1>
+
+        <p>Your employee has been sick for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <p>You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a>.</p>
+
+        <p>Some businesses also choose to pay additional sick pay. If you offer extra sick pay you can decide when to start and stop paying it, and how much extra to pay. You can pay it from the first day your employee is sick.</p>
+
+        <p>Your employee does not need to give you proof of their sickness, such as a fit note from their doctor. To get SSP, your employee must complete the <a href="https://public-online.hmrc.gov.uk/lc/content/xfaforms/profiles/forms.html?contentRoot=repository:///Applications/PersonalTax_iForms/1.0/SC2&template=SC2.xdp">Employee’s statement of sickness (SC2)</a>.</p>
+
+        <p>If your employee remains off work sick for 8 or more days, you can ask for proof of their sickness. You can decide on the proof you need - it could be a fit note or another form of medical evidence.</p>
+
+
+      <!--
+          If employee has been off sick more than 8 calendar days, you must pay statutory sick pay (proof of sickness can be requested)
+      -->
+
+      {% else %}
+
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay</h1>
+
+        <p>Your employee has been sick for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <p>You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a>.</p>
+
+        <p>Some businesses also choose to pay additional sick pay. If you offer extra sick pay you can decide when to start and stop paying it, and how much extra to pay. You can pay it from the first day your employee is sick.</p>
+
+        <p>You can ask your employee for proof of their sickness. You can decide on the proof you need - it could be a fit note or another form of medical evidence. You do not have to ask for proof if you’re happy without it.</p>
+
+        <p>Your employee can ask their doctor for a fit note because they’ve been off sick for 8 or more days. <a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers">Find out what to do when you’re given a fit note</a>.</p>
+
+      {% endif %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+      
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype B
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

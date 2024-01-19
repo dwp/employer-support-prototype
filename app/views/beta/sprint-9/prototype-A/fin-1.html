@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Tell your employee about possible financial support {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of FIN-1 summary content -->
+
+      <h1 class="govuk-heading-l">Tell your employee about possible financial support</h1>
+
+      <p class="govuk-body">Your employee might be able to get a government grant to help pay for adjustments. The scheme is called <a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in a new tab)</a>.</p>
+
+      <p class="govuk-body">Access to Work grants do not have to be paid back, and they will not affect any benefits your employee gets.</p>
+
+      <!-- End of FIN-1 summary content -->
+
+      <br><br>
+
+      {% if (data['adjQ3'] == "yes") %}   
+        {{ govukButton({
+            text: "Continue",
+            href: "adj-q4"
+        }) 
+      }}
+
+      {% else %}    
+        {{ govukButton({
+            text: "Continue",
+           href: "adj-g5"
+       }) 
+      }}
+
+     {% endif %}
+      
+    </div>
+  </div>
+
+{% endblock %}

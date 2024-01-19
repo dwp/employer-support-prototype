@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Has your employee told you about their disability or health condition? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="est-q3-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Has your employee told you about their disability or health condition?
+              </h1>
+            </legend>
+            <div id="hasEmployeeTold-hint" class="govuk-hint">
+              Your employee does not have to tell you, but you’re allowed to ask. Knowing about the disability or health condition can help you support your employee to return to work when they’re ready.
+            </div>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-1" name="estQ3" type="radio" value="yesToldMe">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-1">
+                  Yes, my employee has told me
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-2" name="estQ3" type="radio" value="notToldMe">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-2">
+                  I’ve asked, but my employee has not told me
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="number-of-employees-3" name="estQ3" type="radio" value="notAsked">
+                <label class="govuk-label govuk-radios__label" for="number-of-employees-3">
+                  I have not asked
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+

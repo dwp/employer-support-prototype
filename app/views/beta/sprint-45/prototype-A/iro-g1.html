@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+About inclusive recruiting and onboarding {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">About inclusive recruiting and onboarding</h1>
+
+      <p class="govuk-body-l">Job applicants are protected under the Equality Act 2010. You should hire the best person for the job based on their application, assessments and interview.</p>
+
+      <h2 class="govuk-heading-l">Avoiding discrimination</h2>
+      
+      <p class="govuk-body">You must avoid disability discrimination during the recruitment and selection process. You can ask applicants if they need any reasonable adjustments during the recruitment process. But you must not ask about health conditions or disabilities (except in very limited circumstances set out in the Equality Act 2010) until a job offer has been accepted.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments" target="_blank">You can read more about reasonable adjustments on GOV.UK (opens in new tab)</a></p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/guidance/equality-act-2010-guidance" target="_blank">Read more about the Equality Act 2010 on GOV.UK. (opens in new tab)</a></p>
+
+      <h2 class="govuk-heading-l">Benefits of inclusive recruitment</h2>
+
+      <p class="govuk-body">Employing people with health conditions and disabilities can help you to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have access to a wider group of applicants</li>
+        <li>have a more diverse workforce</li>
+        <li>improve existing employee morale</li>
+      </ul>
+
+      <p class="govuk-body">Retaining employees will remove the cost of recruiting, advertising and interviewing for roles.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/collections/disability-confident-campaign" target="_blank">Employers can sign up for the Disability Confident scheme (opens in new tab)</a>. They can then use the Disability Confident symbol in their job adverts. This will show that they encourage applications from people with disabilities.</p>
+
+      <p class="govuk-body">You could encourage more applicants if you display that you are an equal opportunities employer. This is also known as an equal employment opportunity (EEO) statement.</p>
+
+      <p class="govuk-body"><a href="https://www.eoc.org.uk/" target="_blank">Find out more about being an equal opportunities employer on the EOC website (opens in new tab)</a></p>
+
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "iro-g2"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

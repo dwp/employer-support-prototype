@@ -1,0 +1,227 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Discussing changes to work environment {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Discussing changes to work environment</h1>
+
+    <p class="govuk-body-l">This might include things like desk space, equipment and noise levels. These changes can make the work environment less challenging. </p>
+
+    <p class="govuk-body"><strong>Example:</strong> a place to work away from distractions can help an employee who is feeling overwhelmed by stress.</p>
+    <p class="govuk-body"><strong>Example:</strong> an employee who uses mobility aids might need an accessible parking space.</p>
+
+    <p class="govuk-body">You do not need to follow these worked examples step by step. If the scenario is irrelevant to you, using some of the ideas and processes mentioned can still help you support your employee. For example, discussing temporary adjustments or being more sympathetic to employee needs.</p>
+
+    <p class="govuk-body">Select the text below to expand the worked examples.</p>
+
+    <!--
+        BAD BACK
+    -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check how an employer supported their employee with a temporary health condition whilst working from home.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">An employee who was home based had been suffering from a bad back for over a month.</p>
+
+        <h3 class="govuk-heading-s">What happened first</h3>
+
+        <p class="govuk-body">During a meeting with their employer, the employee mentioned their recent back problems and that they found a new, stylish, top-of-the-range chair online. The employee asked for it to be expensed by the company as they could not afford the chair themselves.</p>
+
+        <p class="govuk-body">The employer wanted to make sure that they understood the employee’s needs. They were concerned that the proposed chair did not meet the requirements. The employer also worried about the cost of the chair and that everyone else in the company would want one.</p>
+
+        <h3 class="govuk-heading-s">What happened next</h3>
+
+        <p class="govuk-body">Both met to discuss what the employee had already tried - a back support, a different chair, stretching, advice from their doctor or physiotherapist.</p>
+
+        <p class="govuk-body">It was agreed that:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the employer would arrange for a desk assessment to be carried out at the employees home</li>
+          <li>the employer would take advice from the assessment on which chair would be most suitable for the employee’s needs</li>
+          <li>the new chair would be within the company allocated budget allowance</li>
+        </ul>
+
+        <p class="govuk-body">They met a month later to check if the condition had improved with the new chair and if they needed any more support</p>
+
+      </div>
+    </details>
+
+      <!--
+          HEARING LOSS
+      -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check how an employer supported their deaf employee to make sure the working environment was suitable.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">A moderately deaf employee is finding it difficult to concentrate in the open-plan office.</p>
+
+        <h3 class="govuk-heading-s">They find it:</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>tiring being on video calls with other noises around them distracting them</li>
+          <li>difficult fitting an interpreter next to them when needed in the limited space between the desk areas</li>
+          <li>awkward as it draws attention to their disability</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">What happened first</h3>
+
+        <p class="govuk-body">The employer wanted to make sure that their employee felt supported and able to carry out their job. They also wanted to check if there was anything else they could do to help the employee overcome their concentration difficulties. </p>
+
+        <p class="govuk-body">The employer checked workplace policies and researched further before having a conversation with the employee.</p>
+
+        <p class="govuk-body">The employer suggests moving to a quieter area for a trial period.</p>
+
+        <p class="govuk-body">It was less distracting, but the employee:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>felt separated from their team</li>
+          <li>felt that they missed out on team discussions</li>
+          <li>wasted time going to and from their team area</li>
+          <li>felt awkward and that it was unfair they had been separated</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">What happened next</h3>
+
+        <p class="govuk-body">Next, it was agreed that a partition screen would be added for a trial period. This gave more privacy and fewer distractions. However there was still not enough space for the interpreter when needed.</p>
+
+        <p class="govuk-body">The employer decided to swap the team areas around. This meant that the employee was in a quieter space with more room for extra seats near their desk when needed, but was still part of the team.</p>
+
+        <h3 class="govuk-heading-s">What's happening now</h3>
+
+        <p class="govuk-body">They meet fortnightly to check on the situation and if the new team location is working for the employee.</p>
+
+      </div>
+    </details>
+
+      <!--
+          NEURODIVERGENCE
+      -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check how an employer supported their employee with their neurodivergent condition.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">An employee recently completed tests and is waiting for a diagnosis for their neurodivergent condition.</p>
+
+        <h3 class="govuk-heading-s">What happened first</h3>
+
+        <p class="govuk-body">The employer asked for a meeting with the employee as they noticed that in meetings they were:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>not reading the clients’ body language</li>
+          <li>missing conversational cues</li>
+          <li>finding it difficult following long meetings</li>
+        </ul>
+
+        <p class="govuk-body">Colleagues had also mentioned that they thought the employee was distant and unfriendly.</p>
+
+        <p class="govuk-body">The employer wanted to make sure that they supported the employee effectively. They checked their workplace policies.</p>
+
+        <p class="govuk-body">They met and discussed the employee's situation and what they found difficult or stressful in the workplace. The employee said that they:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>were sensitive to bright lights and sudden, loud noises in the office</li>
+          <li>generally had difficulty focusing</li>
+          <li>found it challenging when colleagues use jargon or metaphors</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">What happened next</h3>
+
+        <p class="govuk-body">They agreed to put some temporary adjustments in place to check if the employee found they supported their situation.</p>
+
+        <p class="govuk-body">The employee’s desk was moved from a dark corner of the office to near a window for more natural light.</p>
+
+        <p class="govuk-body">The employer agreed that the employee could use headphones or earplugs when needed. Voice recognition software was installed to record long meetings so the employee could play back relevant parts.</p>
+
+        <p class="govuk-body">They worked together to create new visual instructions for the office equipment, such as the photocopier. These were displayed on the walls and in an online shared folder on the intranet.</p>
+
+        <p class="govuk-body">The employer moved the employee off a high-pressure project for a month.</p>
+
+        <p class="govuk-body">They met a couple of weeks later to discuss if the adjustments put in place were supporting their needs.</p>
+
+        <h3 class="govuk-heading-s">What’s happening now</h3>
+
+        <p class="govuk-body">The employer gives instructions in various formats until they find the one that works best for the employee.</p>
+
+        <p class="govuk-body">They advised the employee to contact Access to Work to check what help could be available.</p>
+
+        <p class="govuk-body">The employer is researching neurodiversity awareness training for all employees.</p>
+
+        <p class="govuk-body">They meet every two weeks to discuss and agree on any further adjustments that could support the employee.</p>
+
+      </div>
+    </details>
+
+
+
+    <p class="govuk-body">You should refer to any policies you have in place. Both temporary and permanent changes could support them.</p>
+
+    <p class="govuk-body">Consider and agree on each change together with your employee. You should review any changes you make regularly. These are sometimes temporary as health conditions can change over time.</p>
+
+    <br />
+
+    <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "rea-c3"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Examples of changes for physical conditions {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="../return-to-work/ret-q1" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "adj-g3"
+      }) }}
+
+      <h1 class="govuk-heading-l">Examples of changes for physical conditions</h1>
+
+       <p class="govuk-body">There are many types of physical condition, so ask about the changes that would help the most. </p>
+
+        <p class="govuk-body">You can ask your employee about possible changes like:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>providing wheelchair access (a change to the workplace)</li>
+          <li>giving a parking space to someone who would not normally have one (a change to ways of working)</li>
+          <li>special software for someone with a visual impairment (extra support)</li>
+        </ul>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">More about reasonable adjustments on GOV.UK</a></p>
+
+        <br>
+        
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+
+    </form>
+      
+    </div>
+  </div>
+
+{% endblock %}

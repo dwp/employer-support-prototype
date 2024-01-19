@@ -1,0 +1,120 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Checklist: deciding on changes at work
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-column-full">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "deciding-changes-at-work"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      <!-- Deciding on changes section -->
+
+      <h1 class="govuk-heading-l">Checklist: deciding on changes at work</h1>
+
+      <p class="govuk-body">Changes to the workplace or the job can help people stay at work while they manage their health. This checklist can help you to decide on the changes they might need.</p>
+
+      <!-- test - Extra - third card -->
+
+      <!-- Large diff to hold all 3 cards -->
+
+        <!-- 
+          Changes to the environment card 
+        -->
+        <div class="checklistCardSpacing">
+        <div class="checklistCard">
+
+        <div class="checklistCheckbox"></div>
+
+          <h2 class="govuk-heading-m">Changes to the environment</h2>
+          <p class="govuk-body">This kind of change might include things like desk space, equipment and other physical changes.</p>
+        </div>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Example: 
+          <span class="govuk-body">an employee who uses a wheelchair might need an accessible car parking space.</span>
+        </p>
+  
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      </div>
+
+        <!-- 
+          Ways of working 
+        -->
+        <div class="checklistCardSpacing">
+        <div class="checklistCard">
+          <div class="checklistCheckbox"></div>
+            <h2 class="govuk-heading-m">Ways of working</h2>
+            <p class="govuk-body">Changes to work hours, shift patterns or other policies at work can help.</p>
+        </div>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Example: 
+          <span class="govuk-body">if a condition affects an employee’s energy in the morning, they might need to start their working day later.</span>
+        </p>
+  
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        </div>
+
+        <!-- 
+          Extra help
+        -->
+        <div class="checklistCardSpacing">
+        <div class="checklistCard">
+          <div class="checklistCheckbox"></div>
+          <h2 class="govuk-heading-m">Extra help</h2>
+          <p class="govuk-body">It might help you employee to have someone to help with parts of their job or how they access work.</p>
+        </div>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Example: 
+          <span class="govuk-body">someone with an eyesight condition might need someone they work with to read their post for them.</span>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        </div>
+  
+
+        <p class="govuk-body">Check in with your employee as often as works for you both. You can update this sheet or start a new one.</p>
+
+        <p class="govuk-body">These changes will be made by ________________ and we will review them on ________________.</p>
+
+      <!-- <p class="govuk-body">For more information on managing employees with health conditions and disabilities, see <a href="http://gov.uk/healthywork">gov.uk/healthywork</a>.</p> -->
+
+        
+
+        <br><br>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype D
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

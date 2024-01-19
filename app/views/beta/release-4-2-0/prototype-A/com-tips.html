@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Tips on talking to your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Tips on talking to your employee</h1>
+
+      <p class="govuk-body-l">These topics can help you have an open and useful conversation with your employee.</p>
+      <br />
+      <hr />
+   <br />
+      <h2 class="govuk-heading-m">Ask about them first</h2>
+          <p class="govuk-body">Start by asking about your employee in general - find out how they're doing.</p>
+          <p class="govuk-hint"><em>"Thanks for letting me know..."</em></p>
+          <p class="govuk-hint"><em>"How are you in general?"</em></p>
+      <br />
+<hr />
+<br />
+<h2 class="govuk-heading-m">Your employee's situation</h2>
+   
+<p class="govuk-body">You can start to ask about your employee's experience, and check anything you have already learned with them.</p>
+<p class="govuk-hint"><em>"What are you comfortable sharing right now?"</em></p>
+<p class="govuk-hint"><em>"Am I right in thinking this about your condition?"</em></p>
+
+<br />
+<hr />
+<br />
+<h2 class="govuk-heading-m">Challenges at work</h2>
+<p class="govuk-body">When it feels appropriate, talk about how the job or work environment might be making things difficult. You could arrange a time to talk about support in more detail.</p>
+<p class="govuk-hint"><em>"Which parts of work are making things difficult right now?"</em></p>
+<p class="govuk-hint"><em>"When you're ready we can talk about changes..."</em></p>
+<br />
+<hr />
+     <br />
+     <h2 class="govuk-heading-m">Plan to keep in touch</h2>
+        <p class="govuk-body">Agree when you will get in touch next, and how often you will speak. Choose a method of communication that works for you both.</p>
+        <p class="govuk-hint"><em>"When should we talk again?"</em></p>
+        <p class="govuk-hint"><em>"What type of format works best for you for us to chat?"</em></p>
+     <br />
+<hr />
+  <br />
+
+  <br />
+
+      <br>
+
+      {% if data['staQ2'] == 'noOffWork' %}
+        {{ govukButton({
+          text: "Continue",
+          href: "est-q3"
+          }) 
+        }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue",
+          href: "com-q2"
+          }) 
+        }}
+      {% endif %}
+      
+    </div>
+  </div>
+
+{% endblock %}

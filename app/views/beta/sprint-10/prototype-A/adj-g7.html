@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Decide what is reasonable for your business {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of ADJ-G7 summary content -->
+
+      <h1 class="govuk-heading-xl">Decide what is reasonable for your business</h1>
+     
+      <p class="govuk-body-l">You must make 'reasonable adjustments' to make sure workers with disabilities, or physical or mental health conditions, are not substantially disadvantaged when doing their jobs.</p>
+
+      <p class="govuk-body">What is considered ‘reasonable’ will depend on your business.</p>
+
+      <p class="govuk-body">For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+      <!-- End of ADJ-G7 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "fin-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

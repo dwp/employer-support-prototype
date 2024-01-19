@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Would you like advice on talking to your employee about their health condition or disability? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="com-q3-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Would you like advice on talking to your employee about their health condition or disability?
+              </h1>
+            </legend>
+            <p class="govuk-body">
+              If you answer yes, you will see tips on:
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>things to keep in mind when starting and having open conversations like avoiding words like ‘suffering’ and making assumptions</li>
+              <li>the importance of talking regularly, as many conditions will change over time </li>
+            </ul>         
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="help-on-what-to-say-in-work-1" name="comQ3" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="help-on-what-to-say-in-work-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="help-on-what-to-say-in-work-2" name="comQ3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="help-on-what-to-say-in-work-2">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

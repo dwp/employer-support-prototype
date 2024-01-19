@@ -1,0 +1,181 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Consider occupational health support {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<style>
+  .gem-c-pagination {
+    display: block;
+    margin: 50px 0;
+}
+.gem-c-pagination__list {
+    margin: 0;
+    padding: 0;
+}
+.gem-c-pagination__item:first-child {
+    margin-bottom: 20px;
+}
+.gem-c-pagination__item {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    list-style: none;
+}
+.gem-c-pagination__link {
+    display: block;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+.gem-c-pagination__link-title {
+    display: block;
+    border-top: 1px solid #b1b4b6;
+    padding-top: 15px;
+}
+.gem-c-pagination__link-icon {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    display: inline-block;
+    margin-bottom: 1px;
+    height: 0.482em;
+    width: 0.63em;
+    fill: #505a5f;
+}
+.gem-c-pagination__link-text {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-left: 10px;
+}
+.gem-c-pagination__link-divider {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+}
+.gem-c-pagination__link-label {
+    display: inline-block;
+    margin-top: 0.1em;
+    margin-left: 25px;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1em;
+}
+@media (min-width: 40.0625em) {
+  .gem-c-pagination__item {
+    font-size: 19px;
+    line-height: 1.3157894737;
+}
+.gem-c-pagination__link-icon {
+    font-size: 24px;
+    line-height: 1.25;
+}
+.gem-c-pagination__link-text {
+    font-size: 19px;
+    line-height: 1.3157894737;
+}
+.gem-c-pagination__link-label {
+    margin-left: 30px;
+}
+
+}
+</style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="adj-g5-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of ADJ-G5 summary content -->
+
+      <h1 class="govuk-heading-xl">Consider occupational health support</h1>
+     
+      <p class="govuk-body-l">Occupational health professionals can help you to manage health and wellbeing at work.</p>
+
+      <!--
+        How they can help
+      -->
+      
+      <h2 class="govuk-heading-l">How they can help</h2>
+
+      <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>providing health assessments for your employees</li>
+        <li>helping you decide on any changes you might need to make at work</li>
+        <li>supporting your employees to manage their health</li>
+      </ul>
+
+      <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>helping you monitor the health of your employees</li>
+        <li>managing cases over time and supporting employees to return to work</li>
+        <li>helping you to create policies for your business</li>
+      </ul>
+
+      <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+
+      <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+
+      <!--
+        Finding occupational health services
+      -->
+      
+      <h2 class="govuk-heading-l">Finding occupational health services</h2>
+
+      <p class="govuk-body">The following links open in a new tab.</p>
+
+      <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
+      <a href="https://cohpa.org/find-a-oh-provider/" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
+      </p>
+
+       
+      <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhshealthatwork.co.uk/support-for-business.asp" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+
+      <!-- End of ADJ-G5 summary content -->
+
+      <br><br>
+
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="gem-track-click">
+            <li class="gem-c-pagination__item gem-c-pagination__item--next">
+              <a href="adj-g10" class="govuk-link gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="adj-g10" data-track-dimension="next" data-track-dimension-index="29">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">Next</span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Having regualr meetings with your employee</span>
+              </a>
+            </li>
+        </ul>
+      </nav>
+
+    </form>
+    </div>
+  </div>
+
+{% endblock %}

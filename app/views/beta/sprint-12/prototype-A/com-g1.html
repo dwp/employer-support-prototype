@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Help your employee feel supported {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Help your employee feel supported</h1>
+     
+      <p class="govuk-body-l">You can contact your employee while they are off work. Starting a conversation can make your employee feel supported and help them recover.</p>
+
+      <!--
+          What to say to your employee
+      -->
+
+      <h2 class="govuk-heading-l">What to say to your employee</h2>
+
+      <p class="govuk-body">Let your employee know you support them. You can ask to talk about work if you need to, but you should try to do that only when your employee is ready.</p>
+
+      <p class="govuk-body">Helpful things to say include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>sorry to hear you’re feeling unwell, take time to look after yourself</li>
+        <li>can we arrange a time to talk about work, so we can cover while you’re away?</li>
+        <li>let us know if there is anything you need</li>
+      </ul>
+
+      <!--
+          What not to say
+      -->
+
+      <h2 class="govuk-heading-l">What not to say</h2>
+
+      <p class="govuk-body">Try not to put pressure on your employee. Unless it’s essential to your business, you should avoid asking about what they have or have not done at work.</p>
+
+      <p class="govuk-body">Things to avoid saying include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>where did you put things?</li>
+        <li>could you just answer this one question?</li>
+        <li>when are you going to be back?</li>
+      </ul>
+
+      <!--
+          How to stay in touch
+      -->
+
+      <h2 class="govuk-heading-l">How to stay in touch</h2>
+
+      <p class="govuk-body">There are no rules about how often you get in touch. You and your employee should agree how often you will contact each other.</p>
+
+      <p class="govuk-body">Use whatever method feels most appropriate for you both. It could be an email or phone call, text or social media message.</p>
+
+      <p class="govuk-body">You might find it helpful to make a note of when you’ve been in touch and what you discussed. It can remind you both of what you agreed to do.</p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "rea-g1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

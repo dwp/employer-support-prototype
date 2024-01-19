@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Is it likely that your employee is disabled? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="rea-q1-routing">
+
+      <a href="com-q1" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Is it likely that your employee is disabled?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes-employee-is-disabled" name="reaQ1" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="yes-employee-is-disabled">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no-employee-is-not-disabled" name="reaQ1" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="no-employee-is-not-disabled">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="not-sure-if-employee-is-disabled" name="reaQ1" type="radio" value="notSure">
+                <label class="govuk-label govuk-radios__label" for="not-sure-if-employee-is-disabled">
+                  I’m not sure
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You must talk to your employee about possible changes to the workplace or ways of working
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "does-employee-need-changes"
+      }) }}
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+      <h1 class="govuk-heading-l">You must talk to your employee about possible changes to the workplace or ways of working</h1>
+
+      <p class="govuk-body">Employees who are disabled or who have health conditions should not be disadvantaged when doing their jobs.</p>
+
+      <p class="govuk-body">As the employer you are responsible for making sure your employee is not disadvantaged. You may need to make changes to the workplace or the way your employee can do their job.</p>
+
+      <p class="govuk-body">These changes are called ‘reasonable adjustments’ and they are required by law.</p>
+
+      <p class="govuk-body">You must talk to your employee about what changes they might need when they return to work.</p>
+
+      <p class="govuk-body">Read more about <a href="https://www.acas.org.uk/reasonable-adjustments">reasonable adjustments</a>.</p>
+      
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

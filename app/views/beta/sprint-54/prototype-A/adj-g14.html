@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Options you can consider {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G14 summary content -->
+
+      <h1 class="govuk-heading-xl">Options you can consider</h1>
+
+      <p class="govuk-body-l">Health conditions and disabilities can change over time. Treat each employee's needs individually. An employee with an undiagnosed condition will have very different needs to one managing chronic pain, for example.</p>
+
+      <!--
+        Areas to consider supporting your employee
+      -->
+      
+      <h2 class="govuk-heading-l">Areas to consider supporting your employee</h2>
+
+      <p class="govuk-body">To meet your legal obligations you need to have considered or put into practice as many of the following as possible:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>discussed what your employee finds difficult and manageable</li>
+        <li>had regular discussions together about what is and is not working</li>
+        <li><a href="https://www.gov.uk/government/publications/health-adjustment-passport" target="_blank">put reasonable adjustments in place and work with a Reasonable Adjustment Plan/health passport (opens in new tab)</a></li>
+        <li>contacted organisations for independent advice or support, such as Acas, HSE or Equality Advisory and Support Services (EASS)</li>
+        <li>let your employee know about possible financial help available to them</li>
+        <li>considered legal representation/advice if a situation has become difficult</li>
+      </ul>
+
+      <!--
+        If the situation has become difficult to manage
+      -->
+
+      <h2 class="govuk-heading-l">If the situation has become difficult to manage</h2>
+
+      <p class="govuk-body">You could consider legal guidance or advice if a situation has become difficult.</p>
+
+      <!-- End of ADJ-G14 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q6"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

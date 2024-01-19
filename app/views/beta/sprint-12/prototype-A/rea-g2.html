@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Understanding disability {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">Understanding disability</h1>
+     
+      <p class="govuk-body">The law defines disability as a physical or mental health condition that has a ‘substantial’ and ‘long-term’ negative effect on someone’s ability to do normal daily activities.</p>
+
+      <p class="govuk-body">To understand what ‘substantial’ and ‘long-term’ mean, see the <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">definition of disability under the Equality Act 2010 (opens in a new tab)</a>.</p>
+
+      
+
+      <h2 class="govuk-heading-l">How to know if your employee is disabled</h2>
+
+      <p class="govuk-body">Not all disabilities are visible, and you might not know if your employee is disabled.</p>
+
+      <p class="govuk-body">You’re allowed to ask if your employee is disabled. If you ask, be clear that you’re asking because you want to support them.</p>
+
+      <p class="govuk-body">Your employee does not have to tell you if they’re disabled.</p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "rea-q1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

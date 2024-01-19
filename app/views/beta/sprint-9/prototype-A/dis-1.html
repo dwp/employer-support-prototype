@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Avoid discrimination {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of DIS-1 summary content -->
+
+      <h1 class="govuk-heading-l">Avoid discrimination</h1>
+     
+      <p class="govuk-body-l">You must make sure disabled employees are not substantially disadvantaged when doing their jobs.</p>
+
+      <!--
+        Unlawful discrimination
+      -->
+
+      <h2 class="govuk-heading-m">Unlawful discrimination</h2>
+
+      <p class="govuk-body">If you do not make reasonable adjustments for a disabled employee you would be unlawfully discriminating against them. Your employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+
+      <p class="govuk-body">By law you must make reasonable adjustments if you could be expected to know that your employee is disabled. This can be difficult to be sure about, so you might decide to make adjustments for all employees with health conditions.</p>
+
+      <p class="govuk-body">The law applies to all workers, including trainees, apprentices, contract workers and business partners.</p>
+
+      <!--
+        Understanding what is reasonable
+      -->
+
+      <h2 class="govuk-heading-m">Understanding what is reasonable</h2>
+
+      <p class="govuk-body">What is considered ‘reasonable’ will depend on your business.</p>
+
+      <p class="govuk-body">For example, if an employee uses a wheelchair and your workplace does not have space for a lift, you would not be forced to change premises. However, you would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+      <!-- End of DIS-1 summary content -->
+
+      <br><br>
+
+    {% if (data['comQ2'] == "no") %}   
+      {{ govukButton({
+          text: "Continue",
+          href: "fin-1"
+      }) 
+    }}
+
+    {% else %}    
+      {{ govukButton({
+          text: "Continue",
+          href: "adj-q2"
+      }) 
+    }}
+
+    {% endif %}
+      
+    </div>
+  </div>
+
+{% endblock %}

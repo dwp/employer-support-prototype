@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Learn about your employee’s condition {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">Learn about your employee’s condition</h1>
+
+      <p class="govuk-body">You do not have to know the details of your employee’s condition before you talk to them.</p>
+
+      <p class="govuk-body">However, knowing how your employee might be affected can help to prepare for your conversation with them and any changes at work they might need.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/">NHS Health A to Z</a> has details of many conditions and the most common symptoms.</p>
+      
+      <h2 class="govuk-heading-m">Mental health</h2>
+
+      <p class="govuk-body">If your employee has a mental health condition it’s especially important to be patient to be patient and let them lead the conversation.</p>
+
+      <p class="govuk-body">Physical conditions like back pain or a disability can effect mental health. They can cause stress, anxiety and affect everyday life.</p>
+
+      <p class="govuk-body">Mental health conditions caused by something outside of work can affect someone’s ability to do their job.</p>
+
+      <p class="govuk-body">The <a href="https://www.nhs.uk/mental-health/">NHS mental health website</a> has advice to help you support someone facing difficult issues or life events.</p>
+
+      <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/">Mind Mental Health at Work</a> website is a collection of work-related guides from mental health experts.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../communicating/com-q2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

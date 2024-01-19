@@ -1,0 +1,122 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Talk to your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<<<<<<< HEAD
+=======
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+>>>>>>> 0a3712dcc119119027fef1385a77980a0e1c8642
+      <h1 class="govuk-heading-xl">Talk to your employee</h1>
+     
+      <p class="govuk-body-l">Start a supportive conversation with your employee as soon as you can.</p>
+
+      <!--
+          What to say to your employee
+      -->
+
+      <h2 class="govuk-heading-l">Starting a conversation</h2>
+
+      <p class="govuk-body">It's OK to make the first move and start a conversation. Some people might be reluctant to bring things up themselves. Let your employee know you support them and give them time if they need it.</p>
+
+      <p class="govuk-body">You should:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>let them know you understand that the job or workplace might need changes</li>
+        <li>be patient and let the conversation develop gradually</li>
+        <li>listen to the words they prefer to use and use those words yourself</li>
+      </ul>
+
+      <!--
+          What not to say
+      -->
+
+      <h2 class="govuk-heading-l">Things to keep in mind</h2>
+
+      <p class="govuk-body">When talking to your employee, you need to make sure that you do not exacerbate their health condition or disability.</p>
+
+      <p class="govuk-body">Listen and be open to what your employee says. They will not want to be patronised or treated too differently, but it’s OK to take some steps to support their unique needs. Your employees are legally protected from discrimination in the workplace. This duty of care comes under the Equality Act 2010.</p>
+
+      <p class="govuk-body">You should avoid:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>making assumptions about how their condition might affect them</li>
+        <li>using words like ‘suffering from’ which suggests they are a victim</li>
+        <li>assuming they will definitely need your help (it's OK if they decline, but remember to check again later)</li>
+      </ul>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/guidance/equality-act-2010-guidance" target="_blank">Check your legal obligations in the information and guidance on GOV.UK (opens in new tab)</a></p>
+
+      <!--
+          Talk regularly
+      -->
+
+      <h2 class="govuk-heading-l">Talk regularly</h2>
+
+      <p class="govuk-body">Many conditions will change over time, so it's important to talk regularly. Make sure any support is still working.</p>
+
+      <p class="govuk-body">You should agree how often you will talk together. Depending on your situation, once a week or once a month might work.</p>
+
+      <p class="govuk-body">Make a note of when you’ve spoken and what you discussed. This can be a helpful reminder of what you agreed to do.</p>
+
+      <p class="govuk-body">Keep health information private. If you need to share it with colleagues, get your employee's consent first.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/accessible-communication.htm" target="_blank">You can find more best practice information on effective and accessible communication on the HSE website (opens in new tab)</a></p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

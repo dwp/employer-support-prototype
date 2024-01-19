@@ -1,0 +1,152 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Details of what you need to do {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-l">
+            Details of what you need to do
+        </h1>
+
+        <!--
+            Look into this and maybe add icon
+            !!!!!!!!!!!!!
+        -->
+        <p class="govuk-body"><a href="javascript:window.print()">Print your results</a></p>
+
+        <br>
+        <br>
+
+    </div>
+   </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <!-- <p class="govuk-body govuk-!-font-weight-bold">Because you said your employee:</p> -->
+        <!-- <h2 class="govuk-heading-s">Because you said your employee:</h2> -->
+
+        <p class="govuk-body govuk-!-font-weight-bold">Because you said your employee:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>has been off work sick for {{ data['daysEmployeeOffSick'] }} days</li>
+            <li>has a physical condition</li>
+            <!-- <li>has a mental health and physical condition</li> -->
+            <li>is not ready to return to work</li>
+            <li>will return to work eventually</li>
+        </ul>
+
+        <p class="govuk-body govuk-!-font-weight-bold">Because you said:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you want help on what to say to your employee</li>
+        </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <!--
+        Statutory Sick Pay
+      -->
+
+      <h2 class="govuk-heading-m">Statutory Sick Pay</h2>
+
+        <p class="govuk-body">Your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+
+        <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay">Check your employee’s eligibility, and calculate how much SSP you need to pay</a>. You pay SSP instead of your employee’s normal pay. You cannot claim SSP back from the government.</p>
+
+        <p class="govuk-body">Some employers also choose to pay additional sick pay. If you offer extra sick pay you can decide when to start and stop paying it, and how much extra to pay. You can pay it from the first day your employee is sick.</p>
+
+        <p class="govuk-body">You can ask your employee for proof of their sickness. You can decide on the proof you need - it could be a fit note or another form of medical evidence. You do not have to ask for proof if you’re happy without it.</p>
+
+        <p class="govuk-body">Your employee can ask their doctor for a fit note because they’ve been off sick for 8 or more days. <a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers">Find out what to do when you’re given a fit note</a>.</p>
+        
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <!--
+            What to say to your employee
+        -->
+
+      <h2 class="govuk-heading-m">What to say to your employee</h2>
+
+        <p class="govuk-body">Let your employee know you support them. You can ask to talk about work if you need to, but you should try to do that only when your employee is ready.</p>
+
+        <p class="govuk-body">Helpful things to say include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>sorry to hear you’re feeling unwell, take time to look after yourself</li>
+        <li>can we arrange a time to talk about work, so we can cover while you’re away?</li>
+        <li>let us know if there is anything you need</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">What not to say</h2>
+
+      <p class="govuk-body">Try not to put pressure on your employee. Unless it’s essential to your business, you should avoid asking about what they have or have not done at work.</p>
+
+      <p class="govuk-body">Things to avoid saying include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>where did you put things?</li>
+        <li>could you just answer this one question?</li>
+        <li>when are you going to be back?</li>
+      </ul>
+
+      <!--
+          How to get in touch
+      -->
+
+      <h2 class="govuk-heading-m">How to get in touch</h2>
+
+      <p class="govuk-body">There are no rules about how often you get in touch. You and your employee should agree how often you will contact each other.</p>
+
+      <p class="govuk-body">Use whatever method feels most appropriate for you both. It could be an email or phone call, text or social media message.</p>
+
+      <p class="govuk-body">You should make a note of when you’ve been in touch and what you discussed. This can be a helpful reminder of what was agreed.</p>
+
+        <!--
+            How to get in touch
+        -->
+
+        <h2 class="govuk-heading-m">How to get in touch</h2>
+
+        <p class="govuk-body">There are no rules about how often you get in touch, but it should be at regular intervals. You and your employee should agree how often you get in contact with each other.</p>
+
+        <p class="govuk-body">Use whatever method feels most comfortable and appropriate for both you and your employee. It could be a text message, social media message, email, letter, phone call, or face to face meeting.</p>
+
+        <p class="govuk-body">The conversations you have should be informal, and focussed on the employee’s wellbeing. However, you should make a note of when you’ve been in touch and what you discussed. This can be helpful in case there is a dispute in the future.</p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+         <!--
+            How to help your employee return to work when they are ready
+        -->
+
+       <h2 class="govuk-heading-m">How to help your employee return to work when they are ready</h2>
+
+       <h3 class="govuk-heading-s">Keep in contact</h3>
+
+       <p class="govuk-body">You should keep in contact with your employee. Staying in touch will make it easier for your employee to tell you if they become ready to return to work.</p>
+
+       <p class="govuk-body">Find more information about <a class="govuk-link" href="https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence">returning to work after absence</a> on the ACAS website.</p>
+
+       <p class="govuk-body">When your employee has told you they are ready to return, you might find it helpful to come back to this website. Answer some more questions for guidance on what you should say and do to help your employee return to work.</p>
+
+       <!--
+            Look into this and maybe add icon
+            !!!!!!!!!!!!!
+        -->
+        <br>
+        <p class="govuk-body"><a href="javascript:window.print()">Print your results</a></p>
+        
+    </div>
+  </div>
+
+{% endblock %}

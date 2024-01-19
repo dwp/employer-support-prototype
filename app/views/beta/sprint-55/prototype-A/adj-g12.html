@@ -1,0 +1,135 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Putting workplace changes in place {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G12 summary content -->
+
+      <span class="govuk-caption-xl">Considering adjustments and additional help</span>
+
+      <h1 class="govuk-heading-xl">Putting workplace changes in place</h1>
+
+      <!--
+        What is reasonable
+      -->
+      
+      <h2 class="govuk-heading-l">What is reasonable?</h2>
+
+      <p class="govuk-body">What is ‘reasonable’ will depend on your business. It would be helpful for you to consider the extent to which any change could help overcome the disadvantage faced by your employee.</p>
+
+      <p class="govuk-body">You can consider things such as:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how practical and effective it is to make an adjustment</li>
+        <li>the cost of the adjustment</li>
+        <li>the size of your business</li>
+        <li>the resources available to you</li>
+        <li>the benefit to your employee</li>
+      </ul>
+
+      <p class="govuk-body">As well as possible changes to your employee’s role or work environment, you could change the way they work. For example, some people prefer to do different tasks or fewer hours when their condition is worse.</p>
+
+      <p class="govuk-body">If an employee uses a wheelchair and you do not have space for a lift, you will not need to change premises. But you would need to consider other ways for them to be able to do their job, such as working from somewhere else.</p>
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice" target="_blank">See more examples of changes on the Equality and Human Rights Commission website (opens in new tab)</a></p>
+
+      <!--
+        Examples of reasonable adjustments
+      -->
+      
+      <h2 class="govuk-heading-l">Examples of reasonable adjustments</h2>
+
+      <p class="govuk-body">The changes you make will depend on your employee’s needs. For example, you could consider:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>providing a closer car parking space for an employee who struggles to walk longer distances</li>
+        <li>more breaks for an employee with fatigue</li>
+        <li>reducing public-facing tasks if that environment makes an employee's mental health condition worse</li>
+        <li>giving verbal, as well as written, instructions for tasks could help an employee with a cognitive disability</li>
+      </ul> 
+      
+      <p class="govuk-body">For more information and guidance check the following websites:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments" target="_blank">reasonable adjustments for workers with disabilities or health conditions on GOV.UK (opens in new tab)</a></li>
+        <li><a href="https://www.equalityhumanrights.com/en/multipage-guide/employment-workplace-adjustments" target="_blank">workplace adjustments guidance on Equality and Human Rights Commission (EHRC) (opens in new tab)</a></li>
+        <li><a href="https://abilitynet.org.uk/factsheets/what-are-reasonable-adjustments" target="_blank">What are reasonable adjustments on AbilityNet website (opens in new tab)</a></li>
+      </ul>
+
+      <!--
+        If cost is one of the reasons you are unable to make changes
+      -->      
+
+      <h2 class="govuk-heading-l">If cost is one of the reasons you are unable to make changes</h2>
+
+      <p class="govuk-body">If adjustments are more expensive than is reasonable for you, your employee can apply to <a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in new tab)</a> to help with the costs.</p>
+
+      <p class="govuk-body">Access to Work grants do not have to be paid back, and they will not affect any benefits your employee gets.</p>
+
+      <p class="govuk-body">You could get expert workplace health support from Occupational Health.</p>
+
+
+      <!-- End of ADJ-G12 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-g13"
+        }) 
+      }}
+  
+    {{ govukButton({
+      text: "Finish and go to summary",
+      classes: "govuk-button--secondary",
+      href: "skip-3"
+    }) }}
+    </div>
+  </div>
+
+{% endblock %}

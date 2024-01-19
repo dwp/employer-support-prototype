@@ -1,0 +1,48 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is your employee’s name?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="what-kind-of-illness-or-disability" method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "start-now"
+      }) }}
+
+      <span class="govuk-caption-xl">Supporting an employee with an illness or disability</span>
+
+      {{ govukInput({
+        label: {
+          text: "What is your employee’s name?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          text: "Your employee’s name won’t be stored or used for anything else."
+        },
+        id: "employeeNameC",
+        name: "employeeNameC"
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee discloses condition - prototype C
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Checklist for deciding on changes at work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="adj-g5-routing">
+
+      <!-- Start of ADJ-G5 summary content -->
+
+      <h1 class="govuk-heading-xl">Checklist for deciding on changes at work</h1>
+     
+      <p class="govuk-body-l">This checklist can help you decide on any changes you can make to support your employee. Working through the three areas together will help you to identify the right changes.</p>
+     
+      <img src="../../../../public/images/checklist.png" width="100%" />
+
+      <br />
+      
+      <p class="govuk-body">Check in with your employee as often as works for you both. You can update this sheet or start a new one.</p>
+    </form>
+    </div>
+  </div>
+
+{% endblock %}

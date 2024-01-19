@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Has your employee told you they have a health condition or disability? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="est-q3-routing">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Has your employee told you they have a health condition or disability?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-told-condition-1" name="estQ3" type="radio" value="yesToldMe">
+                <label class="govuk-label govuk-radios__label" for="employee-told-condition-1">
+                  Yes, they have told me
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-told-condition-2" name="estQ3" type="radio" value="notToldMe">
+                <label class="govuk-label govuk-radios__label" for="employee-told-condition-2">
+                  I’ve asked, but they have not told me
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="employee-told-condition-3" name="estQ3" type="radio" value="notAsked">
+                <label class="govuk-label govuk-radios__label" for="employee-told-condition-3">
+                  I have not asked
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+

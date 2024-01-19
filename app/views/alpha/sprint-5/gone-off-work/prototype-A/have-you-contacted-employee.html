@@ -1,0 +1,65 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Have you contacted your employee since they have been off work sick?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "must-pay-ssp"
+      }) }}
+
+      <!-- <br><br> -->
+
+      <span class="govuk-caption-xl">Employee absent due to sickness: what you need to do</span>
+
+      {{ govukRadios({
+        idPrefix: "contactedEmployeeA",
+        name: "contactedEmployeeA",
+        value: data['offBecauseCovid'],
+        fieldset: {
+          legend: {
+            text: "Have you contacted your employee since they have been off work sick?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "For example, with a phone call, letter or text message"
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes",
+            checked: data['contactedEmployeeA'] === 'Yes'
+          },
+          {
+            value: "No~/alpha/sprint-5/gone-off-work/prototype-A/get-in-touch-with-employee",
+            text: "No",
+            checked: data['contactedEmployeeA'] === 'No'
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+
+  <div class="unbrandedFooter">
+    <p class="govuk-body unbrandedJourneyName">Employee gone off sick - prototype A
+      <span class="govuk-body unbrandedClearData"><a href="/index">Return to homepage</a></span>
+    </p>
+  </div>
+
+{% endblock %}

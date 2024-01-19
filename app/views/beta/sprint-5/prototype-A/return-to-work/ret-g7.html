@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Find out what your employee needs {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- {{ govukBackLink({
+        text: "Back",
+        href: "est-q2"
+      }) }} -->
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-l">Find out what your employee needs</h1>
+
+      <p class="govuk-body">You should talk to your employee about how you can help them return to work. They could be happy to return to their current job, or they might need some changes.</p>
+
+      <p class="govuk-body">You should discuss any changes you can make together. There are a few things you can think about, and no change is right for everyone.</p>
+
+      <!--
+        TO DO 
+        Add conditional statements
+
+        Mental health conditions
+      -->
+      
+      <h2 class="govuk-heading-m">Examples of changes for mental health conditions</h2>
+
+      <p class="govuk-body">Talk to your employee about changes like:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>having quiet areas in the office</li>
+        <li>different start times or working hours</li>
+        <li>help managing their workload</li>
+      </ul>
+
+      <!--
+        TO DO 
+        Add conditional statements
+        
+        Physical conditions
+      -->
+
+
+      <h2 class="govuk-heading-m">Examples of changes for physical conditions</h2>
+
+      <p class="govuk-body">Discuss possible changes like:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>providing wheelchair access</li>
+        <li>giving them a parking space near to work</li>
+        <li>software for people with visual impairments</li>
+      </ul>
+
+      <!--
+        More help with employee’s return
+      -->
+      <h2 class="govuk-heading-m">More help with employee’s return</h2>
+
+      <p class="govuk-body">The <a href="https://www.gov.uk/access-to-work">Access to Work</a> scheme can help your employee with the costs of some changes. It can also provide a workplace assessment to decide which changes are needed.</p>
+
+      <p class="govuk-body">An occupational health expert can be useful if the case is complex or you're not sure what to do. ACAS has information on <a href="https://www.acas.org.uk/using-occupational-health-at-work">using occupational health at work</a>.</p>
+
+      <p class="govuk-body">There is more information about <a href="https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence">using occupational health at work</a> on the ACAS website.</p>
+      
+      <br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "../summary/sum-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

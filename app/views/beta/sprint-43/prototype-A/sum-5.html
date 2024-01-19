@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Summary of key advice {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Summary of guidance in this service</h1>
+
+        <p class="govuk-body">There are no more questions.</p>
+
+        <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+        <p class="govuk-body">The answers you gave have not been recorded. If you leave this page you will need to answer the questions again to see the guidance information. <a href="#" onclick="frames['sum-4'].print()">save and print the guidance information you’ve seen (opens in a new window)</a> and refer to it when needed in the future.</p>
+
+        <!--
+          Survey link/help us improve
+        -->
+
+        <h2 class="govuk-heading-l">Discussing changes at work</h2>
+
+         <p class="govuk-body">Check the areas to consider when discussing changes:</p>
+         <ul class="govuk-list govuk-list--bullet">
+         <li><a href="rea-c1" target="_blank">to ways of working (opens in new tab)</a></li>
+         <li><a href="rea-c2" target="_blank">to work environment (opens in new tab)</a></li>
+         <li><a href="rea-c3" target="_blank">including extra support and temporary and permanent changes (opens in new tab)</a></li>
+</ul>
+
+        <h2 class="govuk-heading-l">Links included in the guidance</h2>
+
+        <p class="govuk-body">These links were included in the guidance. You can review these or save them to read later.</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://www.gov.uk/guidance/disability-confident-how-to-sign-up-to-the-employer-scheme" target="_blank">The Disability Confident scheme (opens in new tab)
+          </a></li>
+          <li><a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">Definition of disability under the Equality Act 2010 (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in new tab)</a></li>
+          <li><a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">Using occupational health services at Acas (the Advisory, Conciliation and Arbitration service) (opens in new tab)</a></li>
+          <li><a href="https://businessdisabilityforum.org.uk/knowledge-hub/resources/tailored-adjustments-plans-passports-and-agreements/" target="_blank">The Business Disability Forum (opens in new tab)</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Help us to improve the service</h2>
+
+        <p class="govuk-body">‘Support with employee health and disability’ is a new service. Your <a href="#">feedback</a> will help us to improve it.</p>
+        
+    </div>
+  </div>
+
+{% endblock %}
+
+

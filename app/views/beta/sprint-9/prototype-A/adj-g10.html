@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have regular meetings with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+
+      <!-- Start of ADJ-G10 summary content -->
+
+      <h1 class="govuk-heading-l">Have regular meetings with your employee</h1>
+
+      <p class="govuk-body-l">It’s important to keep checking that your employee feel supported. If their condition changes, you might need to make more changes.</p>
+
+      <!--
+        Keep talking with employee
+      -->
+
+      <h2 class="govuk-heading-m">Keep talking with your employee</h2>
+
+      <p class="govuk-body">After you’ve made adjustments to your employee’s role, workplace, or ways of working you will need to regularly check they are still appropriate.</p>
+
+      <p class="govuk-body">It’s important to keep talking to your employee about what they need. The changes you put in place might not be right for them, or your employee’s disability or health condition might change.</p>
+
+      <!--
+        Support from occupational health
+      -->
+
+      <h2 class="govuk-heading-m">Support from occupational health</h2>
+
+      <p class="govuk-body">If the changes you put in place are not supporting your employee as much as they should, or if the employee’s situation has changed, you might find it useful to hire an occupational health provider.</p>
+
+      <p class="govuk-body">Find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> on the ACAS website.</p>      
+     
+      <!-- End of ADJ-G10 summary content -->
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue to summary",
+        href: "sum-3"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Discussing possible changes your employee might need  {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Possible changes that could help your employee</span>
+
+      <h1 class="govuk-heading-xl">Discussing possible changes your employee might need</h1>
+     
+      <p class="govuk-body-l">Your employee’s health condition or disability might mean they need some changes to their role or workplace.</p>
+
+      <h2 class="govuk-heading-l">How to talk to your employee about what they need</h2>
+
+      <p class="govuk-body">Many disabled people and people with health conditions want to continue working. Work brings more than just financial benefits – it also gives many people a sense of purpose and community.</p>
+
+      <p class="govuk-body">Ask your employee what changes they need to their job, workplace or ways of working. Remember to talk about what they feel capable of doing as well as what is challenging.</p>
+
+      <h2 class="govuk-heading-l">Let your employee lead</h2>
+
+      <p class="govuk-body">You can be proactive and start a conversation, but let your employee lead where they can.</p>
+
+      <p class="govuk-body">Use open-ended questions like:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>“Is there anything in the workplace that is making things more challenging for you?”</li>
+        <li>“What can we do to help in the short and long term? Are things likely to change over time”</li>
+        <li>“Are you worried about any specific part of your job? How can we help with that?”</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Support them over time</h2>
+
+      <p class="govuk-body">Supporting your employee should be an ongoing process. Give them time to think and come back to the conversation later if you need to.</p>
+
+      <p class="govuk-body">After your first chat, agree if you need to talk again to review the changes you agreed.</p>
+
+      <p class="govuk-body">You should make a note of what you discuss with your employee and when you will talk again. This can be a helpful reminder of what you need to do.</p>
+
+      <p class="govuk-body">You should review any changes you decide to make regularly. These are sometimes temporary as health conditions can change over time.</p>
+
+      <p class="govuk-body">Both you and your employee should be comfortable with any changes made.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/understand-barriers.htm" target="_blank">You can find more best practice guidance on the HSE website (opens in new tab)</a>. This includes understanding, identifying and finding possible solutions to any work barriers.</p>
+      
+      <p class="govuk-body"><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">You should always refer to any policies you have in place. You can access workplace policy templates on the Acas website (opens in new tab)</a></p>
+
+      <br><br>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "com-q5"
+        }) 
+      }}
+
+    {{ govukButton({
+      text: "Finish and go to summary",
+      classes: "govuk-button--secondary",
+      href: "skip-4"
+    }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}
