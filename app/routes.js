@@ -96,27 +96,7 @@ router.use('/beta/sprint-56', require('./views/beta/sprint-56/routes'));
 
 router.use('/beta/sprint-57', require('./views/beta/sprint-57/routes'));
 
-router.use('/sandbox/usability-prototype', require('./views/sandbox/usability-prototype/routes'));
-
-router.use('/sandbox/usability-prototype2', require('./views/sandbox/usability-prototype/routes'));
-
-router.use('/sandbox/usability-prototype3', require('./views/sandbox/usability-prototype/routes'));
-
 router.use('/beta/release-7-0-0', require('./views/beta/release-7-0-0/routes'));
-
-router.use('/release/release1/english', require('./views/release/release1/english/routes'));
-
-router.use('/release/release1/welsh', require('./views/release/release1/welsh/routes'));
-
-router.use('/release/release2/english', require('./views/release/release2/english/routes'));
-
-router.use('/release/release2/welsh', require('./views/release/release2/welsh/routes'));
-
-router.use('/sandbox/layout-change', require('./views/sandbox/layout-change/routes'));
-
-router.use('/sandbox/design-audit/english', require('./views/sandbox/design-audit/english/routes'));
-
-
 
 // router.use('/beta/sprint-:routeVersion', (req, res, next) => {
 //   var routeVersion = req.params.routeVersion
