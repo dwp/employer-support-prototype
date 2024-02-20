@@ -1,6 +1,9 @@
 {% extends "layouts/main.html" %}
 
+
+
 {% block pageTitle %}
+{% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
@@ -9,7 +12,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+    
 
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
