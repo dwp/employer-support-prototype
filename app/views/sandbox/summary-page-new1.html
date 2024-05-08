@@ -1,0 +1,309 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You are now at the end of the service {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl" id="end-of-service-page-heading">Support with employee health and disability summary page</h1>
+
+
+
+
+
+
+        
+
+
+        <p class="govuk-body">This page will show a summary of all the guidance you have recieved on this service.</p>
+      
+
+        <div class="govuk-inset-text">
+            The answers you selected have not been recorded. If you close this page, you will need to start from the beginning to see the guidance.
+          </div>
+        
+       
+      
+<br>
+
+<br>
+
+       
+
+
+        </div>
+        </div>
+     
+        
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+ 
+
+        <h2 class="govuk-heading-l">Personalised guidance summary</h2>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button" onclick="frames['sum-4'].print()">
+          Save page as a PDF
+        </button>
+
+        <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+        <p class="govuk-body">The guidance on this page are based on your following answers: </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your employee is <b>currently off work</b></li>
+          <li>your employee has been <b>off work for 61 days</b></li>
+          <li>your employee has told you they <b>have a health condition or disability</b></li>
+          <li>you wanted <b>examples of changes around extra help</b></li>
+         </ul>
+
+        </div>
+         <div class="govuk-grid-column-one-third">
+   
+           <!--    <button type="submit" class="govuk-button" data-module="govuk-button" style="float:right">
+                Save page as a PDF
+              </button>-->
+        </div>
+        
+        
+        </div>
+
+<br>
+<br>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+                Paying your employee
+              </h2>
+
+              
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Key information
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    You must pay Statutory Sick Pay (SSP) if your employee is eligible.
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Useful links <br>(opens in new tabs)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                     
+                      <li><a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Check more about SSP payments on GOV.UK</a></li>
+                      <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay</a> </li>
+                      <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Statutory Sick Pay (SSP) employer guide </a></li>
+                     </ul>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          
+          <br>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+                Having conversations with your employee
+              </h2>
+
+              
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Key information
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    As an employer, you have a duty to protect your employee’s health, safety and welfare. This comes under the Health and Safety Law.
+                    <br><br>
+You must make sure that you are following the GDPR.
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Useful links <br>(opens in new tabs)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Check more information about employers' health and safety law responsibilities on the HSE website</a></li>
+                      <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check what is classed as direct and indirect discrimination on the Equality and Human Rights Commission website</a></li>
+                      <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Find out more about the GDPR on GOV.UK  </a> </li>
+                      <li> <a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Workplace policy templates on the Acas website</a> </li>
+
+                      <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check what is classed as a disability under the Equality Act 2010 on GOV.UK </a></li>
+                      <a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Mental Health at Work  </a></li>
+                      <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Disability Confident employer scheme   </a> </li>
+                      <li> <a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Employing disabled people and people with health conditions </a>  </li>
+                      <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">NHS Health A to Z  </a>  </li>
+                     </ul>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+        <br>
+
+
+        <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+                Considering adjustments and additional help
+              </h2>
+
+              
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Key information
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    If your employee has a disability, you must make reasonable adjustments if they would otherwise be substantially disadvantaged in doing their job.
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Useful links <br>(opens in new tabs)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">You can find more best practice guidance on the HSE website</a></li>
+                      <li> <a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Workplace policy templates on the Acas website</a></li>
+                      <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Workplace adjustments guidance on Equality and Human Rights Commission (EHRC)  </a> </li>
+                      <li> <a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Reasonable adjustments for workers with disabilities or health conditions on GOV.UK </a></li>
+
+                      <li> <a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Workplace adjustments guidance on Equality and Human Rights Commission (EHRC)</a></li>
+                      <li> <a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">What are reasonable adjustments on AbilityNet website </a></li>
+                      <li> <a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Definition of disability under the Equality Act 2010 </a> </li>
+                      <li>  <a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">The law around workplace adjustments on the HSE website </a> </li>
+                     </ul> </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+        <br>
+
+
+        <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+                Possible changes that could help your employee
+              </h2>
+
+              
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+              
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Useful links <br>(opens in new tabs)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">You can access workplace policy templates on the Acas website</a></li>
+                      <li><a href="https://www.gov.uk/access-to-work" target="_blank">Apply to Access to Work</a></li>
+                     </ul>
+           
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+
+
+
+<br>
+<br>
+   </div>
+   </div>
+   
+
+   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+         <h3 class="govuk-heading-m">Possible financial assistance</h3>
+
+         <p class="govuk-body">Let your employee know about possible financial help available to them, such as <a href="https://www.gov.uk/access-to-work">Access to Work (opens in new tab)</a>.</p>
+
+        
+        <h2 class="govuk-heading-m">Help us to improve the service</h2>
+
+        <p class="govuk-body">‘Support with employee health and disability’ is a new service. Your <a href="#">feedback (opens in a new tab)</a> will help us to improve it.</p>
+
+        <br>
+        <br>
+
+        <a class="govuk-link app-c-back-to-top dont-print" href="#end-of-service-page-heading">
+          <svg class="app-c-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+          </svg>
+          Back to top
+      </a>
+</div>
+</div>
+    </div>
+    
+  </div>
+
+
+{% endblock %}
