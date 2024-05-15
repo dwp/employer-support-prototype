@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Support wth employee health and disability summary page {{ data['pageTitleAddOn'] }}
+Your guidance summary {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -47,7 +47,7 @@ Support wth employee health and disability summary page {{ data['pageTitleAddOn'
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl" id="end-of-service-page-heading">Support with employee health and disability summary page</h1>
+        <h1 class="govuk-heading-xl" id="end-of-service-page-heading">Your guidance summary</h1>
 
 
 
@@ -57,12 +57,12 @@ Support wth employee health and disability summary page {{ data['pageTitleAddOn'
         
 
 
-        <p class="govuk-body">This page shows a summary of all the guidance you have received on this service.</p>
+        <p class="govuk-body">This page shows a summary of all the guidance you have received based on the answers you have given. </p>
+        <p>You can save a PDF version of this page to keep and refer to later.</p>
       
 
         <div class="govuk-inset-text">
-          Your answers have not been recorded. If you close this page you will need to start from the beginning to see the guidance. You can save a PDF version of this page to keep and refer to later.
-          </div>
+          Your answers have not been recorded. If you close this page you will need to start from the beginning to see the guidance. </div>
         
        
       
@@ -81,7 +81,7 @@ Support wth employee health and disability summary page {{ data['pageTitleAddOn'
             <div class="govuk-grid-column-two-thirds">
  
 
-        <h2 class="govuk-heading-l">Personalised guidance summary</h2>
+        
 
         <button type="submit" class="govuk-button" data-module="govuk-button" onclick="frames['sum-4'].print()">
           Save page as a PDF
@@ -89,14 +89,15 @@ Support wth employee health and disability summary page {{ data['pageTitleAddOn'
 
         <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
 
-        <p class="govuk-body">The guidance on this page is based on the answers you gave: </p>
+        <p class="govuk-body">You told us you have an employee who:</p>
 
         <ul class="govuk-list govuk-list--bullet">
-          <li>your employee is <b>currently off work</b></li>
-          <li>your employee has been <b>off work for 61 days</b></li>
-          <li>your employee has told you they <b>have a health condition or disability</b></li>
-          <li>you wanted <b>examples of changes around extra help</b></li>
-         </ul>
+          <li>is <b>currently off work</b></li>
+          <li>has been <b>off work for 61 days</b></li>
+          <li>has told you they <b>have a health condition or disability</b></li></ul>
+          
+          <p class="govuk-body">You also told us you wanted <b>examples of changes around extra help</b>.</p>
+         
 
         </div>
          <div class="govuk-grid-column-one-third">
@@ -135,7 +136,7 @@ Support wth employee health and disability summary page {{ data['pageTitleAddOn'
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Useful links <br>(opens in new tabs)
+                    Useful links <br>(opens in a new tab)
                   </dt>
                   <dd class="govuk-summary-list__value">
                     <ul class="govuk-list govuk-list--bullet">
@@ -169,18 +170,18 @@ Support wth employee health and disability summary page {{ data['pageTitleAddOn'
                   <dd class="govuk-summary-list__value">
                     As an employer, you have a duty to protect your employee’s health, safety and welfare. This comes under the Health and Safety Law.
                     <br><br>
-You must make sure that you are following the GDPR.
+You must make sure that you are following GDPR guidance.
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Useful links <br>(opens in new tabs)
+                    Useful links <br>(opens in a new tab)
                   </dt>
                   <dd class="govuk-summary-list__value">
                     <ul class="govuk-list govuk-list--bullet">
                       <li><a href="https://www.hse.gov.uk/leadership/legislation.htm" target="_blank">Information about employers' health and safety law responsibilities on the Health and Safety Executive (HSE) website</a></li>
                       <li><a href="https://www.equalityhumanrights.com/equality/equality-act-2010/your-rights-under-equality-act-2010/direct-and-indirect-discrimination" target="_blank">Check what is classed as direct and indirect discrimination on the Equality and Human Rights Commission (EHRC) website</a></li>
-                      <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Find out more about the GDPR  </a> </li>
+                      <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Find out more about GDPR  </a> </li>
                       <li> <a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Acas workplace policy templates</a> </li>
 
                       <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check what is classed as a disability under the Equality Act 2010</a></li>
@@ -218,7 +219,7 @@ You must make sure that you are following the GDPR.
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Useful links <br>(opens in new tabs)
+                    Useful links <br>(opens in a new tab)
                   </dt>
                   <dd class="govuk-summary-list__value">
                     <ul class="govuk-list govuk-list--bullet">
@@ -253,7 +254,7 @@ You must make sure that you are following the GDPR.
               
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Useful links <br>(opens in new tabs)
+                    Useful links <br>(opens in a new tab)
                   </dt>
                   <dd class="govuk-summary-list__value">
                     <ul class="govuk-list govuk-list--bullet">
