@@ -1,0 +1,151 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Discussing changes at work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">This section: possible changes that could help your employee</span>
+
+    <h1 class="govuk-heading-xl">Discussing extra help</h1>
+
+    <p class="govuk-body-l">It might help your employee to have extra support with parts of their job or how they access work.</p>
+
+    <p class="govuk-body">Possible changes could include a buddy system to help them feel supported, or for an employee with temporary hearing loss, giving their phone duties to someone else.</p>
+
+    <p class="govuk-body">You do not need to follow these worked example step by step. If the scenario is irrelevant to you, using some of the ideas and processes mentioned can still help you support your employee. For example, discussing temporary adjustments or being more sympathetic to employee needs.</p>
+
+    <p class="govuk-body">Select the text below to expand the worked example.</p>
+
+      <!--
+          CANCER
+      -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check how an employer supported their employee with a recent cancer diagnosis.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <p class="govuk-body">An employee recently had a cancer diagnosis. They’re very distracted at work and are having trouble coming to terms with their diagnosis. They need to take time off for treatment and consultations. They’re also worried about their finances.</p>
+
+        <h3 class="govuk-heading-s">What happened first</h3>
+
+        <p class="govuk-body">The employee set up a meeting with their employer to let them know about the diagnosis. They met to discuss the current situation.</p>
+
+        <p class="govuk-body">The employee mentioned that they planned to keep working during the treatment.</p>
+
+        <h3 class="govuk-heading-s">What happened next</h3>
+
+        <p class="govuk-body">The employer wanted to make sure that they offered the most appropriate support for the employee’s needs.</p>
+
+        <p class="govuk-body">As the employee planned to stay at work, they also wanted to make sure that the employee could continue to work effectively.</p>
+
+        <p class="govuk-body">The employer checked workplace policies around sickness absences and pay and researched online. They confirmed that employees with a cancer diagnosis are covered from disability-related discrimination under the Equality Act 2010.</p>
+
+        <p class="govuk-body">The employer suggested keeping their catch-up meetings to just a few things at a time. This helped to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>avoid adding extra stress or anxiety for the employee</li>
+          <li>keep track of the information, changing circumstances, discussions and decisions made</li>
+          <li>only go into as much detail as the employee was comfortable with</li>
+        </ul>
+
+        <p class="govuk-body">When the employee’s treatment schedule was confirmed, they met to discuss the plan. They confirmed time off for appointments and recovery time from treatment side effects.</p>
+
+        <p class="govuk-body">To help the employee if they wanted to share their diagnosis with colleagues, the employer suggested they prepare some responses to questions the employee might not be comfortable with, such as:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>“I’d rather not talk about it at work.”</li>
+          <li>“I’ll let you know when I'm comfortable talking about...”</li>
+          <li>“I’m focusing on work at the moment.”</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">What’s happening now</h3>
+
+        <p class="govuk-body">The employee’s treatment schedule is now confirmed. They meet to discuss the possible side effects of the treatment and how the employee’s day-to-day routine could be affected.</p>
+        <p class="govuk-body">They also discuss whether any further adjustments could help remove any barriers stopping the employee from doing their job effectively.</p>
+        <p class="govuk-body">The employee is worried about the financial implications of having cancer. The employer has consulted its policy and let the employee know what sick pay is available.</p>
+        <p class="govuk-body">They have also advised the employee to contact Access to Work and any cancer charities to check what other help and support could be available.</p>
+        <p class="govuk-body">The employer will continue to support the employee and they'll have regular meetings. They discuss if there are any other measures that could help the employee. The employer makes sure that any notes from their meetings are kept private.</p>
+
+      </div>
+    </details>
+
+
+    <p class="govuk-body">Consider and agree on each change together with your employee. You should review any changes you make regularly. These are sometimes temporary as health conditions can change over time.</p>
+
+    <h2 class="govuk-heading-l">Checking policies</h2>
+
+     <p class="govuk-body">You should refer to any policies you have in place around absences, health and disability, or health and safety. Both temporary and permanent changes could support them.</p>
+
+     <p class="govuk-body"><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">You can access workplace policy templates on the Acas website (opens in new tab)</a></p>
+
+     <h2 class="govuk-heading-l">Useful resources</h2>
+
+     <p class="govuk-body">Your employee can <a href="https://www.gov.uk/access-to-work" target="_blank">apply to Access to Work (opens in new tab)</a>to help with the costs.</p>
+
+     <br>
+     <p class="govuk-body"><strong>Next section:</strong> managing a difficult situation</p>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "adj-g5"
+      }) 
+    }}
+
+  {{ govukButton({
+    text: "Finish and go to summary",
+    classes: "govuk-button--secondary",
+    href: "skip-3"
+  }) }}
+      
+    </div>
+  </div>
+
+
+{% endblock %}
