@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Get expert workplace health support {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G5 summary content -->
+
+      <span class="govuk-caption-l">This section: managing a difficult situation</span>
+
+      <h1 class="govuk-heading-xl">Get expert workplace health support</h1>
+     
+      <p class="govuk-body-l">There can be times when a situation is complex, or you need extra support. Occupational health professionals can help you manage health and wellbeing at work.</p>
+
+      <!--
+        What they do
+      -->
+      
+      <h2 class="govuk-heading-l">How they can help</h2>
+
+      <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>providing health assessments for your employees</li>
+        <li>helping you decide on any changes you might need to make at work</li>
+        <li>supporting your employees to manage their health</li>
+      </ul>
+
+      <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>managing and monitoring cases over time</li>
+        <li>helping you to create policies for your business</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Benefits for your business</h2>
+
+      <p class="govuk-body">There is a cost to using these services but they can have many benefits for your business. </p>
+
+      <p class="govuk-body">Helping your employees to stay healthy can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>reduce absences</li>
+        <li>prevent problems getting worse</li>
+        <li>save money in the long run by taking the right actions as early as you can</li>
+      </ul>
+
+      <p class="govuk-body">There is more about <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">using occupational health services on the Acas website (opens in new tab)</a>.</p>
+
+      <!--
+        Finding occupational health services
+      -->
+      
+      <h2 class="govuk-heading-l">Finding occupational health services</h2>
+
+      <p class="govuk-body">The following organisations can direct you to services that could help you.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">Society of Occupational Medicine (opens in new tab)</a> has a tool to help you find a local provider.</li>
+        <li><a href="https://cohpa.org/find-a-oh-provider/" target="_blank">Commercial Occupational Health Providers’ Association (opens in new tab)</a> has a contact form for local providers</li>
+        <li><a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (opens in new tab)</a> has a list of services that meet their quality standards</li>
+        <li><a href="https://www.nhshealthatwork.co.uk/support-for-business.asp" target="_blank">NHS Health and Work Network (opens in new tab)</a> has a map of local NHS providers</li>
+      </ul>
+
+      <!-- End of ADJ-G5 summary content -->
+
+      <br />
+      <p class="govuk-body"><strong>Next page:</strong> more guidance on managing a difficult situation</p>
+ 
+
+      {{ govukButton({
+        text: "Continue",
+        href: "adj-q7"
+        }) 
+      }}
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}
