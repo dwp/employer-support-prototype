@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+The law around making changes {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G13 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: newidiadau posib a allai helpu eich gweithiwr</span>
+
+      <h1 class="govuk-heading-xl">Y gyfraith ynghylch gwneud newidiadau</h1>
+
+      <p class="govuk-body">Cyn i chi benderfynu nad oes unrhyw beth y gallwch ei wneud i’ch gweithiwr, byddwch yn ofalus nad ydych yn gwahaniaethu yn eu herbyn.
+
+        Rhybudd</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Os oes gan eich gweithiwr anabledd, rhaid i chi wneud addasiadau rhesymol pe byddent fel arall o dan anfantais sylweddol wrth wneud eu swydd.        </strong>
+      </div>
+
+      <p class="govuk-body">Mae’r gyfraith yn diffinio anabledd fel rhywbeth corfforol neu feddyliol sydd ag effaith ‘sylweddol’ a ‘hirdymor’ ar allu rhywun i wneud gweithgareddau dyddiol arferol.</p>
+
+      <p class="govuk-body">Am fwy, <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">gweler y diffiniad o anabledd o dan Ddeddf Cydraddoldeb 2010 (yn agor mewn tab newydd)</a>.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/the-law.htm" target="_blank">Gallwch ddarganfod mwy ar y gyfraith o amgylch addasiadau yn y gweithle ar wefan HSE (yn agor mewn tab newydd)</a></p>
+
+        <!--
+        Unsure if you can make the changes your employee needs
+      -->
+
+      <h2 class="govuk-heading-l">Dim yn siwr os gallwch wneud y newidiadau sydd eu hangen ar eich gweithiwr
+
+      </h2>
+
+      <p class="govuk-body">Gwnewch unrhyw newidiadau y gallwch i helpu eich gweithiwr. Yn aml gallant fod dros dro ac yn fwy fforddiadwy nag y byddech yn ei ddisgwyl.</p>
+
+      <p class="govuk-body">Gallai rhai newidiadau ymddangos yn fach i chi, ond gallent wneud gwahaniaeth mawr i’ch gweithiwr.</p>
+    
+
+      <!-- End of ADJ-G13 summary content -->
+
+      <br>
+
+      <p class="govuk-body"><strong>Tudalen nesaf:</strong> mwy o ganllawiau ar newidiadau posib a allai helpu eich gweithiwr</p>
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "adj-g5"
+        }) 
+      }}
+
+     
+
+      {{ govukButton({
+        text: "Finish and go to summary",
+        classes: "govuk-button--secondary",
+        href: "skip-4"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

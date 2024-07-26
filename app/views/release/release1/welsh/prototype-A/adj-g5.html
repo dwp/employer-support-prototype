@@ -1,0 +1,132 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Get expert workplace health support {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G5 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: newidiadau posib a allai helpu eich gweithiwr</span>
+
+      <h1 class="govuk-heading-xl">Cael cymorth iechyd arbenigol yn y gweithle</h1>
+     
+      <p class="govuk-body-l">Gall fod adegau pan mae sefyllfa’n gymhleth, neu mae angen cefnogaeth ychwanegol arnoch. Gall gweithwyr iechyd proffesiynol galwedigaethol eich helpu i reoli iechyd a lles yn y gwaith.</p>
+
+      <!--
+        What they do
+      -->
+      
+      <h2 class="govuk-heading-l">Sut y gallant helpu</h2>
+
+      <p class="govuk-body">Gall arbenigwyr iechyd galwedigaethol helpu gydag iechyd gweithwyr drwy:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>darparu asesiadau iechyd i’ch gweithwyr</li>
+        <li>eich helpu i benderfynu ar unrhyw newidiadau y gallai fod angen i chi eu gwneud yn y gwaith</li>
+        <li>cefnogi eich gweithwyr i reoli eu hiechyd</li>
+      </ul>
+
+      <p class="govuk-body">Maent hefyd yn paratoi eich busnes ar gyfer unrhyw faterion yn y dyfodol drwy:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>rheoli a monitro achosion dros amser</li>
+        <li>eich helpu i greu polisïau ar gyfer eich busnes</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Buddion i’ch busnes</h2>
+
+      <p class="govuk-body">Mae cost i ddefnyddio’r gwasanaethau hyn ond gallant fod â llawer o fanteision i’ch busnes. </p>
+
+      <p class="govuk-body">Gall helpu eich gweithwyr i aros yn iach:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>lleihau absenoldebau</li>
+        <li>atal problemau rhag gwaethygu</li>
+        <li>arbed arian yn y tymor hir trwy gymryd y camau cywir mor gynnar ag y gallwch</li>
+      </ul>
+
+      <p class="govuk-body">Mae mwy am <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">ddefnyddio gwasanaethau iechyd galwedigaethol ar wefan Acas (yn agor mewn tab newydd).</a>.</p>
+
+      <!--
+        Finding occupational health services
+      -->
+      
+      <h2 class="govuk-heading-l">Dod o hyd i wasanaethau iechyd galwedigaethol</h2>
+
+      <p class="govuk-body">Gall y sefydliadau canlynol eich cyfeirio at wasanaethau a allai eich helpu.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">Mae gan y Society of Occupational Medicine (yn agor mewn tab newydd)</a> declyn i’ch helpu i ddod o hyd i ddarparwr lleol</li>
+        <li><a href="https://cohpa.org/find-a-oh-provider/" target="_blank">Mae gan y Commercial Occupational Health Providers’ Association (yn agor mewn tab newydd) </a> ffurflen gyswllt i ddarparwyr lleol</li>
+        <li><a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Mae gan Safe Effective Quality Occupational Health Service (yn agor mewn tab newydd)</a> restr o wasanaethau sy’n bodloni eu safonau ansawdd</li>
+        <li><a href="https://www.nhshealthatwork.co.uk/support-for-business.asp" target="_blank">Mae gan NHS Health and Work Network (yn agor mewn tab newydd)</a> fap o ddarparwyr GIG lleol</li>
+      </ul>
+
+      <!-- End of ADJ-G5 summary content -->
+
+      <br />
+      <p class="govuk-body"><strong>Yr adran nesaf:</strong> rheoli sefyllfa anodd</p>
+ 
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "adj-q7"
+        }) 
+      }}
+
+
+      {{ govukButton({
+        text: "Gorffen a mynd i’r crynodeb",
+        classes: "govuk-button--secondary",
+        href: "skip-2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

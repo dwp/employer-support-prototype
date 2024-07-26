@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You are now at the end of the service {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl" id="end-of-service-page-heading">You are now at the end of the service</h1>
+
+        <p class="govuk-body"></p>
+
+        <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+        <p class="govuk-body"><a href="#" onclick="frames['sum-4'].print()">You can save or print all of the guidance information you've seen (opens in a new window)</a></p>
+
+        <p class="govuk-body">The answers you selected have not been recorded. If you close this page, you will need to start from the beginning to see the guidance.</p>
+
+        <h2 class="govuk-heading-l">Your summary of guidance in this service</h2>
+
+        <p class="govuk-body">The guidance on this page highlights what you have seen throughout the service. It includes your legal obligations as an employer, examples of reasonable adjustments and links to further guidance from other organisations.</p>
+
+        <h3 class="govuk-heading-m">Your legal responsibilities</h3>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            As an employer, you have a duty to protect your employees.  
+          </strong>
+        </div>
+
+        <p class="govuk-body">You must make sure:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you keep a record of any discussions you have with your employee</li>
+          <li>let your employee know about possible financial help available to them</li>
+          <li>you have considered or put into practice reasonable adjustments</li>
+         </ul>
+
+        <p class="govuk-body">What is ‘reasonable’ in terms of adjustments will depend on your business. Check examples of changes at work you could put into practice:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="rea-c1" target="_blank">ways of working (opens in new tab)</a></li>
+          <li><a href="rea-c2" target="_blank">work environment (opens in new tab)</a></li>
+          <li><a href="rea-c3" target="_blank">extra support and temporary and permanent changes (opens in new tab)</a></li>
+         </ul>
+
+         <h3 class="govuk-heading-m">Possible financial assistance</h3>
+
+         <p class="govuk-body">Let your employee know about possible financial help available to them, such as <a href="https://www.gov.uk/access-to-work">Access to Work (opens in new tab)</a>.</p>
+
+        <h2 class="govuk-heading-l">Links included in the guidance</h2>
+
+        <h3 class="govuk-heading-m">Links to further financial guidance</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+
+    {% if (data['daysEmployeeOffSick'] >= '197') %}
+        <li><a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Check more about SSP payments on GOV.UK (opens in new tab)</a></li>    
+    {% else %}
+        <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in new tab)</a></li>
+        <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Fit notes (opens in new tab)</a></li>
+    {% endif %}
+        </ul>
+        
+        <h2 class="govuk-heading-l">Help us to improve the service</h2>
+
+        <p class="govuk-body">‘Support with employee health and disability’ is a new service. Your <a href="#">feedback (opens in a new tab)</a> will help us to improve it.</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
