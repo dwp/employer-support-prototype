@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1">
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Support with employee health and disability
+      </h1>
+
+        <p>This guidance is for employers and managers.</p>
+
+        <p>It will help you support employees and understand any legal requirements. There are links to government and other organisations that can help.</p>
+          
+        <p>The guidance will help you with:</p> 
+        <ul class="govuk-list govuk-list--bullet">
+            <li>managing absences and keeping in touch</li>
+            <li>having conversations with your employee, in and out of work</li>
+            <li>deciding on changes to help them stay or come back to work</li>
+            <li>protecting your business and your employees with policies and procedures</li>
+            <li>managing complex situations</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">How this service works</h2>
+
+        <p>You will see questions about your situation and advice based on your answers.</p>
+
+        <p>The service does not store personal information, but you can save and print the guidance.</p> 
+
+
+        <a href="sta-q2" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
+            Start now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg>
+        </a>
+        
+    </div>
+  </div>
+
+{% endblock %}
