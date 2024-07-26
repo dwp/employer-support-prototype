@@ -104,6 +104,10 @@ router.use('/sandbox/usability-prototype3', require('./views/sandbox/usability-p
 
 router.use('/beta/release-7-0-0', require('./views/beta/release-7-0-0/routes'));
 
+router.use('/release/release1/english', require('./views/release/release1/english/routes'));
+
+router.use('/release/release1/welsh', require('./views/release/release1/welsh/routes'));
+
 
 
 // router.use('/beta/sprint-:routeVersion', (req, res, next) => {

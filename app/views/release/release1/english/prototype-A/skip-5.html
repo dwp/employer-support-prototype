@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Before you are taken to the summary {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of SKIP-5 summary content -->
+
+      <h1 class="govuk-heading-xl">Before you are taken to your summary</h1>
+
+      <p class="govuk-body">There are still some areas of guidance in this service that could be helpful. If you select yes below, you will see information on:</p> 
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>considering adjustments and additional help</li>
+        <li>possible changes that could help your employee</li>
+        <li>managing a difficult situation</li>
+        {% if data['staQ2'] == 'noOffWork' %}
+        <li>supporting a return to work</li>
+        {% endif %}
+        <li>keeping a record of changes</li>
+      </ul>
+        
+      <form method="POST" action="skip-5-routing">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              Do you want to check this guidance?
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-you-want-to-check-guidance-2" name="skip5" type="radio" value="NoTakeMeToSummary">
+                <label class="govuk-label govuk-radios__label" for="do-you-want-to-check-guidance-2">
+                  No, I have all the guidance I need. Take me to my summary
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-you-want-to-check-guidance-1" name="skip5" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="do-you-want-to-check-guidance-1">
+                  Yes, take me to this guidance
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+      <!-- End of SKIP-5 summary content -->
+
+      <br><br>     
+    </div>
+  </div>
+
+{% endblock %}
