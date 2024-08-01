@@ -1,0 +1,148 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Putting workplace changes in place {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G12 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: newidiadau posib a allai helpu eich gweithiwr</span>
+
+      <h1 class="govuk-heading-xl">Rhoi newidiadau yn y gweithle mewn lle</h1>
+
+      <!--
+        What is reasonable
+      -->
+      
+      <h2 class="govuk-heading-l">Beth sy’n rhesymol?</h2>
+
+      <p class="govuk-body">Bydd beth sy’n ‘rhesymol’ yn dibynnu ar eich busnes.</p>
+
+      <p class="govuk-body">Byddai’n ddefnyddiol i chi ystyried i ba raddau y gallai unrhyw newid helpu i oresgyn yr anfantais y mae eich gweithiwr yn ei wynebu..</p>
+
+      <p class="govuk-body">Gallwch ystyried pethau fel:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>pa mor ymarferol ac effeithiol yw gwneud addasiad</li>
+        <li>cost yr addasiad</li>
+        <li>
+          maint eich busnes
+          </li>
+        <li>yr adnoddau sydd ar gael i chi</li>
+        <li>y budd i’ch gweithiwr</li>
+      </ul>
+
+      <p class="govuk-body">Yn ogystal â newidiadau posibl i rôl neu amgylchedd gwaith eich gweithiwr, fe allech newid y ffordd maent yn gweithio. Er enghraifft, mae’n well gan rai pobl wneud gwahanol dasgau neu lai o oriau pan fydd eu cyflwr yn waeth.</p>
+
+      <p class="govuk-body">Os yw gweithiwr yn defnyddio cadair olwyn ac nad oes gennych le i lifft, ni fydd angen i chi newid safle. Ond byddai angen i chi ystyried ffyrdd eraill iddynt allu gwneud eu gwaith, fel gweithio o rywle arall.</p>
+
+      <p class="govuk-body"><a href="https://www.equalityhumanrights.com/en/multipage-guide/examples-reasonable-adjustments-practice" target="_blank">Gweler fwy o enghreifftiau o newidiadau ar wefan y Comisiwn Cydraddoldeb a Hawliau Dynol (yn agor mewn tab newydd)</a></p>
+
+      <!--
+        Examples of reasonable adjustments
+      -->
+      
+      <h2 class="govuk-heading-l">Enghreifftiau o addasiadau rhesymol</h2>
+
+      <p class="govuk-body">Bydd y newidiadau a wnewch yn dibynnu ar anghenion eich gweithiwr. Er enghraifft, gallech ystyried:
+
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>darparu lle parcio car agosach i weithiwr sy’n cael trafferth cerdded pellteroedd hirach</li>
+        <li>mwy o seibiannau i weithiwr gyda blinder</li>
+        <li>lleihau tasgau sy’n wynebu’r cyhoedd os yw’r amgylchedd hwnnw’n gwaethygu cyflwr iechyd meddwl gweithiwr</li>
+        <li>gallai rhoi cyfarwyddiadau ar lafar, yn ogystal ag ysgrifenedig, helpu gweithiwr ag anabledd gwybyddol</li>
+      </ul> 
+      
+      <p class="govuk-body">Am fwy o wybodaeth ac arweiniad edrychwch ar y gwefannau canlynol:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments" target="_blank">addasiadau rhesymol ar gyfer gweithwyr ag anableddau neu gyflyrau iechyd ar GOV.UK (yn agor mewn tab newydd)</a></li>
+        <li><a href="https://www.equalityhumanrights.com/en/multipage-guide/employment-workplace-adjustments" target="_blank">canllawiau ar addasiadau yn y gweithle ar Gomisiwn Cydraddoldeb a Hawliau (EHRC) (yn agor mewn tab newydd)</a></li>
+        <li><a href="https://abilitynet.org.uk/factsheets/what-are-reasonable-adjustments" target="_blank">Beth yw addasiadau rhesymol ar wefan AbilityNet (yn agor mewn tab newydd)
+        </a></li>
+      </ul>
+
+      <!--
+        If cost is one of the reasons you are unable to make changes
+      -->      
+
+      <h2 class="govuk-heading-l">Os mae cost yw un o’r rhesymau pam nad ydych yn gallu gwneud newidiadau</h2>
+
+      <p class="govuk-body">Os yw addasiadau’n ddrytach nag sy’n rhesymol i chi, gall eich gweithiwr <a href="https://www.gov.uk/access-to-work" target="_blank">gwneud cais i Fynediad at Waith (yn agor mewn tab newydd)</a> i helpu gyda’r costau.</p>
+
+      <p class="govuk-body">Nid oes rhaid talu grantiau Mynediad at Waith yn ôl, ac ni fyddant yn effeithio ar unrhyw fudd-daliadau y mae eich gweithiwr yn eu cael.</p>
+
+      <p class="govuk-body">Fe allech gael cymorth iechyd arbenigol yn y gweithle gan Iechyd Galwedigaethol.</p>
+
+
+      <!-- End of ADJ-G12 summary content -->
+
+      <br>
+
+      <p class="govuk-body"><strong>Tudalen nesaf:</strong> mwy o ganllawiau ar newidiadau posib a allai helpu eich gweithiwr</p>
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "adj-g13"
+        }) 
+      }}
+
+
+  
+    {{ govukButton({
+      text: "Gorffen a mynd i’r crynodeb
+      ",
+      classes: "govuk-button--secondary",
+      href: "skip-4"
+    }) }}
+    </div>
+  </div>
+
+{% endblock %}
