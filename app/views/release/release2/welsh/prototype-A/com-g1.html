@@ -1,0 +1,182 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Stay in touch with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Yr adran hon: cael sgyrsiau gyda’ch gweithiwr</span>
+
+      <h1 class="govuk-heading-xl">Cadw mewn cysylltiad â’ch gweithiwr</h1>
+     
+      <p class="govuk-body-l">Gallwch gysylltu â’ch gweithiwr tra byddant i ffwrdd o’r gwaith. Dylech ddechrau sgwrs bositif cyn gynted â phosibl. Bydd hyn yn gwneud i’ch gweithiwr deimlo eu bod yn cael eu cefnogi ac yn fwy parod i ddychwelyd i’r gwaith.
+
+
+     <!--
+          Your duty as an employer
+      -->
+
+      <h2 class="govuk-heading-l">Eich dyletswydd fel cyflogwr</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Rhybudd Fel cyflogwr, mae dyletswydd arnoch i ddiogelu iechyd, diogelwch a lles eich gweithiwr. Mae hyn yn dod o dan y Gyfraith Iechyd a Diogelwch.
+        </strong>
+      </div>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/workers/employers.htm" target="_blank">Gwiriwch fwy o wybodaeth am gyfrifoldebau cyfraith iechyd a diogelwch cyflogwyr ar wefan y Weithrediaeth Iechyd a Diogelwch (HSE) (yn agor mewn tab newydd)</a></p>
+
+      <p class="govuk-body">Wrth siarad â’ch gweithiwr, mae angen i chi fod yn ystyriol i beidio ag achosi straen diangen sy’n cael effaith ar eu cyflwr iechyd neu eu hanabledd. Ni ddylech wahaniaethu yn eu herbyn yn uniongyrchol neu’n anuniongyrchol.</p>
+      
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/workers/employers.htm" target="_blank">Gwiriwch beth sy’n cael ei ystyried yn wahaniaethu uniongyrchol ac anuniongyrchol ar wefan y Comisiwn Cydraddoldeb a Hawliau Dynol (EHRC) website (yn agor mewn tab newydd)</a></p>
+
+      <p class="govuk-body"> Dylech wirio unrhyw bolisïau a gweithdrefnau sydd gennych mewn lle ynghylch cyfathrebu â’ch gweithwyr tra maent i ffwrdd o’r gwaith.</p>
+
+      <p class="govuk-body"> Bydd cael sgyrsiau rheolaidd gyda’ch gweithiwr yn eu helpu i deimlo’n gyfforddus a’u bod yn cael eu cefnogi.</p>
+
+
+      <!--
+          What to say to your employee
+      -->
+
+      <h2 class="govuk-heading-l">Beth i’w ddweud wrth eich gweithiwr</h2>
+
+      <p class="govuk-body">Cyn eich sgwrs, dylech wirio unrhyw bolisi yn y gweithle ar reoli absenoldeb y gallech fod gyda.
+
+      </p>
+
+
+      <p class="govuk-body">Gadewch i’ch gweithiwr wybod eich bod yn eu cefnogi ond dim ond siarad â nhw am waith pan fyddant yn barod.
+
+      </p>
+
+      <p class="govuk-body">Defnyddiwch iaith galonogol a chefnogol fel:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>“A fyddwch chi’n gyffyrddus...”</li>
+        <li>“Rhowch wybod i ni...”</li>
+        <li>“Allwn ni drefnu...”</li>
+      </ul>
+
+      <!--
+          What not to say
+      -->
+
+      <h2 class="govuk-heading-l">Beth i beidio ei ddweud</h2>
+
+      <p class="govuk-body">Ceisiwch beidio rhoi pwysau ar eich gweithiwr. Canolbwyntiwch ar y cymorth y gallent fod eu hangen. Os oes anabledd neu gyflwr hirdymor ganddynt, cymerwch ofal i ofyn os yw’r absenoldeb yn gysylltiedig a’r hyn y mae’n ei olygu iddynt.</p>
+
+      <p class="govuk-body">Ni ddylech ddefnyddio iaith rymus fel:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>“Ydych chi wedi gwneud y dasg hon?”</li>
+        <li>“Pryd fydd pethau’n ôl i’r arfer?”</li>
+        <li>“Mae angen i ni eich cael yn ôl cyn gynted â phosib”</li>
+      </ul>
+
+      <!--
+          How to stay in touch
+      -->
+
+      <h2 class="govuk-heading-l">Sut i gadw mewn cysylltiad</h2>
+
+      <p class="govuk-body">Nid oes unrhyw reolau ynghylch pa mor aml rydych yn cysylltu er dylech chi ystyried a oes gennych bolisi gweithle ar hyn, neu unrhyw weithdrefnau absenoldeb salwch. Dylech chi a’ch gweithiwr gytuno pa mor aml y byddwch yn cysylltu â’ch gilydd.</p>
+
+      <p class="govuk-body">Defnyddiwch ba bynnag ddull sy’n teimlo’n fwyaf addas i chi’ch dau. Er enghraifft, gallai fod yn e-bost, galwad ffôn neu neges destun.</p>
+
+      <p class="govuk-body">Dylech osgoi creu straen neu bryder ychwanegol i’ch gweithiwr. Peidiwch â rhoi pwysau arnynt i ddychwelyd i’r gwaith cyn eu bod yn barod.
+
+      </p>
+
+      <h3 class="govuk-heading-m">Cadw cofnod o gyfarfodydd a sgyrsiau</h3>
+
+      <p class="govuk-body">Dylech nodi pryd rydych wedi bod mewn cysylltiad a’r hyn y gwnaethoch ei drafod. Gall hyn fod yn nodyn atgoffa defnyddiol o’r hyn y gwnaethoch gytuno i’w wneud. Gallai hefyd helpu i amddiffyn eich busnes os oes angen i chi ddangos tystiolaeth o gyfathrebu â’ch gweithiwr am eu cyflwr iechyd neu anabledd.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Mae’n rhaid i chi sicrhau eich bod yn dilyn y GDPR.
+        </strong>
+      </div>
+
+
+      <p class="govuk-body"><a href="[https://www.gov.uk/personal-data-my-employer-can-keep-about-me]" target="_blank">Gallwch ddarganfod mwy o wybodaeth am GDPR ar GOV.UK (yn agor mewn tab newydd)</a></p>
+
+      <h2 class="govuk-heading-l">Adnoddau defnyddiol</h2>
+
+      <p class="govuk-body"><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">Gallwch gael mynediad at dempledi polisi yn y gweithle ar wefan Acas (Y Gwasanaeth Cynghori, Cymodi a Chyflafareddu) (yn agor mewn tab newydd)</a></p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/equality-act-guidance/disability-equality-act-2010-guidance-on-matters-to-be-taken-into-account-in-determining-questions-relating-to-the-definition-of-disability-html#introduction" target="_blank">Gwiriwch beth sy’n cael ei ystyried fel anabledd o dan y Ddeddf Cydraddoldeb 2010 ar GOV.UK (yn agor mewn tab newydd)
+
+      </a></p>
+
+      <br>
+
+      <p class="govuk-body"><strong>Tudalen nesaf:</strong> mwy o ganllawiau ar gael sgyrsiau gyda’ch gweithiwr</p>
+
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "est-q3"
+      }) }}
+
+
+
+      {{ govukButton({
+        text: "Gorffen a mynd i’r crynodeb",
+        classes: "govuk-button--secondary",
+        href: "skip-5"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

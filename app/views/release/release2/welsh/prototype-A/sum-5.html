@@ -1,0 +1,141 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You are now at the end of the service {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl" id="end-of-service-page-heading">Eich Crynodeb o ganllawiau yn y gwasanaeth hwn</h1>
+
+      <p class="govuk-body">Rydych nawr ar ddiwedd y gwasanaeth.
+
+
+      </p>
+
+      <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+      <p class="govuk-body"><a href="#" onclick="frames['sum-4'].print()">Gallwch arbed neu argraffu’r wybodaeth ganllaw rydych wedi’i weld (agor mewn ffenestr newydd)</a></p>
+
+      <p class="govuk-body">Nid yw’r atebion a ddewiswyd gennych wedi’u cofnodi. Os ydych yn cau’r dudalen hon, bydd angen i chi ddechrau o’r dechrau i weld y canllawiau.</p>
+      <p class="govuk-body">Mae’r canllawiau ar y dudalen hon yn tynnu sylw at yr hyn rydych wedi’i weld trwy gydol y gwasanaeth. Mae’n cynnwys eich rhwymedigaethau cyfreithiol fel cyflogwr, enghreifftiau o addasiadau rhesymol a dolenni i ganllawiau pellach gan sefydliadau eraill.</p>
+
+     
+      <h2 class="govuk-heading-l">Eich cyfrifoldebau cyfreithiol</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Fel cyflogwr, mae gennych ddyletswydd i ddiogelu eich gweithwyr.  
+        </strong>
+      </div>
+
+      <p class="govuk-body">Rhaid i chi wneud yn siwr:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>rydych yn cadw cofnod o unrhyw drafodaethau a gewch gyda’ch gweithiwr</li>
+        <li>rydych wedi ystyried neu roi addasiadau rhesymol mewn lle</li>
+       </ul>
+
+
+       <h3 class="govuk-heading-l">Cymorth ariannol posibl</h3>
+
+       <p class="govuk-body">Gadewch i’ch gweithiwr wybod am gymorth ariannol posibl sydd ar gael iddynt, <a href="https://www.gov.uk/access-to-work">fel Mynediad at Waith (yn agor mewn tab newydd)</a>.</p>
+
+       <h2 class="govuk-heading-l">Links included in the guidance</h2>
+
+       <p class="govuk-body"></p>
+
+       <h3 class="govuk-heading-l">Dolenni sydd wedi’u cynnwys yn y canllaw</h3>
+
+       <p class="govuk-body">Cafodd y dolenni hyn eu cynnwys yn y canllawiau. Gallwch adolygu’r rhain nawr neu eu cadw i ddarllen yn ddiweddarach trwy eu clustnodi yn eich porwr.</p>
+
+
+       <h3 class="govuk-heading-s">Dolenni defnyddiol sy’n ymwneud â’ch cyfrifoldebau cyfreithiol</h3>
+
+       <ul class="govuk-list govuk-list--bullet">
+
+   {% if (data['daysEmployeeOffSick'] >= '197') %}
+       <li><a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Canllawiau ar Reoliad Cyffredinol ar Ddiogelu Data (GDPR) (yn agor mewn tab newydd)</a></li>    
+   {% else %}
+       <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Diffiniad o anabledd o dan y Ddeddf Cydraddoldeb 2010 (yn agor mewn tab newydd)</a></li>
+       <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Y gyfraith ynghylch addasiadau yn y gweithle ar wefan HSE (yn agor mewn tab newydd)</a></li>
+   {% endif %}
+       </ul>
+
+       
+       <h3 class="govuk-heading-s">Dolenni defnyddiol sy’n ymwneud ag addasiadau rhesymol</h3>
+
+       <ul class="govuk-list govuk-list--bullet">
+         <li><a href="https://www.gov.uk/government/publications/equality-act-guidance/disability-equality-act-2010-guidance-on-matters-to-be-taken-into-account-in-determining-questions-relating-to-the-definition-of-disability-html#introduction" target="_blank">Enghreifftiau o newidiadau ar wefan y Comisiwn Cydraddoldeb a Hawliau Dynol (yn agor mewn tab newydd)</a></li>
+         <li><a href="https://www.hse.gov.uk/workers/employers.htm" target="_blank">Addasiadau rhesymol ar gyfer gweithwyr ag anableddau neu gyflyrau iechyd ar GOV.UK (yn agor mewn tab newydd)</a></li>
+         <li><a href="https://www.equalityhumanrights.com/en/advice-and-guidance/what-direct-and-indirect-discrimination" target="_blank">Canllawiau ar addasiadau yn y gweithle ar Gomisiwn Cydraddoldeb a Hawliau (EHRC) (yn agor mewn tab newydd)</a></li>
+         <li><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">Beth yw addasiadau rhesymol ar wefan AbilityNet (yn agor mewn tab newydd)</a></li>
+
+       </ul>
+               
+       <h3 class="govuk-heading-s">Dolenni i ganllawiau pellach a allai eich helpu i gefnogi eich gweithiwr
+
+       </h3>
+
+       <ul class="govuk-list govuk-list--bullet">
+         <li><a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Gwybodaeth arfer gorau ar gyfathrebu effeithiol a hygyrch ar wefan HSE (yn agor mewn tab newydd)</a></li>
+         <li><a href="https://www.gov.uk/government/collections/disability-confident-campaign" target="_blank">Templedi polisi yn y gweithle ar wefan Acas (yn agor mewn tab newydd)</a></li>
+         <li><a href="https://www.gov.uk/government/publications/employing-disabled-people-and-people-with-health-conditions/employing-disabled-people-and-people-with-health-conditions" target="_blank">Gallwch ddarganfod mwy o ganllawiau arfer gorau ar wefan HSE (yn agor mewn tab newydd)
+        </a></li>
+        
+       </ul>
+
+      <h2 class="govuk-heading-l">Helpwch ni i wella’r gwasanaeth newydd hwn</h2>
+
+      <p class="govuk-body">Mae ‘Cymorth gydag iechyd ac anabledd gweithwyr’ yn wasanaeth newydd. Bydd eich <a href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,139 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Supporting your employee if they are ready to get back to work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of RET-G7 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: cefnogi dychwelyd i’r gwaith</span>
+
+      <h1 class="govuk-heading-xl">Cefnogi eich gweithiwr os ydynt yn barod i ddychwelyd i’r gwaith
+
+      </h1>
+
+      <p class="govuk-body-l">Dylech wneud unrhyw newidiadau y cytunwyd arnynt cyn i’ch gweithiwr ddychwelyd i’r gwaith. Mae rhai pethau y gallwch eu gwneud hefyd i’w helpu i ymgartrefu.</p>
+
+      <!--
+        Before employee's first day
+      -->
+
+      <h2 class="govuk-heading-l">Cyn eu diwrnod cyntaf yn ôl yn y gwaith</h2>
+
+      <p class="govuk-body">Efallai y bydd eich gweithiwr yn teimlo’n nerfus ynghylch dychwelyd i’r gwaith, yn enwedig os yw wedi bod i ffwrdd am amser hir.
+
+      </p>
+
+      <p class="govuk-body">Gall fod yn gysur i’ch gweithiwr os ydych yn cynllunio eu diwrnod cyntaf yn ôl. Trafodwch yr hyn y byddant yn ei wneud ar eu diwrnod a’u hwythnos gyntaf.</p>
+      
+      <p class="govuk-body">Os nad yw’ch gweithiwr yn gweithio o adref, gallant eu cael hi’n ddefnyddiol gwneud ymweliad fyr cyn eu diwrnod cyntaf yn ôl yn y gwaith. Mae’n ffordd i gwrdd â chydweithwyr eto, heb y pwysau o ddechrau gweithio.</p>
+
+      <!--
+        Sharing information
+      -->
+
+      <h2 class="govuk-heading-l">Rhannu gwybodaeth a dilyn GDPR</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Mae’n rhaid i chi ddilyn y Rheoliad Cyffredinol ar Ddiogelu Data (GDPR).
+        </strong>
+      </div>
+
+      <p class="govuk-body">Mae hyn yn cwmpasu rheoli a phrosesu data personol eich gweithiwr, gan gynnwys gwybodaeth am eu hiechyd.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/personal-data-my-employer-can-keep-about-me" target="_blank">Gallwch ddarganfod mwy am y wybodaeth y gall cyflogwyr ei gadw ar eu gweithwyr ar GOV.UK (yn agor mewn tab newydd)
+
+      </a></p>
+
+      <h3 class="govuk-heading-s">Cael caniatâd eich gweithwyr i rannu gwybodaeth</h3>
+
+      <p class="govuk-body">Gofynnwch i’ch gweithiwr a ydynt am i bobl eraill wybod am eu cyflwr.</p>
+
+      <p class="govuk-body">Mae’n rhaid i chi gael caniatâd eich gweithiwr cyn rhannu unrhyw beth sy’n cael ei drafod yn eich cyfarfodydd.</p>
+
+      <p class="govuk-body">Gofynnwch i’ch gweithiwr a ydynt am i bobl eraill wybod am eu cyflwr. Os yw’n well ganddynt beidio â rhannu, cytunwch sut y byddwch yn ateb cwestiynau gan gydweithwyr.
+
+      </p>
+
+      <!--
+        What to do in the first week
+      -->
+      
+      <h2 class="govuk-heading-l">Beth i’w wneud yn yr wythnos gyntaf pan fydd eich gweithiwr yn dychwelyd</h2>
+
+      <p class="govuk-body">Dywedwch wrth eich gweithiwr am unrhyw newidiadau sy’n effeithio ar eu gwaith. Er enghraifft, dywedwch wrthynt am staff sydd wedi ymuno neu wedi gadael, neu ffyrdd newydd o wneud pethau. Bydd y sgwrs hon yn helpu eich gweithiwr i deimlo’n barod i wneud eu swydd eto.</p>
+
+      <p class="govuk-body">Mae rhai gweithwyr yn ei chael hi’n ddefnyddiol cael ‘cyfaill’ pan fyddant yn dychwelyd. Mae cyfaill yn gydweithiwr dibynadwy sy’n gallu ateb cwestiynau a’u helpu i ymgartrefu.</p>
+
+      <p class="govuk-body">Gallwch ddarganfod mwy o ganllawiau ar yr arfer gorau o <a href="https://www.hse.gov.uk/disability/best-practice/sickness-absence.htm" target="_blank">gefnogi absenoldeb salwch a dychwelyd i’r gwaith ar gyfer eich gweithiwr ar wefan (yn agor mewn tab newydd).</a>.</p>
+
+      <!-- End of RET-G7 summary content -->
+      
+      <br>
+      <p class="govuk-body"><strong>Yr adran nesaf:</strong>  cadw cofnod o newidiadau</p>
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "adj-g10"
+      }) }}
+
+     
+
+      {{ govukButton({
+        text: "Gorffen a mynd i’r crynodeb",
+        classes: "govuk-button--secondary",
+        href: "skip-1"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}
