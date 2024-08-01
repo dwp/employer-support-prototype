@@ -1,0 +1,669 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Summary of what you should do {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Summary of what you should do</h1>
+
+        <p class="govuk-body">Based on your answers, this is a summary of the guidance you’ve seen. You might find it useful to save or print this page.</p>
+
+        {% if (data['staQ2'] == 'stillWorking') or (data['estQ3'] == 'yesToldMe') %}
+
+        <!-- Start of EST-G4 summary content -->
+          
+        <h1 class="govuk-heading-l">Learn more about your employee’s health condition or disability</h1>
+
+        <p class="govuk-body">Some employers find it helpful to find out more about their employee’s health condition or disability.</p>
+      
+        <p class="govuk-body">Do not make assumptions about your employee’s abilities when you learn about your employee's health condition or disability. It’s important to talk to your employee about what they feel able to do at work.</p>
+
+        <p class="govuk-body">The <a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in a new tab)</a> has details of many conditions and the most common symptoms. Many of the health conditions listed on the NHS website also have links to support organisations for that condition.</p>
+      
+        <h2 class="govuk-heading-m">Consider mental health</h2>
+
+        <p class="govuk-body">Physical conditions can also affect mental health. They can cause stress, anxiety and affect everyday life.</p>
+
+        <p class="govuk-body">The <a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in a new tab)</a> website is a collection of work-related guides from mental health experts.</p>
+
+        <h2 class="govuk-heading-m">If your employee is disabled or has a long-term health condition</h2>
+
+        <p class="govuk-body">You must not discriminate unlawfully on the grounds of a health condition or disability. When you agree next steps with your employee, keep in mind that the law requires you to make reasonable adjustments in some cases.</p>
+
+        <p class="govuk-body">You should seek advice if you and your employee are not sure if this disability law applies in your situation.</p>
+
+        <p class="govuk-body">ACAS has <a href="https://www.acas.org.uk/disability-discrimination/what-disability-means" target="_blank">advice on what disability means (opens in a new tab)</a>.</p>
+        
+        <!-- End of EST-G4 summary content -->
+        
+        {% elif data['estQ3'] == 'notToldMe' %}
+        <!-- Start of EST-G5 summary content -->
+        <h1 class="govuk-heading-l">What to do if your employee does not want to tell you about their health condition or disability</h1>
+
+        <p class="govuk-body">It can be helpful for you to know why your employee is off work, but they do not have to tell you.</p>
+        
+        <p class="govuk-body">You can help create a culture in your workplace that encourages employees to share relevant health information with you.</p>
+  
+        <p class="govuk-body">Explain to employees how you keep health information private, and only use it to make positive changes to help them do their job. Be non-judgemental when you talk about health conditions or disabilities, and encourage colleagues to do the same. This is especially important for mental health conditions.</p>
+  
+        <h2 class="govuk-heading-m">When you can ask for medical evidence</h2>
+  
+        <p class="govuk-body">If your employee is off work due to a health condition or disability for 8 or more days you can ask for medical evidence. Examples of medical evidence are a letter from a hospital, or a <a href="https://www.gov.uk/government/publications/fit-note-guidance-for-employers-and-line-managers" target="_blank">fit note from a doctor (opens in a new tab)</a>. Fit notes used to be called sick notes.</p>
+  
+        <p class="govuk-body">A fit note will usually include a brief summary of the health condition or disability, and the medical professional’s recommendation about the employee’s ability to work.</p>
+  
+        <p class="govuk-body">If your employee does not give you medical evidence after 8 days’ absence you do not have to pay <a href="https://www.gov.uk/statutory-sick-pay" target="_blank">Statutory Sick Pay (opens in a new tab)</a>.</p>
+        <!-- End of EST-G5 summary content -->
+        {% elif data['estQ3'] == 'notAsked' %}
+        <!-- Start of COM-G8 summary content -->
+        <h1 class="govuk-heading-l">Ask about your employee’s health condition or disability</h1>
+
+        <p class="govuk-body">You should ask your employee about their health condition or disability. Start with a general chat about how they are and how the condition might affect them.</p>
+  
+        <p class="govuk-body">Your employee does not have to tell you about their health condition or disability. You should avoid asking for too many details, or pushing them to be certain about things too soon.</p>
+  
+        <p class="govuk-body">You can return to this website later for more advice on supporting your employee by making any changes they need.</p>
+        <!-- End of COM-G8 summary content -->
+        {% endif %}
+
+        {% if data['estQ6'] == 'yes' %}
+        <!-- Start of EST-G3 summary content -->
+
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay if your employee is eligible</h1>
+
+        <p class="govuk-body">Because your employee has been off work for 8 days or more, you must pay Statutory Sick Pay (SSP) if your employee is eligible.</p>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim SSP from the government.</p>
+
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+        <p class="govuk-body">You can choose to ask for medical evidence of your employee’s health condition or disability before you pay SSP. Examples of medical evidence are a letter from a hospital, or a fit note. Fit notes used to be called sick notes.</p>
+        <!-- End of EST-G3 summary content -->
+        {% endif %}
+
+        {% if (data['daysEmployeeOffSick'] >= '4') and (data['daysEmployeeOffSick'] <= '7') %}
+        <!-- Start of EST-G2 summary content -->
+
+        <h1 class="govuk-heading-l">You must pay Statutory Sick Pay if your employee is eligible</h1>
+
+        <p class="govuk-body">Your employee went off work on {{ data['employeeLeaveDateDayA'] | int }} {{ data['employeeLeaveDateMonthA'] | formatMonth }} {{ data['employeeLeaveDateYearA'] }}.
+          This means your employee has been off work for {{ data['daysEmployeeOffSick'] }} days. This includes non-working days, such as weekends.</p>
+        
+        <p class="govuk-body">You must pay Statutory Sick Pay (SSP) if your employee is eligible. <a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in a new tab)</a>. You pay SSP instead of a normal salary. You cannot reclaim SSP from the government.</p>
+        
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+
+        <p class="govuk-body">You should not ask your employee to provide proof of their health condition or disability from a medical professional. If your employee is off work for 8 or more days you can choose to ask for proof before you pay SSP.</p>
+    
+
+        <!-- End of EST-G2 summary content -->
+        {% endif %}
+
+        {% if (data['daysEmployeeOffSick'] >= '1') and (data['daysEmployeeOffSick'] <= '3') %}
+        <!-- Start of EST-G1 summary content -->
+        <h1 class="govuk-heading-l">You do not need to pay Statutory Sick Pay yet</h1>
+
+        <p class="govuk-body">Your employee went off work on {{ data['employeeLeaveDateDayA'] | int }} {{ data['employeeLeaveDateMonthA'] | formatMonth }} {{ data['employeeLeaveDateYearA'] }}.
+          This means your employee has been off work for 
+          {% if data['daysEmployeeOffSick'] == '1'  %}
+           {{ data['daysEmployeeOffSick'] }} day.
+          {% else  %}
+            {{ data['daysEmployeeOffSick'] }} days. 
+          {% endif  %}
+        This includes non-working days, such as weekends.
+        </p>
+  
+        <p class="govuk-body">You do not need to pay Statutory Sick Pay (SSP). You might need to pay Statutory Sick Pay if your employee continues to be off sick for 4 or more days. Find out more about <a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Statutory Sick Pay (opens in a new tab)</a>.</p>
+  
+        <p class="govuk-body">Some employers choose to pay their own sick pay. This is in addition to SSP. If you offer additional sick pay you can decide when to start and stop paying it, and how much to pay.</p>
+  
+        <p class="govuk-body">You should not ask your employee to provide proof of their health condition or disability from a medical professional. If your employee is off work for 8 or more days you can choose to ask for proof before you pay SSP.</p>
+        
+        <!-- End of EST-G1 summary content -->
+        {% endif %}
+
+        {% if data['comQ1'] == 'yes' %}
+        <!-- Start of COM-G1 summary content -->
+        <h1 class="govuk-heading-l">Help your employee feel supported</h1>
+     
+      <p class="govuk-body">You can contact your employee while they are off work. Starting a conversation can make your employee feel supported and help them recover.</p>
+
+      <!--
+          What to say to your employee
+      -->
+
+      <h2 class="govuk-heading-m">What to say to your employee</h2>
+
+      <p class="govuk-body">Let your employee know you support them. You can ask to talk about work if you need to, but you should try to do that only when your employee is ready.</p>
+
+      <p class="govuk-body">Helpful things to say include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>sorry to hear you’re feeling unwell, take time to look after yourself</li>
+        <li>can we arrange a time to talk about work, so we can cover while you’re away?</li>
+        <li>let us know if there is anything you need</li>
+      </ul>
+
+      <!--
+          What not to say
+      -->
+
+      <h2 class="govuk-heading-m">What not to say</h2>
+
+      <p class="govuk-body">Try not to put pressure on your employee. Unless it’s essential to your business, you should avoid asking about what they have or have not done at work.</p>
+
+      <p class="govuk-body">Things to avoid saying include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>where did you put things?</li>
+        <li>could you just answer this one question?</li>
+        <li>when are you going to be back?</li>
+      </ul>
+
+      <!--
+          How to stay in touch
+      -->
+
+      <h2 class="govuk-heading-m">How to stay in touch</h2>
+
+      <p class="govuk-body">There are no rules about how often you get in touch. You and your employee should agree how often you will contact each other.</p>
+
+      <p class="govuk-body">Use whatever method feels most appropriate for you both. It could be an email or phone call, text or social media message.</p>
+
+      <p class="govuk-body">You might find it helpful to make a note of when you’ve been in touch and what you discussed. It can remind you both of what you agreed to do.</p>
+        <!-- End of COM-G1 summary content -->
+        {% endif %}
+
+        <!-- Start of REA-G1 summary content -->
+        <h1 class="govuk-heading-l">You might need to make changes for a disabled employee</h1>
+     
+        <p class="govuk-body">A disabled employee should have the same opportunity to do their job as someone who is not disabled.</p>
+  
+        <p class="govuk-body">If your employee’s disability puts them at a substantial disadvantage, you might need to make changes to their role, environment, or the way they do their job.</p>
+  
+        <p class="govuk-body">These changes are called ‘reasonable adjustments’.</p>
+        <!-- End of REA-G1 summary content -->
+
+        <!-- Start of REA-G2 summary content -->
+        <h1 class="govuk-heading-l">Understanding disability</h1>
+     
+        <p class="govuk-body">The law defines disability as a physical or mental health condition that has a ‘substantial’ and ‘long-term’ negative effect on someone’s ability to do normal daily activities.</p>
+  
+        <p class="govuk-body">To understand what ‘substantial’ and ‘long-term’ mean, see the <a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">definition of disability under the Equality Act 2010 (opens in a new tab)</a>.</p>
+    
+        <h2 class="govuk-heading-m">How to know if your employee is disabled</h2>
+  
+        <p class="govuk-body">Not all disabilities are visible, and you might not know if your employee is disabled.</p>
+  
+        <p class="govuk-body">You’re allowed to ask if your employee is disabled. If you ask, be clear that you’re asking because you want to support them.</p>
+  
+        <p class="govuk-body">Your employee does not have to tell you if they’re disabled.</p>
+        <!-- End of REA-G2 summary content -->
+
+        {% if data['reaQ1'] == 'no' %}
+        <!-- Start of REA-G3 summary content -->
+        <h1 class="govuk-heading-l">You can choose to make changes for your employee</h1>
+     
+        <p class="govuk-body-m">The law about reasonable adjustments only applies to employees who are disabled. If your employee is not disabled, you do not have a legal obligation to make changes for them.</p>
+  
+        <h2 class="govuk-heading-m">The law if you have disabled employees</h2>
+  
+        <p class="govuk-body">At the moment you do not believe you have any disabled employees. But your employee might become disabled, or you might hire someone in the future who is disabled.</p>
+  
+        <p class="govuk-body">If you have a disabled employee, the law says you must make changes so that they’re not substantially disadvantaged when doing their job. These changes are called ‘reasonable adjustments’.</p>
+  
+        <h2 class="govuk-heading-m">How a disabled employee might be disadvantaged</h2>
+  
+        <p class="govuk-body">A disabled employee could be disadvantaged by:</p>
+  
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the way things are done in your business, such as policies or working conditions</li>
+          <li>physical barriers in the workplace, such as heavy doors or steps</li>
+          <li>a lack of specialist equipment or assistance, such as screen-reading software or a support worker</li>
+        </ul>
+  
+        <h2 class="govuk-heading-m">What is a ‘substantial’ disadvantage</h2>
+  
+        <p class="govuk-body">A disabled employee is at a ‘substantial’ disadvantage when they are affected in a way that is not ‘minor or trivial’.</p>
+  
+        <p class="govuk-body">For example, an employee with hearing loss finds it difficult to hear in meetings which take place in an open plan office. They are at a substantial disadvantage compared to other employees who can hear everything said in the meeting.</p>
+  
+        <p class="govuk-body">The employer can change the location of the meeting. This would be making a reasonable adjustment to the way things are done in that business.</p>
+  
+        <h2 class="govuk-heading-m">What is ‘reasonable’</h2>
+  
+        <p class="govuk-body">What is ‘reasonable’ will be different for each business. You can consider factors such as how practical it is to make an adjustment, the cost, and the benefit to your employee.</p>
+  
+        <p class="govuk-body">For example, an employee uses a wheelchair and their workplace does not have space for a lift. The employer would not be forced to change premises. However, they would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+  
+        <p class="govuk-body">See more information about <a href="https://www.equalityhumanrights.com/en/multipage-guide/what-do-we-mean-reasonable/" target="_blank">what we mean by reasonable (opens in a new tab)</a> on the EHRC website.</p>
+  
+        <h2 class="govuk-heading-m">Your legal obligations</h2>
+  
+        <p class="govuk-body">You could be unlawfully discriminating against a disabled employee if you do not make the reasonable adjustments they need.</p>
+  
+        <p class="govuk-body">The employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+  
+        <p class="govuk-body">The law applies to all workers. This includes trainees, apprentices, contract workers and business partners.</p>
+  
+        <h2 class="govuk-heading-m">Supporting all your employees</h2>
+  
+        <p class="govuk-body">The law about reasonable adjustments only applies to employees who are disabled. However, you can also choose to make reasonable adjustments for all employees with health conditions.</p>
+  
+        <p class="govuk-body">Many adjustments are low cost and simple to do, and can help your employee continue in their role.</p>
+        <!-- End of REA-G3 summary content -->
+        {% else %}
+        <!-- Start of REA-G4 summary content -->
+        <h1 class="govuk-heading-l">You might need to make changes for your employee</h1>
+     
+      <p class="govuk-body">If your employee is disabled you must make changes so they are not substantially disadvantaged when doing their job. These changes are called ‘reasonable adjustments’.</p>
+
+      <h2 class="govuk-heading-m">How a disabled employee might be disadvantaged</h2>
+
+      <p class="govuk-body">A disabled employee could be disadvantaged by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the way things are done in your business, such as policies or working conditions</li>
+        <li>physical barriers in the workplace, such as heavy doors or steps</li>
+        <li>a lack of specialist equipment or assistance, such as screen-reading software or a support worker</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">What is a ‘substantial’ disadvantage</h2>
+
+      <p class="govuk-body">A disabled employee is at a ‘substantial’ disadvantage when they are affected in a way that is not ‘minor or trivial’.</p>
+
+      <p class="govuk-body">For example, an employee with hearing loss finds it difficult to hear in meetings which take place in an open plan office. They are at a substantial disadvantage compared to other employees who can hear everything said in the meeting.</p>
+
+      <p class="govuk-body">The employer can change the location of the meeting. This would be making a reasonable adjustment to the way things are done in that business.</p>
+
+      <h2 class="govuk-heading-m">What is ‘reasonable’</h2>
+
+      <p class="govuk-body">What is ‘reasonable’ will be different for each business. You can consider factors such as how practical it is to make an adjustment, the cost, and the benefit to your employee.</p>
+
+      <p class="govuk-body">For example, an employee uses a wheelchair and their workplace does not have space for a lift. The employer would not be forced to change premises. However, they would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+
+      <p class="govuk-body">See more information about <a href="https://www.equalityhumanrights.com/en/multipage-guide/what-do-we-mean-reasonable/" target="_blank">what we mean by reasonable (opens in a new tab)</a> on the EHRC website.</p>
+
+      <h2 class="govuk-heading-m">Your legal obligations</h2>
+
+      <p class="govuk-body">You could be unlawfully discriminating against a disabled employee if you do not make the reasonable adjustments they need.</p>
+
+      <p class="govuk-body">The employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+
+      <p class="govuk-body">The law applies to all workers. This includes trainees, apprentices, contract workers and business partners.</p>
+
+      <h2 class="govuk-heading-m">Supporting all your employees</h2>
+
+      <p class="govuk-body">The law about reasonable adjustments only applies to employees who are disabled. However, you can also choose to make reasonable adjustments for all employees with health conditions.</p>
+
+      <p class="govuk-body">Many adjustments are low cost and simple to do, and can help your employee continue in their role.</p>
+        <!-- End of REA-G4 summary content -->
+        {% endif %}
+
+        {% if data['reaQ2'] == 'yes' %}
+        <!-- Start of REA-G5 summary content -->
+        <h1 class="govuk-heading-l">Make changes for your employee</h1>
+     
+        <p class="govuk-body">You must make changes so that your disabled employee is not substantially disadvantaged when doing their job. These changes are called ‘reasonable adjustments’.</p>
+  
+        <h2 class="govuk-heading-m">How a disabled employee might be disadvantaged</h2>
+  
+        <p class="govuk-body">A disabled employee could be disadvantaged by:</p>
+  
+         <ul class="govuk-list govuk-list--bullet">
+          <li>the way things are done in your business, such as policies or working conditions</li>
+          <li>physical barriers in the workplace, such as heavy doors or steps</li>
+          <li>a lack of specialist equipment or assistance, such as screen-reading software or a support worker</li>
+        </ul>
+  
+        <h2 class="govuk-heading-m">What is a ‘substantial’ disadvantage</h2>
+  
+        <p class="govuk-body">A disabled employee is at a ‘substantial’ disadvantage when they are affected in a way that is not ‘minor or trivial’.</p>
+  
+        <p class="govuk-body">For example, an employee with hearing loss finds it difficult to hear in meetings which take place in an open plan office. They are at a substantial disadvantage compared to other employees who can hear everything said in the meeting.</p>
+  
+        <p class="govuk-body">In this example the employer could make a reasonable adjustment by changing the location of the meeting.</p>
+  
+        <h2 class="govuk-heading-m">What is ‘reasonable’</h2>
+  
+        <p class="govuk-body">What is ‘reasonable’ will be different for each business.</p>
+  
+        <p class="govuk-body">You can consider how practical it is to make an adjustment, the cost, and the benefit to your employee. All this will help you decide what is reasonable.</p>
+  
+        <p class="govuk-body">For example, an employee uses a wheelchair and their workplace does not have space for a lift. The employer would not be forced to change premises. However, they would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+  
+        <p class="govuk-body">See more information about <a href="https://www.equalityhumanrights.com/en/multipage-guide/what-do-we-mean-reasonable/" target="_blank">what we mean by reasonable (opens in a new tab)</a> on the EHRC website.</p>
+  
+        <h2 class="govuk-heading-m">Your legal obligations</h2>
+  
+        <p class="govuk-body">You could be unlawfully discriminating against a disabled employee if you do not make the reasonable adjustments they need.</p>
+  
+        <p class="govuk-body">The employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+  
+        <p class="govuk-body">The law applies to all workers. This includes trainees, apprentices, contract workers and business partners.</p>
+  
+        <h2 class="govuk-heading-m">Supporting all your employees</h2>
+  
+        <p class="govuk-body">The law about reasonable adjustments only applies to employees who are disabled. However, you can also choose to make reasonable adjustments for all employees with health conditions.</p>
+  
+        <p class="govuk-body">Many adjustments are low cost and simple to do, and can help your employee continue in their role.</p>
+        <!-- End of REA-G5 summary content -->
+        {% else %}
+        <!-- Start of REA-G6 summary content -->
+        <h1 class="govuk-heading-l">You might need to make changes for your employee</h1>
+   
+        <p class="govuk-body">You must be sure your disabled employee is not substantially disadvantaged when doing their job. If they are, you might need to make changes for them. These changes are called ‘reasonable adjustments’.</p>
+    
+        <h2 class="govuk-heading-m">Talk to your employee</h2>
+    
+        <p class="govuk-body">Do not guess if your employee is at a disadvantage. Ask them about their experiences at work.</p>
+    
+        <p class="govuk-body">It may be helpful to show your employee this page. You will be able to save and print all guidance information when you reach the end of the questions.</p>
+    
+        <p class="govuk-body">If your employee does not feel disadvantaged at the moment, check again in the future. The workplace might be different, or your employee’s disability might change.</p>
+    
+        <h2 class="govuk-heading-m">How a disabled employee might be disadvantaged</h2>
+    
+        <p class="govuk-body">A disabled employee could be disadvantaged by:</p>
+    
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the way things are done in your business, such as policies or working conditions</li>
+          <li>physical barriers in the workplace, such as heavy doors or steps</li>
+          <li>a lack of specialist equipment or assistance, such as screen-reading software or a support worker</li>
+        </ul>
+    
+        <h2 class="govuk-heading-m">What is a ‘substantial’ disadvantage</h2>
+    
+        <p class="govuk-body">A disabled employee is at a ‘substantial’ disadvantage when they are affected in a way that is not ‘minor or trivial’.</p>
+    
+        <p class="govuk-body">For example, an employee with hearing loss finds it difficult to hear in meetings which take place in an open plan office. They are at a substantial disadvantage compared to other employees who can hear everything said in the meeting.</p>
+    
+        <p class="govuk-body">In this example the employer could make a reasonable adjustment by changing the location of the meeting.</p>
+    
+        <h2 class="govuk-heading-m">What is ‘reasonable’</h2>
+    
+        <p class="govuk-body">What is ‘reasonable’ will be different for each business.</p>
+    
+        <p class="govuk-body"></p>You can consider how practical it is to make an adjustment, the cost, and the benefit to your employee. All this will help you decide what is reasonable.</p>
+    
+        <p class="govuk-body">For example, an employee uses a wheelchair and their workplace does not have space for a lift. The employer would not be forced to change premises. However, they would be expected to consider other ways for the employee to be able to do their role – such as working from somewhere else.</p>
+    
+        <p class="govuk-body">See more information about <a href="https://www.equalityhumanrights.com/en/multipage-guide/what-do-we-mean-reasonable/" target="_blank">what we mean by reasonable (opens in a new tab)</a> on the EHRC website.</p>
+    
+        <h2 class="govuk-heading-m">Your legal obligations</h2>
+    
+        <p class="govuk-body">You could be unlawfully discriminating against a disabled employee if you do not make the reasonable adjustments they need.</p>
+    
+        <p class="govuk-body">The employee could make a claim to an employment tribunal if they believe they have been discriminated against.</p>
+    
+        <p class="govuk-body">The law applies to all workers. This includes trainees, apprentices, contract workers and business partners.</p>
+    
+        <h2 class="govuk-heading-m">Supporting all your employees</h2>
+    
+        <p class="govuk-body">The law about reasonable adjustments only applies to employees who are disabled. However, you can also choose to make reasonable adjustments for all employees with health conditions.</p>
+    
+        <p class="govuk-body">Many adjustments are low cost and simple to do, and can help your employee continue in their role.</p>
+        <!-- End of REA-G6 summary content -->
+        {% endif %}
+
+        {% if data['adjQ3'] == 'yes' %}
+        <!-- Start of FIN-G1 summary content -->
+        <h1 class="govuk-heading-l">Tell your employee about possible financial support</h1>
+
+        <p class="govuk-body">Your employee might be able to get a government grant to help pay for adjustments. The scheme is called <a href="https://www.gov.uk/access-to-work" target="_blank">Access to Work (opens in a new tab)</a>.</p>
+  
+        <p class="govuk-body">Access to Work grants do not have to be paid back, and they will not affect any benefits your employee gets.</p>
+        <!-- End of FIN-G1 summary content -->
+        {% endif %}
+
+        {% if (data['adjQ4'] == 'yes') or (data['adjQ2'] == 'notSure') %}
+        <!-- Start of ADJ-G5 summary content -->
+        <h1 class="govuk-heading-l">Get help from occupational health</h1>
+     
+      <p class="govuk-body">Occupational health professionals can help you and your employees to talk about health at work and decide any changes you will make.</p>
+
+      <!--
+        What they do
+      -->
+      
+      <h2 class="govuk-heading-m">What they do</h2>
+
+      <p class="govuk-body">Occupational health experts can help with employee health by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>providing health assessments for your employees</li>
+        <li>helping you decide on any changes you might need to make at work</li>
+        <li>supporting your employees to manage their health</li>
+      </ul>
+
+      <p class="govuk-body">They also prepare your business for any future issues by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>helping you monitor the health of your employees</li>
+        <li>managing cases over time and supporting employees to return to work</li>
+        <li>helping you to create policies for your business</li>
+      </ul>
+
+      <p class="govuk-body">These services will need to be paid for, but can save you time and money by helping your employees to stay healthy and productive. Teams might include people like doctors, nurses, counsellors and assessors.</p>
+
+      <p class="govuk-body">You can find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> from the ACAS website.</p>
+
+      <!--
+        Finding occupational health services
+      -->
+      
+      <h2 class="govuk-heading-m">Finding occupational health services</h2>
+
+      <p class="govuk-body">The following links open in a new tab.</p>
+
+      <p class="govuk-body"><a href="https://www.som.org.uk/find-an-oh-professional" target="_blank">The Society of Occupational Medicine</a>  is a membership body with a tool to help you find a local provider. 
+      <a href="https://cohpa.org/find-a-oh-provider/" target="_blank">The Commercial Occupational Health Providers’ Association</a> also has a contact form for local providers.
+      </p>
+
+       
+      <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">Safe Effective Quality Occupational Health Service (SEQOHS)</a> maintains quality standards and has a list of services which meet their criteria.</p>
+
+      <p class="govuk-body">The <a href="https://www.seqohs.org/Accreditedunits.aspx?ShowInfo=1" target="_blank">NHS Health and Work Network</a> represents occupational health teams in the NHS. It also provides support to business and a map of local NHS providers.</p>
+
+        <!-- End of ADJ-G5 summary content -->
+        {% endif %}
+
+        {% if (data['staQ2'] == 'stillWorking') and (data['adjQ2'] == 'no') and (data['adjQ4'] == 'no') %}
+        <!-- Start of DIS-G1 summary content -->
+        <h1 class="govuk-heading-l">Your employee can take sick leave</h1>
+     
+        <p class="govuk-body">If you cannot make changes to help your employee stay at work, they might benefit from some time off.</p>
+  
+        <p class="govuk-body">If you cannot identify any changes to help your employee, or the changes are not reasonable for your business, the situation may still improve over time.</p>
+  
+        <p class="govuk-body">Your employee can take sick leave to see if their condition improves.</p>
+  
+        <p class="govuk-body">After 7 days, you can ask for proof of their condition, like a Fit Note. If they stay off for over 4 weeks, they may be considered long-term sick.</p>
+  
+        <p class="govuk-body">Get <a href="https://www.gov.uk/taking-sick-leave" target="_blank">more advice on sick leave (opens in a new tab)</a>.</p>
+        <!-- End of DIS-G1 summary content -->
+        {% endif %}
+
+        {% if (data['adjQ2'] == 'no') and (data['adjQ4'] == 'no') %}
+        <!-- Start of DIS-G2 summary content -->
+        <h1 class="govuk-heading-l">Dismiss someone fairly</h1>
+     
+      <p class="govuk-body">As a last resort, you can dismiss someone if you cannot make changes to accommodate them. But only based on their ability to do their job.</p>
+
+      <!--
+        Fair dismissals involving a health condition or disability
+      -->
+
+      <h2 class="govuk-heading-m">Fair dismissals involving a health condition or disability</h2>
+
+      <p class="govuk-body">If your employee cannot do their job because no reasonable adjustments can be made, it may be fair for you to dismiss them, even if they’re disabled.</p>
+
+      <p class="govuk-body">For a dismissal to be fair, you must have a good reason and behave reasonably.</p>
+
+      <p class="govuk-body">Before you dismiss someone with a heath condition or disability, you might want to ensure you have:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>talked to your employee about their condition</li>
+        <li>tried to make changes to help them stay at work</li>
+        <li>asked for an occupational health assessment or medical report</li>
+      </ul>
+
+      <p class="govuk-body">See <a href="https://www.gov.uk/dismiss-staff" target="_blank">GOV.UK guidance on dismissing staff (opens in a new tab)</a></p>
+
+      <!--
+        Capability procedures
+      -->
+
+      <h2 class="govuk-heading-m">Capability procedures</h2>
+
+      <p class="govuk-body">It’s important to investigate the situation and make sure your employee is no longer able to do their job.</p>
+
+      <p class="govuk-body">ACAS has <a href="https://www.acas.org.uk/capability-procedures" target="_blank">information on capability procedures (opens in a new tab)</a> that can help you to do this.</p>
+
+        <!-- End of DIS-G2 summary content -->
+        {% endif %}
+
+        {% if (data['adjQ2'] == 'yes') and (data['estQ6'] == 'yes') %}
+        <!-- Start of RET-G7 summary content -->
+        <h1 class="govuk-heading-l">Support your employee in their first week back at work</h1>
+
+      <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+
+      <!--
+        Before employee's first day
+      -->
+
+      <h2 class="govuk-heading-m">Before your employee’s first day</h2>
+
+      <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+
+      <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+      
+      <p class="govuk-body">Ask your employee if they want other people to know about their health condition or disability. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+
+      <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+
+      <!--
+        What to do in the first week
+      -->
+      
+      <h2 class="govuk-heading-m">What to do in the first week</h2>
+
+      <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+
+      <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+
+        <!-- End of RET-G7 summary content -->
+        {% elif (data['adjQ4'] == 'yes') and (data['estQ6'] == 'yes') and (data['adjQ2'] == 'notSure') %}
+        <!-- Start of RET-G7 summary content -->
+        <h1 class="govuk-heading-l">Support your employee in their first week back at work</h1>
+
+        <p class="govuk-body">You should make any necessary adjustments before your employee returns to work. There are also other ways you can help them in their first week.</p>
+  
+        <!--
+          Before employee's first day
+        -->
+  
+        <h2 class="govuk-heading-m">Before your employee’s first day</h2>
+  
+        <p class="govuk-body">Your employee might feel nervous about returning to work, especially if they’ve been off for a long time.</p>
+  
+        <p class="govuk-body">It can be reassuring for your employee if you plan their first day back. Discuss what they will be doing on their first day and week.</p>
+        
+        <p class="govuk-body">Ask your employee if they want other people to know about their health condition or disability. If they prefer to keep their condition private, agree with your employee how you will respond to colleagues who may ask you about the absence.</p>
+  
+        <p class="govuk-body">Some employees find it helpful to make a short visit before their first day back at work. It’s a way to meet colleagues again, without the pressure of starting work.</p>
+  
+        <!--
+          What to do in the first week
+        -->
+        
+        <h2 class="govuk-heading-m">What to do in the first week</h2>
+  
+        <p class="govuk-body">Tell your employee about any changes which affect their work. For example, tell them about staff who have joined or left, or new ways of doing things. This meeting will help your employee feel prepared to do their job again.</p>
+  
+        <p class="govuk-body">Some employees find it useful to have a ‘buddy’ when they return. A buddy is a trusted colleague who can answer questions and help them settle in.</p>
+  
+        <!-- End of RET-G7 summary content -->
+        {% endif %}
+
+        {% if data['adjQ2'] == 'no' %}
+          
+        {% else %}
+        <!-- Start of ADJ-G10 summary content -->
+        <h1 class="govuk-heading-l">Have regular meetings with your employee</h1>
+
+      <p class="govuk-body">It’s important to keep checking that your employee feel supported. If their condition changes, you might need to make more changes.</p>
+
+      <!--
+        Keep talking with employee
+      -->
+
+      <h2 class="govuk-heading-m">Keep talking with your employee</h2>
+
+      <p class="govuk-body">After you’ve made adjustments to your employee’s role, workplace, or ways of working you will need to regularly check they are still appropriate.</p>
+
+      <p class="govuk-body">It’s important to keep talking to your employee about what they need. The changes you put in place might not be right for them, or your employee’s health condition or disability might change.</p>
+
+      <!--
+        Support from occupational health
+      -->
+
+      <h2 class="govuk-heading-m">Support from occupational health</h2>
+
+      <p class="govuk-body">If the changes you put in place are not supporting your employee as much as they should, or if the employee’s situation has changed, you might find it useful to hire an occupational health provider.</p>
+
+      <p class="govuk-body">Find more <a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">information about using occupational health services (opens in a new tab)</a> on the ACAS website.</p>      
+  
+        <!-- End of ADJ-G10 summary content -->
+        {% endif %}
+        
+    </div>
+  </div>
+
+{% endblock %}
+
+

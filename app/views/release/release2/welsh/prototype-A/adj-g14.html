@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Options you can consider {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G14 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: rheoli sefyllfa anodd</span>
+
+      <h1 class="govuk-heading-xl">Opsiynau y gallwch eu hystyried</h1>
+
+      <p class="govuk-body-l">Gall cyflyrau iechyd ac anableddau newid dros amser. Dylech drin anghenion pob gweithiwr yn unigol. Bydd gan weithiwr sydd â chyflwr heb ddiagnosis anghenion gwahanol iawn i un sy’n rheoli poen cronig, er enghraifft.</p>
+
+      <!--
+        Areas to consider supporting your employee
+      -->
+      
+      <h2 class="govuk-heading-l">Meysydd i’w hystyried i gefnogi eich gweithiwr</h2>
+
+      <p class="govuk-body">Dylech fod wedi ystyried neu roi ar waith cymaint o’r canlynol â phosibl:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>wedi trafod beth mae eich gweithiwr yn ei chael yn anodd ac yn gallu ei wneud</li>
+        <li>wedi cael trafodaethau rheolaidd gyda’i gilydd am beth sydd ddim yn gweithio</li>
+        <li>wedi rhoi addasiadau rhesymol ar waith ac wedi bod yn defnyddio Cynllun Addasiad Rhesymol/pasbort iechyd</li>
+        <li>wedi cysylltu â sefydliadau am gyngor neu gefnogaeth annibynnol, fel Acas a GOV.UK</li>
+        <li>wedi rhoi gwybod i’ch gweithiwr am gymorth ariannol posibl sydd ar gael iddynt</li>
+      </ul>
+
+      <!--
+        If the situation has become difficult to manage
+      -->
+
+      <h2 class="govuk-heading-l">Os yw’r sefyllfa wedi dod yn anodd i’w rheoli</h2>
+
+      <p class="govuk-body">Gallech ystyried arweiniad cyfreithiol neu gyngor os yw sefyllfa wedi dod yn anodd.
+
+      </p>
+
+      <!-- End of ADJ-G14 summary content -->
+
+      <br>
+
+      <p class="govuk-body"><strong>Tudalen nesaf:</strong> mwy o ganllawiau ar reoli sefyllfa anodd</p>
+
+
+      {{ govukButton({
+        text: "  Parhau ",
+        href: "adj-q6"
+        }) 
+      }}
+
+
+      {{ govukButton({
+        text: "Gorffen a mynd i’r crynodeb",
+        classes: "govuk-button--secondary",
+        href: "skip-2"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

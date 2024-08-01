@@ -108,6 +108,10 @@ router.use('/release/release1/english', require('./views/release/release1/englis
 
 router.use('/release/release1/welsh', require('./views/release/release1/welsh/routes'));
 
+router.use('/release/release2/english', require('./views/release/release2/english/routes'));
+
+router.use('/release/release2/welsh', require('./views/release/release2/welsh/routes'));
+
 
 
 // router.use('/beta/sprint-:routeVersion', (req, res, next) => {

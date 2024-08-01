@@ -1,0 +1,193 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Your rights as an employer {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of DIS-G1 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: rheoli sefyllfa anodd</span>
+
+      <h1 class="govuk-heading-xl">Eich hawliau fel cyflogwr</h1>
+
+      <p class="govuk-body-l">Rhaid i chi ystyried yr holl opsiynau sydd ar gael i chi cyn gwneud unrhyw benderfyniad am ddyfodol eich gweithwyr gyda’ch cwmni.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Fel cyflogwr, mae gennych rwymedigaethau penodol tuag at eich gweithwyr.
+        </strong>
+      </div>
+
+      <p class="govuk-body">Mae hyn yn cynnwys:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>sicrhau eu hiechyd, diogelwch a lles yn y gwaith</li>
+        <li>peidio gwahaniaethu yn eu herbyn</li>
+        <li>rhoi addasiadau ar waith lle bo hynny’n rhesymol</li>
+      </ul>
+
+      <p class="govuk-body">Er mwyn eu cefnogi, dylech sicrhau eich bod wedi rhoi cynnig ar yr holl opsiynau sydd ar gael, gan gynnwys:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>sicrhau bod addasiadau yn iawn i’ch gweithiwr</li>
+        <li>rhoi gwybod i’ch gweithiwr am gymorth ariannol posib sydd ar gael iddynt</li>
+        <li>cael cymorth iechyd yn y gweithle arbenigol gan wasanaeth Iechyd Galwedigaethol</li>
+      </ul>
+
+      <!--
+        Protecting yourself and your business
+      -->
+      
+      <h2 class="govuk-heading-l">Amddiffyn eich hun a’ch busnes</h2>
+
+      <p class="govuk-body">Dylech wneud yn siwr eich bod wedi dilyn eich rhwymedigaethau a’ch dyletswyddau cyfreithiol fel cyflogwr.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.gov.uk/guidance/equality-act-2010-guidance" target="_blank">Gwiriwch eich rhwymedigaethau cyfreithiol yn y wybodaeth a’r canllawiau ar GOV.UK (yn agor mewn tab newydd)</a></li>
+        <li><a href="https://www.hse.gov.uk/disability/adjustments.htm" target="_blank">Gwiriwch wybodaeth ar eich dyletswyddau mewn diogelu gweithwyr anabl ar wefan HSE (yn agor mewn tab newydd)</a></li>
+        <li><a href="https://www.hse.gov.uk/disability/best-practice/the-law.htm" target="_blank">Gallwch ddarganfod mwy ar y gyfraith o amgylch addasiadau yn y gweithle ar wefan HSE (yn agor mewn tab newydd)</a></li>
+      </ul>
+
+      <!--
+        Keeping a record of conversations and meetings
+      -->
+
+      <h2 class="govuk-heading-l">Cadw cofnod o sgyrsiau a chyfarfodydd</h2>
+
+      <p class="govuk-body">Dylech fod wedi cadw cofnod o sgyrsiau neu gyfarfodydd a gawsoch gyda’ch gweithiwr. Dylech fod wedi nodi:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>pryd rydych wedi bod mewn cysylltiad</li>
+        <li>yr hyn y gwnaethoch ei drafod</li>
+        <li>unrhyw amserlenni a osodwyd</li>
+      </ul>
+
+      <p class="govuk-body">Gallai’r nodiadau helpu i amddiffyn eich busnes. Efallai y bydd angen i chi ddangos tystiolaeth o gyfathrebu â’ch gweithiwr am eu cyflwr iechyd neu anabledd os oes unrhyw gamau tribiwnlys cyflogaeth neu fel rhan o’r broses ddiswyddo.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Rhybudd Mae’n rhaid i chi sicrhau eich bod yn dilyn y GDPR.  
+        </strong>
+      </div>
+
+      <p class="govuk-body">Rhaid i bawb sy’n gyfrifol am ddefnyddio data personol ddilyn cyfreithiau diogelu data. Rhaid i chi sicrhau bod data personol eich gweithiwr yn cael ei ddefnyddio’n briodol ac yn gyfreithlon.</p>
+
+      <p class="govuk-body">Efallai y bydd eich gweithiwr yn gofyn i chi beidio â rhannu manylion gwybodaeth bersonol sensitif (fel manylion cyflyrau iechyd). Dylech ofyn am eu caniatâd i rannu eu gwybodaeth, yn enwedig os bydd ei angen i gael cyngor arbennigol.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/data-protection" target="_blank">Darllenwch fwy o ganllawiau ar y Rheolaethau Diogelu Data Cyffredinol (GDPR) (yn agor mewn tab newydd)</a></p>
+
+      
+      <!--
+        If you have tried all options
+      -->
+
+      <h2 class="govuk-heading-l">Os ydych wedi rhoi cynnig ar bob opsiwn</h2>
+
+      <p class="govuk-body">Dylai diswyddo fod yn ddewis olaf. Dim ond ar ôl i chi roi cynnig ar yr holl opsiynau eraill sydd ar gael y dylid ei ystyried.</p>
+
+      <p class="govuk-body">Dylech hefyd ystyried cost recriwtio a hyfforddi gweithiwr newydd.</p>
+
+
+      <p class="govuk-body">Gallai fod yn deg i chi ddiswyddo’ch gweithiwr os:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>ni all eich gweithiwr wneud eu gwaith oherwydd na ellir gwneud addasiadau rhesymol</li>
+        <li>nid yw’r addasiadau rydych wedi rhoi cynnig arnynt yn addas neu ddim bellach yn opsiwn</li>
+      </ul>
+
+      <p class="govuk-body">Dylech wirio canllawiau pellach ac, os oes angen, ofyn am arweiniad cyfreithiol ar:
+
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+             <li><a href="https://www.hse.gov.uk/disability/adjustments.htm" target="_blank">osgoi gwahaniaethu anghyfreithlon wrth ddiswyddo gweithiwr ar wefan Acas (yn agor mewn tab newydd)</a></li>
+             <li><a href="https://www.acas.org.uk/disability-discrimination" target="_blank">osgoi gwahaniaethu anghyfreithlon wrth ddiswyddo gweithiwr ar wefan EHRC (Comisiwn Cydraddoldeb a Hawliau Dynol) (yn agor mewn tab newydd)</a></li>
+   
+      </ul>
+
+      <!-- End of DIS-G1 summary content -->
+
+      <br />
+
+      <h2 class="govuk-heading-l">Adnoddau i’w trosglwyddo i weithwyr yn dilyn diswyddiad</h2>
+
+      <p class="govuk-body">Gallech gefnogi’ch gweithiwr drwy roi gwybod iddynt am adnoddau ar y gwefannau hyn:</p>
+
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>ni all eich gweithiwr wneud eu gwaith oherwydd na ellir gwneud addasiadau rhesymol</li>
+        <li>nid yw’r addasiadau rydych wedi rhoi cynnig arnynt yn addas neu ddim bellach yn opsiwn</li>
+      </ul>
+
+      <p class="govuk-body">Dylech wirio canllawiau pellach ac, os oes angen, ofyn am arweiniad cyfreithiol ar:
+
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+             <li><a href="https://www.hse.gov.uk/disability/adjustments.htm" target="_blank">Gwybodaeth ynghylch diswyddiadau ar Acas (yn agor mewn tab newydd)</a></li>
+             <li><a href="https://www.acas.org.uk/disability-discrimination" target="_blank">Budd-daliadau posibl sydd ar gael ar GOV.UK (yn agor mewn tab newydd)</a></li>
+             <li><a href="https://www.hse.gov.uk/disability/adjustments.htm" target="_blank">Cysylltu â’r Ganolfan Byd Gwaith ar GOV.UK (yn agor mewn tab newydd)</a></li>
+             <li><a href="https://www.acas.org.uk/disability-discrimination" target="_blank">Cyngor Ar Bopeth (yn agor mewn tab newydd)</a></li>
+   
+      </ul>
+      <br>
+
+      {{ govukButton({
+        text: "Parhau i’m crynodeb",
+        href: "sum-5"
+        }) 
+      }}
+      
+    </div>
+  </div>
+
+{% endblock %}

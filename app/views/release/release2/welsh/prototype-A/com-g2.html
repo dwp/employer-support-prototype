@@ -1,0 +1,116 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Discussing possible changes your employee might need  {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Yr adran hon: ystyried addasiadau a help ychwanegol</span>
+
+      <h1 class="govuk-heading-xl">Trafod newidiadau posibl y gallai eich gweithiwr fod eu hangen</h1>
+     
+      <p class="govuk-body-l">Gallai cyflwr iechyd neu anabledd eich gweithiwr olygu bod angen rhai newidiadau i’w rôl neu eu gweithle.</p>
+
+      <h2 class="govuk-heading-l">Sut i siarad â’ch gweithiwr am beth maent ei angen</h2>
+
+      <p class="govuk-body">Mae llawer o bobl anabl a phobl â chyflyrau iechyd am barhau i weithio. Gall gwaith roi ymdeimlad o bwrpas a chymuned i bobl.</p>
+
+      <p class="govuk-body">Gofynnwch i’ch gweithiwr pa newidiadau sydd eu hangen arnynt i’w swydd, gweithle neu ffyrdd o weithio. Cofiwch siarad am yr hyn maen nhw’n teimlo gallant wneud yn ogystal â’r hyn sy’n heriol.
+
+      </p>
+
+      <h2 class="govuk-heading-l">Gadewch i’ch gweithiwr arwain</h2>
+
+      <p class="govuk-body">Gallwch fod yn rhagweithiol a dechrau sgwrs, ond gadewch i’ch gweithiwr arwain lle y gallant.</p>
+
+      <p class="govuk-body">Defnyddiwch gwestiynau penagored fel:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>“Oes unrhyw beth yn y gweithle sy’n gwneud pethau’n fwy heriol i chi?”</li>
+        <li>“Beth allwn ni ei wneud i helpu yn y tymor byr a’r tymor hir? Ydy pethau’n debygol o newid dros amser?”</li>
+        <li>“Ydych chi’n poeni am ran benodol o’ch swydd? Sut allwn ni helpu gyda hynny?”</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Cefnogwch nhw dros amser</h2>
+
+      <p class="govuk-body">Dylai cefnogi eich gweithiwr fod yn broses barhaus. Rhowch amser iddynt feddwl a dod yn ôl i’r sgwrs yn nes ymlaen os oes angen.</p>
+
+      <p class="govuk-body">Ar ôl eich sgwrs gyntaf, cytunwch a oes angen i chi siarad eto i adolygu’r newidiadau y cytunwyd arnynt.</p>
+
+      <p class="govuk-body">Dylech wneud nodyn o’r hyn yr ydych yn ei drafod gyda’ch gweithiwr a phryd y byddwch yn siarad eto. Gall hyn fod yn ddefnyddiol i’ch atgoffa o’r hyn y mae angen i chi ei wneud.</p>
+
+      <p class="govuk-body">Dylech adolygu unrhyw newidiadau rydych chi’n penderfynu eu gwneud yn rheolaidd. Mae’r rhain weithiau yn rhai dros dro gan fod cyflyrau iechyd yn gallu newid dros amser.</p>
+
+      <p class="govuk-body">Dylech chi a’ch gweithiwr fod yn gyfforddus gydag unrhyw newidiadau a wnaed.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/understand-barriers.htm" target="_blank">Gallwch ddarganfod mwy o ganllawiau arfer gorau ar wefan HSE (yn agor mewn tab newydd)</a>. Mae hyn yn cynnwys deall, nodi a dod o hyd i atebion posibl i unrhyw rwystrau i weithio.</p>
+      
+      <p class="govuk-body">Dylech bob amser gyfeirio at unrhyw bolisïau sydd gennych ar waith.<a href="https://www.acas.org.uk/templates-for-employers" target="_blank">Gallwch gael mynediad at dempledi polisi yn y gweithle ar wefan Acas (yn agor mewn tab newydd)</a></p>
+
+      <br>
+      
+      <p class="govuk-body"><strong>Tudalen nesaf:</strong> mwy o ganllawiau ar ystyried addasiadau a help ychwanegol</p>
+
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "com-q5"
+        }) 
+      }}
+
+
+
+    {{ govukButton({
+      text: "Gorffen a mynd i’r crynodeb",
+      classes: "govuk-button--secondary",
+      href: "skip-4"
+    }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

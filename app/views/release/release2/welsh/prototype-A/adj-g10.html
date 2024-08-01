@@ -1,0 +1,131 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have regular meetings with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- Start of ADJ-G10 summary content -->
+
+      <span class="govuk-caption-l">Yr adran hon: cadw cofnod o newidiadau</span>
+
+      <h1 class="govuk-heading-xl">Cynhaliwch gyfarfodydd rheolaidd gyda’ch gweithiwr</h1>
+
+      <p class="govuk-body-l">Mae’n bwysig parhau i wirio bod eich gweithiwr yn teimlo eu bod yn cael eu cefnogi a bod unrhyw newidiadau yn dal yn addas iddynt hwy.</p>
+
+      <!--
+        Keep talking with employee
+      -->
+
+      <h2 class="govuk-heading-l">Daliwch ati i siarad â’ch gweithiwr</h2>
+
+      <p class="govuk-body">Siaradwch yn rheolaidd â’ch gweithiwr am beth maent ei angen. Efallai na fydd y newidiadau y byddwch yn eu rhoi mewn lle nawr bob amser yn addas iddynt hwy.</p>
+
+      <p class="govuk-body">Bydd rhai cyflyrau yn amrywio dros amser, a bydd eraill yn cael dyddiau da a drwg. Ceisiwch wneud lle i’r math hwn o newid.</p>
+
+      <p class="govuk-body">Dylech gytuno pa mor aml y byddwch yn siarad gyda’ch gilydd. Dewiswch ddull cyfathrebu sy’n gweithio i’r ddau ohonoch.</p>
+
+      <p class="govuk-body"><a href="https://www.hse.gov.uk/disability/best-practice/talking-toolkit.htm" target="_blank">Mae pecyn cymorth llafar yn seiliedig ar egwyddorion arferion da ar gael ar wefan HSE (yn agor mewn tab newydd)</a></p>
+
+      
+      <!--
+        Record and update a plan
+      -->
+
+      <h2 class="govuk-heading-l">Cofnodi a diweddaru cynllun</h2>
+
+      <p class="govuk-body">Dylech gadw cofnod o’r newidiadau neu’r addasiadau rhesymol rydych wedi cytuno arnynt. Adolygwch ef gyda’ch gilydd yn rheolaidd.</p>
+
+      <p class="govuk-body">Mae cynllun addasiadau rhesymol neu Basbort Addasiadau Iechyd yn ddefnyddiol am hwn. <a href="https://www.gov.uk/government/publications/health-adjustment-passport" target="_blank">Edrychwch ar y canllawiau ar GOV.UK (yn agor mewn tab newydd)</a>.</p>
+
+
+      <!--
+       Keeping information private
+      -->
+
+      <h2 class="govuk-heading-l">Cadw gwybodaeth yn breifat</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Fel cyflogwr, mae gennych ddyletswydd gofal i ddiogelu eich gweithiwr.
+        </strong>
+      </div>
+
+      <p class="govuk-body">Rhaid i bawb sy’n gyfrifol am ddefnyddio data personol gydymffurfio â deddfau diogelu data. Rhaid i chi sicrhau bod data personol eich gweithiwr yn cael ei ddefnyddio’n briodol ac yn gyfreithlon.</p>
+
+      <p class="govuk-body">Efallai y bydd eich gweithiwr yn gofyn i chi beidio â rhannu manylion gwybodaeth bersonol sensitif (fel manylion cyflyrau iechyd). Gallwch ofyn am eu caniatâd i rannu eu gwybodaeth. Fodd bynnag, eglurwch efallai y bydd angen i chi ddefnyddio’r wybodaeth hon i roi addasiadau ar waith neu i’w cadw’n ddiogel yn y gweithle.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/data-protection" target="_blank">Darllenwch fwy o ganllawiau ar y Rheolaethau Diogelu Data Cyffredinol (GDPR) (yn agor mewn tab newydd).</a></p>
+
+
+      <!--
+        Support from occupational health
+      -->
+
+      <h2 class="govuk-heading-l">Cefnogaeth gan iechyd galwedigaethol</h2>
+
+      <p class="govuk-body">Dylai’r newidiadau rydych chi’n eu rhoi ar waith gefnogi eich gweithiwr cymaint â phosibl. Os yw’r sefyllfa wedi newid, gallwch gael cyngor defnyddiol gan ddarparwr iechyd galwedigaethol. Bydd rhaid talu am y gwasanaethau hyn ond gall helpu eich busnes drwy gadw’ch gweithwyr yn iach a chynhyrchiol.</p>
+
+      <p class="govuk-body"><a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">Darganfyddwch fwy am ddefnyddio gwasanaethau iechyd galwedigaethol ar wefan Acas (yn agor mewn tab newydd)
+
+      </a></p>      
+     
+      <!-- End of ADJ-G10 summary content -->
+
+      <br>
+
+      {{ govukButton({
+        text: "Parhau i’m crynodeb",
+        href: "sum-5"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}

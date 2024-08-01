@@ -1,0 +1,154 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You are now at the end of the service {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback (opens in a new window)</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl" id="end-of-service-page-heading">You are now at the end of the service</h1>
+
+        <p class="govuk-body"></p>
+
+        <iframe src="sum-4" name="sum-4" class="govuk-visually-hidden"></iframe>
+
+        <p class="govuk-body"><a href="#" onclick="frames['sum-4'].print()">You can save or print all of the guidance information you've seen (opens in a new window)</a></p>
+
+        <p class="govuk-body">The answers you selected have not been recorded. If you close this page, you will need to start from the beginning to see the guidance.</p>
+
+        <h2 class="govuk-heading-l">Your summary of guidance in this service</h2>
+
+        <p class="govuk-body">The guidance on this page highlights what you have seen throughout the service. It includes your legal obligations as an employer, examples of reasonable adjustments and links to further guidance from other organisations.</p>
+
+        <h3 class="govuk-heading-m">Your legal responsibilities</h3>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            As an employer, you have a duty to protect your employees.  
+          </strong>
+        </div>
+
+        <p class="govuk-body">You must make sure:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you keep a record of any discussions you have with your employee</li>
+          <li>let your employee know about possible financial help available to them</li>
+          <li>you have considered or put into practice reasonable adjustments</li>
+         </ul>
+
+        <p class="govuk-body">What is ‘reasonable’ in terms of adjustments will depend on your business. Check examples of changes at work you could put into practice:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="rea-c1" target="_blank">ways of working (opens in new tab)</a></li>
+          <li><a href="rea-c2" target="_blank">work environment (opens in new tab)</a></li>
+          <li><a href="rea-c3" target="_blank">extra support and temporary and permanent changes (opens in new tab)</a></li>
+         </ul>
+
+         <h3 class="govuk-heading-m">Possible financial assistance</h3>
+
+         <p class="govuk-body">Let your employee know about possible financial help available to them, such as <a href="https://www.gov.uk/access-to-work">Access to Work (opens in new tab)</a>.</p>
+
+        <h2 class="govuk-heading-l">Links included in the guidance</h2>
+
+        <h3 class="govuk-heading-m">Links to further financial guidance</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+
+    {% if (data['daysEmployeeOffSick'] >= '197') %}
+        <li><a href="https://www.gov.uk/employers-sick-pay/eligibility-and-form-ssp1" target="_blank">Check more about SSP payments on GOV.UK (opens in new tab)</a></li>    
+    {% else %}
+        <li><a href="https://www.gov.uk/calculate-statutory-sick-pay" target="_blank">Check your employee’s eligibility, and calculate how much SSP you need to pay (opens in new tab)</a></li>
+        <li><a href="https://www.gov.uk/employers-sick-pay/notice-and-fit-notes" target="_blank">Fit notes (opens in new tab)</a></li>
+    {% endif %}
+        <li><a href="https://www.gov.uk/access-to-work" target="_blank">Apply to Access to Work (opens in new tab)</a></li>  
+        </ul>
+ 
+        
+        <h3 class="govuk-heading-m">Useful links relating to your legal responsibilities</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://www.gov.uk/data-protection" target="_blank">Guidance on General Data Protection Regulation (GDPR) (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/government/publications/equality-act-guidance/disability-equality-act-2010-guidance-on-matters-to-be-taken-into-account-in-determining-questions-relating-to-the-definition-of-disability-html#introduction" target="_blank">Check what is classed as a disability under the Equality Act 2010 on GOV.UK (opens in new tab)</a></li>
+          <li><a href="https://www.hse.gov.uk/workers/employers.htm" target="_blank">Check more information about employers' health and safety law responsibilities on the HSE website (opens in new tab)</a></li>
+          <li><a href="https://www.equalityhumanrights.com/en/advice-and-guidance/what-direct-and-indirect-discrimination" target="_blank">Check what is classed as direct and indirect discrimination on the Equality and Human Rights Commission website (opens in new tab)</a></li>
+          <li><a href="https://www.acas.org.uk/templates-for-employers" target="_blank">Workplace policy templates on the Acas website (opens in new tab)</a></li>
+          <li><a href="https://www.hse.gov.uk/disability/best-practice/the-law.htm" target="_blank">The law around workplace adjustments on the HSE website (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/definition-of-disability-under-equality-act-2010" target="_blank">Definition of disability under the Equality Act 2010 (opens in new tab)</a></li>
+        </ul>
+        
+
+
+
+        <h3 class="govuk-heading-m">Useful links relating to reasonable adjustments</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://www.gov.uk/recruitment-disabled-people/reasonable-adjustments" target="_blank">Reasonable adjustments for workers with disabilities or health conditions on GOV.UK (opens in new tab)</a></li>
+          <li><a href="https://www.equalityhumanrights.com/en/multipage-guide/employment-workplace-adjustments" target="_blank">Workplace adjustments guidance on Equality and Human Rights Commission (EHRC) (opens in new tab)</a></li>
+          <li><a href="https://abilitynet.org.uk/factsheets/what-are-reasonable-adjustments" target="_blank">What are reasonable adjustments on AbilityNet website (opens in new tab)</a></li>
+        </ul>
+        
+        <h3 class="govuk-heading-m">Links to further guidance that could help you to support your employee</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mental Health at Work (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/government/collections/disability-confident-campaign" target="_blank">Disability Confident employer scheme (opens in new tab)</a></li>
+          <li><a href="https://www.gov.uk/government/publications/employing-disabled-people-and-people-with-health-conditions/employing-disabled-people-and-people-with-health-conditions" target="_blank">Employing disabled people and people with health conditions (opens in new tab)</a></li>
+          <li><a href="https://www.nhs.uk/conditions/" target="_blank">NHS Health A to Z (opens in new tab)</a></li>
+          <li><a href="https://www.hse.gov.uk/disability/best-practice/understand-barriers.htm" target="_blank">You can find more best practice guidance on the HSE website (opens in new tab)</a></li>
+          <li><a href="https://www.acas.org.uk/using-occupational-health-at-work" target="_blank">Using occupational health services on the Acas website (opens in new tab)</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Help us to improve the service</h2>
+
+        <p class="govuk-body">‘Support with employee health and disability’ is a new service. Your <a href="#">feedback (opens in a new tab)</a> will help us to improve it.</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
