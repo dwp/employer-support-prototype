@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1">
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Cymorth gydag iechyd ac anabledd gweithwyr
+      </h1>
+
+        <p>Mae’r canllawiau hyn ar gyfer cyflogwyr a rheolwyr.</p>
+
+        <p>Bydd yn eich helpu i gefnogi gweithwyr a deall unrhyw ofynion cyfreithiol. Mae dolenni i’r llywodraeth a sefydliadau eraill a all helpu.</p>
+          
+        <p>Bydd y canllawiau yn eich helpu gyda:</p> 
+        <ul class="govuk-list govuk-list--bullet">
+            <li>rheoli absenoldebau a chadw mewn cysylltiad</li>
+            <li>cael sgyrsiau gyda’ch gweithiwr, yn y gwaith ac allan o’r gwaith</li>
+            <li>penderfynu ar newidiadau i’w helpu i aros neu ddod yn ôl i’r gwaith</li>
+            <li>diogelu eich busnes a’ch gweithwyr gyda pholisïau a gweithdrefnau</li>
+            <li>rheoli sefyllfaoedd cymhleth</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Sut mae’r gwasanaeth hwn yn gweithio</h2>
+
+        <p>Byddwch yn gweld cwestiynau am eich sefyllfa a chyngor yn seiliedig ar eich atebion.
+
+        </p>
+
+        <p>Nid yw’r gwasanaeth yn storio gwybodaeth bersonol, ond gallwch gadw ac argraffu’r canllawiau.</p> 
+
+
+        <a href="sta-q2" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
+          Dechrau nawr
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg>
+        </a>
+        
+    </div>
+  </div>
+
+{% endblock %}

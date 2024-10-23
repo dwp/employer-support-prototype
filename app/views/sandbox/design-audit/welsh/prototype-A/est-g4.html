@@ -1,0 +1,170 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Prepare for a conversation with your employee {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Yr adran hon: cael sgyrsiau gyda’ch gweithiwr</span>
+
+      <h1 class="govuk-heading-xl">Paratowch ar gyfer sgwrs gyda’ch gweithiwr</h1>
+
+      <p class="govuk-body-l">Nid oes angen i chi wybod manylion cyflwr eich gweithiwr cyn i chi siarad â hwy am gymorth. Ond gall dysgu mwy eich helpu i baratoi ar gyfer y sgwrs.
+
+      </p>
+
+      <h2 class="govuk-heading-l">Gwrandewch ar eich gweithiwr</h2>
+      
+      <p class="govuk-body">Mae’n bwysig iawn gwrando ar eich gweithiwr a pheidio â gwneud tybiaethau. Mae gan bawb profiadau gwahanol o gyflyrau iechyd neu anabledd.</p>
+
+      <p class="govuk-body">Fodd bynnag, mae llawer o bobl yn ei werthfawrogi os ydych yn dysgu ychydig am eu cyflwr. Mae hyn yn dangos eich bod eisiau eu cefnogi nhw. Cofiwch mai nhw yw’r arbenigwr yn eu sefyllfa eu hunain o hyd.</p>
+
+      <!--
+          If employee is off work
+      -->
+
+      {% if data['staQ2'] == 'noOffWork' %}
+
+      <h2 class="govuk-heading-l">Cytuno ar lefel o gyswllt pan nad yw eich gweithiwr yn y gwaith</h2>
+      
+      <p class="govuk-body">Dylech wirio unrhyw bolisïau neu weithdrefnau salwch yn y gweithle sydd gennych ar waith. Dylai’r rhain osod y lefel ar fath o gyswllt, ond mae angen i chi gytuno â’ch gweithiwr pa mor aml y cysylltir â hwy yn ystod eu habsenoldeb. Gallai hyn fod drwy:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>ffonio</li>
+        <li>negeseuon</li>
+        <li>ymweliadau cartref neu weithle</li>
+        <li>llythyrau neu e-byst</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Os yw gweithiwr yn gofyn am ddim cyswllt</h3>
+
+      <p class="govuk-body">Fel cyflogwr efallai y bydd angen i chi gael rhywfaint o gyswllt i:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>ddeall os mai’r rheswm am hyn yw bod y gweithiwr yn rhy sâl neu’n analluog i gynnal cyswllt</li>
+        <li>deall a yw’r absenoldeb oherwydd materion neu sbardunau sy’n gysylltiedig â gwaith</li>
+        <li>deall y sefyllfa feddygol bresennol neu ofyn am nodyn ffitrwydd</li>
+        <li>trafod cynllun dychwelyd i’r gwaith, pan fo’n briodol</li>
+      </ul>
+
+      <p class="govuk-body">Fe allech chi gytuno i leihau cyswllt neu gyfathrebu’n ysgrifenedig am gyfnod penodol yn unig.</p>
+
+      <p class="govuk-body">Gallai cyswllt gormodol roi sail i weithwyr gwyno am aflonyddu <a href="https://www.legislation.gov.uk/ukpga/1997/40/contents" target="_blank">o dan Ddeddf Diogelu Rhag Aflonyddu 1997 (yn agor mewn tab newydd)</a>.</p>
+
+      {% endif %}
+
+      <!--
+          End of If statement
+      -->
+
+      <h2 class="govuk-heading-l">Iechyd meddwl</h2>
+
+      <p class="govuk-body">Gall pobl gyda chyflyrau iechyd meddwl teimlo nad yw eu cyflwr yn cael ei ddeall gymaint â chyflyrau corfforol sy’n fwy gweladwy. Mae’n bwysig peidio bychanu pethau fel iselder a phryder. Cymerwch yr amser i ddysgu a gwrando ar eich gweithiwr.</p>
+
+      <p class="govuk-body">Gall cyflyrau corfforol hefyd effeithio ar iechyd meddwl.</p>
+
+      <p class="govuk-body">Gall cyflyrau hirdymor fel iselder effeithio ar bobl yn wahanol iawn dros amser. Mae’n debygol y bydd eich gweithiwr yn cael diwrnodau da a drwg, gydag anghenion gwahanol am bob un.</p>
+
+      <!--
+          If employee is off work
+      -->
+
+      {% if data['staQ2'] == 'noOffWork' %}
+
+      <p class="govuk-body">Gwnewch yn siwr nad ydych yn rhoi pwysau ar eich gweithiwr i ddychwelyd i’r gwaith cyn eu bod yn barod. Gallai hyn greu straen a phryder ychwanegol.</p>
+
+      {% endif %}
+
+      <!--
+          End of If statement
+      -->
+
+      <p class="govuk-body"><a href="https://www.mentalhealthatwork.org.uk/" target="_blank">Mind's Mental Health at Work (agor mewn tab newydd)</a> yw casgliad o adnoddau sy’n gysylltiedig â gwaith gan arbenigwyr iechyd meddwl.</p>
+
+      <h2 class="govuk-heading-l">Help pellach gyda chyflyrau ac anableddau cyffredin</h2>
+
+      <p class="govuk-body">Gall y gwefannau hyn eich helpu i ddysgu mwy am gyflwr eich gweithiwr.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/collections/disability-confident-campaign" target="_blank">Mae gan Hyderus o Ran Anabledd (yn agor mewn tab newydd)</a> canllawiau ar recriwtio, rheoli a datblygu pobl gydag anabledd neu gyflwr hirdymor.</p>
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/employing-disabled-people-and-people-with-health-conditions/employing-disabled-people-and-people-with-health-conditions" target="_blank">Mae cyflogi pobl anabl a phobl â chyflyrau iechyd (yn agor mewn tab newydd) </a> yn cynnwys cyngor ar gyflyrau penodol.</p>
+
+      <p class="govuk-body"><a href="https://www.nhs.uk/conditions/" target="_blank">Mae gan NHS Health A to Z (yn agor mewn tab newydd)</a> fanylion am lawer o gyflyrau a’r symptomau mwyaf cyffredin.</p>
+
+      <p class="govuk-body">Gallech hefyd gael cyngor a chefnogaeth gan elusennau iechyd neu anabledd.</p>
+
+      <br />
+      <p class="govuk-body"><strong>Yr adran nesaf:</strong> ystyried addasiadau a help ychwanegol</p>
+
+      {% if data['staQ2'] == 'noOffWork' %}
+        {{ govukButton({
+          text: "Parhau",
+          href: "com-g2"
+          }) 
+        }}
+
+
+ 
+
+      {% else %}
+        {{ govukButton({
+          text: "Parhau",
+          href: "com-g3"
+          }) 
+        }}
+      {% endif %}
+
+      {{ govukButton({
+        text: "Gorffen a mynd i’r crynodeb",
+        classes: "govuk-button--secondary",
+        href: "skip-5"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

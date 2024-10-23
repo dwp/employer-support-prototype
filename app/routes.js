@@ -112,6 +112,8 @@ router.use('/release/release2/english', require('./views/release/release2/englis
 
 router.use('/release/release2/welsh', require('./views/release/release2/welsh/routes'));
 
+router.use('/sandbox/layout-change', require('./views/sandbox/layout-change/routes'));
+
 
 
 // router.use('/beta/sprint-:routeVersion', (req, res, next) => {
