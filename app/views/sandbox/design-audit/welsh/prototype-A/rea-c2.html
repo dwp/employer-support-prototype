@@ -1,0 +1,239 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Discussing changes to work environment {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Yr adran hon: ystyried addasiadau a help ychwanegol</span>
+
+    <h1 class="govuk-heading-xl">Trafod newidiadau i’r amgylchedd gwaith</h1>
+
+    <p class="govuk-body-l">Gallai hyn gynnwys pethau fel gofod desg, offer a lefelau swn. Gall y newidiadau hyn wneud yr amgylchedd gwaith yn llai heriol. </p>
+
+    <p class="govuk-body">Gallai newidiadau posibl gynnwys cynnig lle i weithio i ffwrdd o bethau sy’n tynnu sylw gweithiwr sy’n teimlo wedi’u llethu gan straen. Neu le parcio hygyrch i weithiwr sy’n defnyddio cymhorthion symud.</p>
+
+    <p class="govuk-body">Nid oes angen i chi ddilyn yr enghreifftiau hyn gam wrth gam. Os yw’r sefyllfa yn amherthnasol i chi, gall defnyddio rhai o’r syniadau a’r prosesau a grybwyllir barhau i’ch helpu i gefnogi eich gweithiwr. Er enghraifft, trafod addasiadau dros dro neu fod yn fwy cydymdeimladol ag anghenion gweithwyr.</p>
+
+    <p class="govuk-body">Dewiswch y testun isod i ehangu’r enghreifftiau.</p>
+
+    <!--
+        BAD BACK
+    -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Darganfyddwch sut y gwnaeth cyflogwr gefnogi eu gweithiwr gyda chyflwr iechyd dros dro wrth weithio o gartref.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Roedd gweithiwr oedd yn gweithio gartref wedi bod yn dioddef o boen yn y cefn ers dros fis.</p>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd gyntaf</h3>
+
+        <p class="govuk-body">Yn ystod cyfarfod gyda’u cyflogwr, soniodd y gweithiwr am eu problemau cefn diweddar a’u bod wedi dod o hyd i gadair newydd, arddulliol, uchaf yr ystod ar-lein. Gofynnodd y gweithiwr i’r cwmni talu gan nad oeddent yn gallu fforddio’r gadair eu hunain.</p>
+
+        <p class="govuk-body">Roedd y cyflogwr eisiau sicrhau eu bod yn deall anghenion y gweithiwr. Roeddent yn poeni nad oedd y cadair arfaethedig yn cwrdd â’r gofynion. Roedd y cyflogwr hefyd yn poeni am gost y cadair ac y byddai pawb arall yn y cwmni eisiau un.</p>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd nesaf</h3>
+
+        <p class="govuk-body">Cyfarfu’r ddau i drafod yr hyn yr oedd y gweithiwr eisoes wedi ei roi ar brawf - cymorth cefn, cadair gwahanol, ymarferion ymestyn, cyngor gan eu meddyg neu ffisiotherapydd.</p>
+
+        <p class="govuk-body">Cytunwyd:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>byddai’r cyflogwr yn trefnu bod asesiad desg yn cael ei gynnal yng nghartref y gweithiwr</li>
+          <li>byddai’r cyflogwr yn cymryd cyngor o’r asesiad ar ba gadair fyddai fwyaf addas ar gyfer anghenion y gweithiwr</li>
+          <li>byddai’r cadair newydd o fewn lwfans cyllideb a ddyrannwyd gan y cwmni</li>
+        </ul>
+
+        <p class="govuk-body">Mae’r cyflogwr yn sicrhau bod unrhyw nodiadau o’u cyfarfodydd yn cael eu cadw’n breifat.</p>
+
+        <p class="govuk-body">Fe wnaethant gyfarfod fis yn ddiweddarach i wirio a oedd y cyflwr wedi gwella gyda’r cadair newydd ac os oedd angen mwy o gefnogaeth arnynt</p>
+
+      </div>
+    </details>
+
+      <!--
+          HEARING LOSS
+      -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Gwiriwch sut roedd cyflogwr yn cefnogi eu gweithiwr byddar i sicrhau bod yr amgylchedd gwaith yn addas.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Mae gweithiwr cymharol fyddar yn ei chael hi’n anodd canolbwyntio mewn swyddfa cynllun agored.</p>
+
+        <h3 class="govuk-heading-s">Mae nhw’n:</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>ei chael hi’n flinedig bod ar alwadau fideo gyda synau eraill o’u cwmpas yn tynnu eu sylw</li>
+          <li>ei chael hi’n anodd i roi cyfieithydd wrth eu hymyl pan fydd angen gyda’r lle cyfyngedig rhwng yr ardaloedd desg</li>
+          <li>ei chael hi’n lletchwith wrth iddo dynnu sylw at eu hanabledd</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd gyntaf</h3>
+
+        <p class="govuk-body">Roedd y cyflogwr eisiau sicrhau bod eu gweithiwr yn teimlo eu bod yn cael eu cefnogi ac yn gallu cyflawni eu swydd. Roeddent hefyd eisiau gwirio a oedd unrhyw beth arall y gallent ei wneud i helpu’r gweithiwr i oresgyn eu hanawsterau canolbwyntio.</p>
+
+        <p class="govuk-body">Fe wnaeth y cyflogwr wirio polisïau yn y gweithle ac ymchwilio ymhellach cyn cael sgwrs gyda’r gweithiwr.</p>
+
+        <p class="govuk-body">Mae’r cyflogwr yn awgrymu symud i ardal dawelach am gyfnod prawf.</p>
+
+        <p class="govuk-body">Roedd llai o ymyriadau, ond roedd y gweithiwr yn:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>teimlo wedi’i wahanu oddi wrth eu tîm</li>
+          <li>teimlo eu bod wedi colli allan ar drafodaethau tîm</li>
+          <li>gwastraffu amser yn mynd i ac o ardal eu tîm</li>
+          <li>teimlo’n lletchwith a’i fod yn annheg eu bod wedi cael eu gwahanu</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd nesaf</h3>
+
+        <p class="govuk-body">Nesaf, cytunwyd y byddai sgrin gwahanu yn cael ei hychwanegu am gyfnod prawf. Rhoddodd hyn fwy o breifatrwydd a llai o ymyriadau. Er hynny doedd dal dim digon o le i’r cyfieithydd pan oedd angen.</p>
+
+        <p class="govuk-body">Penderfynodd y cyflogwr newid ardaloedd y tîm o gwmpas. Roedd hyn yn golygu bod y gweithiwr mewn lle tawelach gyda mwy o le i seddi ychwanegol yn agos i’w desg pan oedd angen, ond roedd yn dal yn rhan o’r tîm.</p>
+
+        <h3 class="govuk-heading-s">Beth sy’n digwydd nawr</h3>
+
+        <p class="govuk-body">Maent yn cyfarfod bob pythefnos i wirio’r sefyllfa ac os yw lleoliad y tîm newydd yn gweithio i’r gweithiwr. Mae’r cyflogwr yn sicrhau bod unrhyw nodiadau o’u cyfarfodydd yn cael eu cadw’n breifat.</p>
+
+      </div>
+    </details>
+
+      <!--
+          NEURODIVERGENCE
+      -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Gwiriwch sut y gwnaeth cyflogwr gefnogi eu gweithiwr gyda’u cyflwr niwroamrywiol.
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Mae gweithiwr wedi cwblhau profion yn ddiweddar ac yn aros am ddiagnosis am eu cyflwr niwroamrywiol.</p>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd gyntaf</h3>
+
+        <p class="govuk-body">Gofynnodd y cyflogwr am gyfarfod gyda’r gweithiwr wrth iddynt sylwi pan mewn cyfarfodydd eu bod:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>ddim yn darllen iaith corff y cleientiaid</li>
+          <li>yn methu arwyddion sgyrsiol</li>
+          <li>ei chael hi’n anodd dilyn cyfarfodydd hir</li>
+        </ul>
+
+        <p class="govuk-body">Roedd cydweithwyr hefyd wedi sôn eu bod yn credu bod y gweithiwr yn hirbell a ddim yn gyfeillgar.</p>
+
+        <p class="govuk-body">Roedd y cyflogwr eisiau sicrhau eu bod yn cefnogi’r gweithiwr yn effeithiol. Gwnaethant wirio eu polisïau yn y gweithle.</p>
+
+        <p class="govuk-body">Gwnaethant gyfarfod a thrafod sefyllfa’r gweithiwr a’r hyn roeddent yn ei weld yn anodd neu’n straen yn y gweithle. Dywedodd y gweithiwr eu bod nhw:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>yn sensitif i oleuadau llachar a swn sydyn, uchel yn y swyddfa</li>
+          <li>yn gyffredinol yn cael anhawster canolbwyntio</li>
+          <li>yn ei chael hi’n heriol pan fydd cydweithwyr yn defnyddio jargon neu drosiadau</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd nesaf</h3>
+
+        <p class="govuk-body">Fe gytunon nhw i roi rhai addasiadau dros dro mewn lle i wirio a wnaeth y gweithiwr ganfod eu bod yn cefnogi eu sefyllfa.</p>
+
+        <p class="govuk-body">Symudwyd desg y gweithiwr o gornel dywyll o’r swyddfa i fod yn ymyl ffenestr i gael golau mwy naturiol.</p>
+
+        <p class="govuk-body">Cytunodd y cyflogwr y gallai’r gweithiwr ddefnyddio clustffonau neu blygiau clystiau pan fo angen. Gosodwyd meddalwedd adnabod llais i gofnodi cyfarfodydd hir fel y gallai’r gweithiwr chwarae rhannau perthnasol yn ôl.</p>
+
+        <p class="govuk-body">Gwnaethant weithio gyda’i gilydd i greu cyfarwyddiadau gweledol newydd ar gyfer offer y swyddfa, fel y llungopïwr. Arddangoswyd y rhain ar y waliau ac mewn ffolder a rennir ar-lein ar y fewnrwyd.</p>
+
+        <p class="govuk-body">Symudodd y cyflogwr y gweithiwr oddi ar brosiect pwysedd uchel am fis.</p>
+
+        <p class="govuk-body">Gwnaethant gyfarfod cwpl o wythnosau’n ddiweddarach i drafod os oedd yr addasiadau a roddwyd ar waith yn cefnogi eu hanghenion. Mae’r cyflogwr yn sicrhau bod unrhyw nodiadau o’u cyfarfodydd yn cael eu cadw’n breifat.</p>
+
+        <h3 class="govuk-heading-s">Beth sy’n digwydd nawr</h3>
+
+        <p class="govuk-body">Maent yn cyfarfod bob pythefnos i wirio’r sefyllfa ac os yw lleoliad y tîm newydd yn gweithio i’r gweithiwr.</p>
+
+      </div>
+    </details>
+
+
+
+    <p class="govuk-body">Ystyriwch a chytunwch ar bob newid ynghyd â’ch gweithiwr. Dylech adolygu unrhyw newidiadau y byddwch yn eu gwneud yn rheolaidd. Mae’r rhain weithiau yn rhai dros dro gan fod cyflyrau iechyd yn gallu newid dros amser.</p>
+
+    <h2 class="govuk-heading-l">Gwirio polisiau</h2>
+
+     <p class="govuk-body">Dylech gyfeirio at unrhyw bolisïau sydd gennych mewn lle ynghylch absenoldebau, iechyd ac anabledd neu iechyd a diogelwch. Gallai newidiadau dros dro a pharhaol eu cefnogi.</p>
+
+
+     <br>
+
+     <p class="govuk-body"><strong>Tudalen nesaf:</strong> mwy o ganllawiau ar ystyried addasiadau a help ychwanegol</p>
+
+    
+
+  
+
+
+    {{ govukButton({
+      text: "Parhau",
+      href: "rea-c3"
+      }) 
+    }}
+
+  {{ govukButton({
+    text: "Gorffen a mynd i’r crynodeb",
+    classes: "govuk-button--secondary",
+    href: "skip-4"
+  }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}
