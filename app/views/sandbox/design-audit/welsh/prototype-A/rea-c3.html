@@ -1,0 +1,154 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Discussing changes at work {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Yr adran hon: ystyried addasiadau a help ychwanegol</span>
+
+    <h1 class="govuk-heading-xl">Trafod help ychwanegol</h1>
+
+    <p class="govuk-body-l">Gallai helpu eich gweithiwr i gael cymorth ychwanegol gyda rhannau o’u swydd neu sut maent yn cael mynediad i waith.</p>
+
+    <p class="govuk-body">Gallai newidiadau posibl gynnwys system gyfeillio i’w helpu i deimlo eu bod yn cael eu cefnogi, neu ar gyfer gweithiwr sydd â cholled clyw dros dro, rhoi eu dyletswyddau ffôn i rywun arall.</p>
+
+    <p class="govuk-body">Nid oes angen i chi ddilyn yr enghraifft hon gam wrth gam. Os yw’r senario yn amherthnasol i chi, gall defnyddio rhai o’r syniadau a’r prosesau a grybwyllir barhau i’ch helpu i gefnogi’ch gweithiwr. Er enghraifft, trafod addasiadau dros dro neu fod yn fwy cydymdeimladol ag anghenion gweithwyr.</p>
+
+    <p class="govuk-body">Dewiswch y testun isod i ehangu’r enghraifft.</p>
+
+      <!--
+          CANCER
+      -->
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Gwiriwch sut y gwnaeth cyflogwr gefnogi eu gweithiwr gyda diagnosis canser diweddar
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <p class="govuk-body">Yn ddiweddar, cafodd gweithiwr ddiagnosis canser. Nid ydynt yn gallu canolbwyntio yn y gwaith ac maent yn cael trafferth dod i delerau â’u diagnosis. Mae angen iddynt gymryd amser i ffwrdd ar gyfer triniaeth ac ymgynghoriadau. Maent hefyd yn poeni am eu cyllid.</p>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd gyntaf</h3>
+
+        <p class="govuk-body">Sefydlodd y gweithiwr gyfarfod gyda’u cyflogwr i roi gwybod iddynt am y diagnosis. Roedden nhw’n cyfarfod i drafod y sefyllfa bresennol.</p>
+
+        <p class="govuk-body">Soniodd y gweithiwr eu bod yn bwriadu parhau i weithio yn ystod y driniaeth.
+
+        </p>
+
+        <h3 class="govuk-heading-s">Beth ddigwyddodd nesaf</h3>
+
+        <p class="govuk-body">Roedd y cyflogwr eisiau sicrhau eu bod yn cynnig y gefnogaeth fwyaf priodol ar gyfer anghenion y gweithiwr.</p>
+
+        <p class="govuk-body">Gan fod y gweithiwr yn bwriadu aros yn y gwaith, roeddent hefyd eisiau sicrhau y gallai’r gweithiwr barhau i weithio’n effeithiol.</p>
+
+        <p class="govuk-body">Gwnaeth y cyflogwr wirio polisïau yn y gweithle ynghylch absenoldebau salwch a thâl, ac ymchwilio ar-lein. Gwnaethant gadarnhau bod gweithwyr sydd â diagnosis canser wedi’i diogelu rhag gwahaniaethu ar sail anabledd o dan y Ddeddf Cydraddoldeb 2010.</p>
+
+        <p class="govuk-body">Awgrymodd y cyflogwr gadw eu cyfarfodydd dal i fyny i ond ychydig o bethau ar y tro. Helpodd hyn i:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>osgoi ychwanegu straen neu bryder ychwanegol i’r gweithiwr</li>
+          <li>olrhain y wybodaeth, amgylchiadau sy’n newid, trafodaethau a phenderfyniadau a wnaed</li>
+          <li>ond mynd i gymaint o fanylion ag oedd y gweithiwr yn gyfforddus gyda
+          </li>
+        </ul>
+
+        <p class="govuk-body">Pan gadarnhawyd amserlen triniaeth y gweithiwr, gwnaethant gyfarfod i drafod y cynllun. Gwnaethant gadarnhau amser i ffwrdd ar gyfer apwyntiadau ac amser gwella o sgil effeithiau triniaeth.</p>
+
+        <p class="govuk-body">Er mwyn helpu’r gweithiwr os oeddent am rannu eu diagnosis gyda chydweithwyr, awgrymodd y cyflogwr eu bod yn paratoi rhai ymatebion i gwestiynau efallai na fyddai’r gweithiwr yn gyfforddus â nhw, fel:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>“Byddai’n well gen i beidio â siarad amdano yn y gwaith.”</li>
+          <li>“Byddaf yn rhoi gwybod i chi pan fyddaf yn gyfforddus i siarad am...”</li>
+          <li>“Rwy’n canolbwyntio ar waith ar hyn o bryd.”</li>
+        </ul>
+
+        <h3 class="govuk-heading-s">Beth sy’n digwydd nawr
+
+        </h3>
+
+        <p class="govuk-body">Mae amserlen triniaeth y gweithiwr bellach wedi’i gadarnhau. Maent yn cyfarfod i drafod sgil-effeithiau posib y driniaeth a sut y gallai effeithio ar drefn y gweithiwr o ddydd i ddydd.
+
+        </p>
+        <p class="govuk-body">Maent hefyd yn trafod a allai unrhyw addasiadau pellach helpu i gael gwared ar unrhyw rwystrau sy’n atal y gweithiwr rhag gwneud eu gwaith yn effeithiol.</p>
+        <p class="govuk-body">Maent hefyd yn trafod a allai unrhyw addasiadau pellach helpu i gael gwared ar unrhyw rwystrau sy’n atal y gweithiwr rhag gwneud eu gwaith yn effeithiol.</p>
+        <p class="govuk-body">Maent hefyd wedi cynghori’r gweithiwr i gysylltu â Mynediad at Waith ac unrhyw elusennau canser i wirio pa gymorth a chefnogaeth arall y gallai fod ar gael.</p>
+        <p class="govuk-body">Bydd y cyflogwr yn parhau i gefnogi’r gweithiwr a byddant yn cael cyfarfodydd rheolaidd. Maent yn trafod os oes unrhyw fesurau eraill allai helpu’r gweithiwr. Mae’r cyflogwr yn sicrhau bod unrhyw nodiadau o’u cyfarfodydd yn cael eu cadw’n breifat.</p>
+
+      </div>
+    </details>
+
+
+    <p class="govuk-body">Ystyriwch a chytunwch ar bob newid ynghyd â’ch gweithiwr. Dylech adolygu unrhyw newidiadau y byddwch yn eu gwneud yn rheolaidd. Mae’r rhain weithiau yn rhai dros dro gan fod cyflyrau iechyd yn gallu newid dros amser.</p>
+
+    <h2 class="govuk-heading-l">Gwirio polisiau</h2>
+
+     <p class="govuk-body">Dylech gyfeirio at unrhyw bolisïau sydd gennych mewn lle ynghylch absenoldebau, iechyd ac anabledd neu iechyd a diogelwch. Gallai newidiadau dros dro a pharhaol eu cefnogi.</p>
+
+     <br>
+     <p class="govuk-body"><strong>Yr adran nesaf:</strong> newidiadau posib a allai helpu eich gweithiwr</p>
+
+    {{ govukButton({
+      text: "Parhau",
+      href: "adj-g12"
+      }) 
+    }}
+
+
+
+  {{ govukButton({
+    text: "Gorffen a mynd i’r crynodeb",
+    classes: "govuk-button--secondary",
+    href: "skip-4"
+  }) }}
+      
+    </div>
+  </div>
+
+
+{% endblock %}

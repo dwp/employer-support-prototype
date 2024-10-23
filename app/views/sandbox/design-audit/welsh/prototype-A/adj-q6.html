@@ -1,0 +1,94 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Have you considered or put into practice these options? {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="POST" action="adj-q6-routing">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-l">Yr adran hon: rheoli sefyllfa anodd</span>
+              <h1 class="govuk-fieldset__heading">
+                Ydych wedi ystyried neu roi ar waith yr opsiynau hyn?
+              </h1>
+            </legend>
+            <p class="govuk-body">
+              Mae angen i chi wneud yn siwr eich bod wedi cefnogi eich gweithiwr drwy:
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>trafod beth sydd ac sydd ddim gweithio</li>
+              <li>rhoi unrhyw addasiadau rhesymol ar waith</li>
+              <li>rhoi gwybod iddynt am gymorth ariannol posibl sydd ar gael</li>
+              <li>cael cymorth iechyd yn y gweithle arbenigol (gan Iechyd Galwedigaethol)</li>              
+            </ul>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-considered-1" name="adjQ6" type="radio" value="yesTried">
+                <label class="govuk-label govuk-radios__label" for="have-you-considered-1">
+                  Ydw, rwyf wedi ceisio gwneud y rhain ond ni all fy gweithiwr weithio o hyd
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-considered-2" name="adjQ6" type="radio" value="noNotTried">
+                <label class="govuk-label govuk-radios__label" for="have-you-considered-2">
+                  Na, nid wyf wedi rhoi cynnig ar yr opsiynau hyn
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Parhau"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

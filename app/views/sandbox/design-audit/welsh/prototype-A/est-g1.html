@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+You do not need to pay Statutory Sick Pay yet {{ data['pageTitleAddOn'] }}
+{% endblock %}
+
+{% block content %}
+
+<!-- PHASE BANNER -->
+<main>
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        Mae hwn yn wasanaeth newydd – bydd eich <a class="govuk-link" href="#">adborth (yn agor mewn tab newydd)</a> yn ein helpu i’w wella.
+
+      </span>
+    </p>
+  </div>
+</main>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-3">
+
+  <!-- BACK BUTTON -->
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
+      onclick="window.history.go(-1); return false;" class="govuk-back-link">Yn ôl</a>
+  </div>
+  <!-- BACK BUTTON END -->
+
+  <!-- WELSH TOGGLE -->
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-1">
+    <nav class="dwp-language-toggle" aria-label="Language toggle">
+      <ul class="dwp-language-toggle__list">
+        <li class="dwp-language-toggle__list-item">
+          English
+        </li>
+        <li lang="cy" class="dwp-language-toggle__list-item">
+          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+          <a href="?lang=cy" class="govuk-link">Cymraeg</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- WELSH TOGGLE END -->
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Yr adran hon: talu eich gweithiwr</span>
+
+      <h1 class="govuk-heading-xl">Nid oes angen i chi dalu Tâl Salwch Statudol eto</h1>
+
+      <!--
+          If employee is off for 1 day, content needs to say day instead of 'days'
+      -->
+
+      <p class="govuk-body">Mae eich gweithiwr wedi bod i ffwrdd o’r gwaith am 1 diwrnod. Mae hyn yn cynnwys diwrnodau nad ydynt yn ddiwrnodau gwaith.
+
+      </p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          Nid oes angen i chi dalu Tâl Salwch Statudol (SSP).
+        </strong>
+      </div>
+
+      <p class="govuk-body">Nid oes angen i chi dalu Tâl Salwch Statudol (SSP). Efallai y bydd angen i chi dalu SSP os yw’ch gweithiwr i ffwrdd o’r gwaith am 4 diwrnod neu fwy. <a href="https://www.gov.uk/employers-sick-pay" target="_blank">Darganfyddwch fwy ar GOV.UK (yn agor mewn tab newydd)</a>.</p>
+
+      <h2 class="govuk-heading-l">Talu tâl salwch ychwanegol</h2>
+
+      <p class="govuk-body">Mae rhai cyflogwyr yn dewis talu eu tâl salwch eu hunain. Mae hyn yn ychwanegol at SSP. Os ydych yn cynnig tâl salwch ychwanegol gallwch benderfynu pryd i ddechrau a stopio ei dalu, a faint i’w dalu.</p>
+
+      <h2 class="govuk-heading-l">Gofyn am dystiolaeth feddygol</h2>
+
+      <p class="govuk-body">Ni ddylech ofyn i’ch gweithiwr ddarparu prawf o’u cyflwr iechyd neu anabledd gan weithiwr meddygol proffesiynol.
+
+      </p>
+
+      <p class="govuk-body">Ar ôl i’ch gweithiwr fod i ffwrdd o’r gwaith am 8 diwrnod neu fwy, gallwch ddewis gofyn am dystiolaeth feddygol.</p>
+
+      <br />
+      <p class="govuk-body"><strong>Yr adran nesaf:</strong> cael sgyrsiau gyda’ch gweithiwr</p>
+
+      {{ govukButton({
+        text: "Parhau",
+        href: "com-g1"
+      }) }}
+
+
+      {{ govukButton({
+        text: "Gorffen a mynd i’r crynodeb",
+        classes: "govuk-button--secondary",
+        href: "skip-6"
+      }) }}
+    </div>
+  </div>
+
+{% endblock %}
