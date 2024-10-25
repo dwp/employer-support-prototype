@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Using the guidance so far, are there still issues you cannot resolve with your employee? {{ data['pageTitleAddOn'] }}
+Has the guidance resolved the issues you have with your employee? {{ data['pageTitleAddOn'] }}
 {% endblock %}
 
 {% block content %}
@@ -53,20 +53,20 @@ Using the guidance so far, are there still issues you cannot resolve with your e
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <span class="govuk-caption-l">This section: managing a difficult situation</span>
               <h1 class="govuk-fieldset__heading">
-                Using the guidance so far, are there still issues you cannot resolve with your employee?
+                Has the guidance resolved the issues you have with your employee?
               </h1>
             </legend>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="still-issues-1" name="adjQ7" type="radio" value="no">
                 <label class="govuk-label govuk-radios__label" for="still-issues-1">
-                  No
+                  Yes, all the issues are resolved 
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="still-issues-2" name="adjQ7" type="radio" value="yesStillIssues">
                 <label class="govuk-label govuk-radios__label" for="still-issues-2">
-                  Yes, there are still issues. I'd like to know what my next options are
+                  No, there are still issues and I would like to know what else I can do
                 </label>
               </div>
             </div>
