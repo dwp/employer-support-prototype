@@ -318,8 +318,8 @@
         pageLinks = JSON.parse(pageLinks);
         for (var i = 0; i < pageLinks.length; i++) {
             var element = document.getElementById(pageLinks[i]);
-            element.classList.add('govuk-tag--green');
             element.classList.remove('govuk-tag--blue');
+            element.classList.add('govuk-tag--green');
             element.innerText = "Complete";
         }
     }
