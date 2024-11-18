@@ -44,7 +44,7 @@ router.post('/prototype-A/sta-q2-routing', function (req, res) {
     let staQ2 = req.session.data.staQ2;
 
     if (staQ2 == 'yesWorking'){
-        res.redirect('est-q3');
+        res.redirect('est-g1');
     } else {
         res.redirect('est-q1');
     }   

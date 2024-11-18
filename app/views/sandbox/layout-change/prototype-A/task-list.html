@@ -72,10 +72,23 @@
                     </a>
                   </div>
                   <div class="govuk-task-list__status" id="before-you-start-2-status">
-                    <strong class="govuk-tag govuk-tag--blue">
+                    <strong class="govuk-tag govuk-tag--blue" id="sta-q2">
                       Incomplete
                     </strong>
                   </div>
+                </li>
+                <li class="govuk-task-list__item">
+                  <div class="govuk-task-list__name-and-hint" href="est-q1">
+                    <div>
+                      Employee absence
+                    </div>
+             
+                  </div>
+                  <div class="govuk-task-list__status" id="before-you-start-2-status">
+                      <strong class="govuk-tag govuk-tag--blue" id="est-q1">
+                        Incomplete
+                      </strong>
+                    </div>
                 </li>
                 <li class="govuk-task-list__item">
                     <div class="govuk-task-list__name-and-hint">
@@ -85,7 +98,7 @@
                
                     </div>
                     <div class="govuk-task-list__status" id="before-you-start-2-status">
-                        <strong class="govuk-tag govuk-tag--blue">
+                        <strong class="govuk-tag govuk-tag--blue" id="est-g1">
                           Incomplete
                         </strong>
                       </div>
@@ -95,12 +108,12 @@
               <ul class="govuk-task-list">
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                   <div class="govuk-task-list__name-and-hint">
-                    <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="before-you-start-1-status">
-                      Stay in touch with your employee
+                    <a class="govuk-link govuk-task-list__link" href="est-q3" aria-describedby="before-you-start-1-status">
+                      Employee conversations
                     </a>
                   </div>
                   <div class="govuk-task-list__status" id="before-you-start-2-status">
-                    <strong class="govuk-tag govuk-tag--blue">
+                    <strong class="govuk-tag govuk-tag--blue" id="est-q3">
                       Incomplete
                     </strong>
                   </div>
@@ -108,40 +121,26 @@
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
                   
-                        Asking about health or disability
+                      Employee conversations guidance
                       </a>
                     </div>
                     <div class="govuk-task-list__status" id="before-you-start-2-status">
-                      <strong class="govuk-tag govuk-tag--blue">
+                      <strong class="govuk-tag govuk-tag--blue" id="est-g5" id="est-g4" id="com-g8">
                         Incomplete
                       </strong>
                     </div>
                   </li>
-                <li class="govuk-task-list__item">
-                    <div class="govuk-task-list__name-and-hint">
-                      <div>
-                        Health and disability guidance
-                      </div>
-               
+                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint" href="com-g3">
+                  
+                      Talking to your employee guidance
+                      </a>
                     </div>
                     <div class="govuk-task-list__status" id="before-you-start-2-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Incomplete
-                        </strong>
-                      </div>
-                  </li>
-                  <li class="govuk-task-list__item">
-                    <div class="govuk-task-list__name-and-hint">
-                      <div>
-                        When to contact your employee
-                      </div>
-               
+                      <strong class="govuk-tag govuk-tag--blue" id="com-g3">
+                        Incomplete
+                      </strong>
                     </div>
-                    <div class="govuk-task-list__status" id="before-you-start-2-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Incomplete
-                        </strong>
-                      </div>
                   </li>
               </ul>
          
@@ -276,11 +275,11 @@
 <br>
 
 
-
+<a href="summary-page1.html">
               <button type="submit" class="govuk-button govuk-button--primary" data-module="govuk-button">
                 Finish and go to summary
               </button>
-
+            </a>
               </div>
             </div>
           </div>
@@ -301,5 +300,29 @@
         
     </div>
   </div>
+
+  <script>
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    var pageLinks = getCookie("pageLinks");
+    if (pageLinks) {
+        pageLinks = JSON.parse(pageLinks);
+        for (var i = 0; i < pageLinks.length; i++) {
+            var element = document.getElementById(pageLinks[i]);
+            element.classList.remove('govuk-tag--blue');
+            element.classList.add('govuk-tag--green');
+            element.innerText = "Complete";
+        }
+    }
+</script>
 
 {% endblock %}

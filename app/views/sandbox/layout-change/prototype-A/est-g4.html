@@ -31,14 +31,13 @@ Prepare for a conversation with your employee {{ data['pageTitleAddOn'] }}
         <li class="govuk-breadcrumbs__list-item">
           <a class="govuk-breadcrumbs__link" href="task-list">Guidance sections</a>
         </li>
+      
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="sta-q2">Check eligibility</a>
+          <a class="govuk-breadcrumbs__link" href="est-q3">Employee conversations
+          </a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="est-q3">Employee conversations</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Guidance</a>
+          <a class="govuk-breadcrumbs__link" href="#">Conversations guidance</a>
         </li>
       </ol>
     </div>
@@ -153,25 +152,15 @@ Prepare for a conversation with your employee {{ data['pageTitleAddOn'] }}
       <p class="govuk-body">You could also get advice and support from health or disability charities.</p>
 
       <br />
-      <p class="govuk-body"><strong>Next section:</strong> considering adjustments and additional help</p>
-
-      {% if data['staQ2'] == 'noOffWork' %}
-        {{ govukButton({
-          text: "Continue",
-          href: "com-g2"
-          }) 
-        }}
-      {% else %}
-        {{ govukButton({
-          text: "Continue to guidance sections",
-          href: "task-list2"
-          }) 
-        }}
-      {% endif %}
+    
+      {{ govukButton({
+        text: "Continue",
+        href: "com-g3"
+      }) }}
 
   
 
     </div>
   </div>
-
+  <script src="/public/javascripts/pageLinks.js" />
 {% endblock %}
