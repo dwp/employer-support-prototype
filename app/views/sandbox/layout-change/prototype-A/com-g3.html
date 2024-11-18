@@ -24,9 +24,27 @@ Talk to your employee {{ data['pageTitleAddOn'] }}
 <div class="govuk-grid-row govuk-!-padding-bottom-3">
 
   <!-- BACK BUTTON -->
-  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
-      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> 
+    
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list">Guidance sections</a>
+        </li>
+      
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="est-q3">Employee conversations
+          </a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href=""
+          onclick="window.history.go(-1); return false;" class="govuk-back-link">Conversations guidance</a>
+        </li>
+      </ol>
+    </div>
+
   </div>
+
   <!-- BACK BUTTON END -->
 
   <!-- WELSH TOGGLE -->
@@ -111,20 +129,12 @@ Talk to your employee {{ data['pageTitleAddOn'] }}
 
       <br><br>
 
-      <p class="govuk-body"><strong>Next section:</strong> considering adjustments and additional help</p>
-
-        {{ govukButton({
-          text: "Continue",
-          href: "com-g2"
-          }) 
-        }}
-
+    
       {{ govukButton({
-        text: "Finish and go to summary",
-        classes: "govuk-button--secondary",
-        href: "skip-5"
+        text: "Continue to guidance sections",
+        href: "task-list"
       }) }}
     </div>
   </div>
-
+  <script src="/public/javascripts/pageLinks.js" />
 {% endblock %}

@@ -24,8 +24,24 @@ What to do if your employee has not told you about a health condition or disabil
 <div class="govuk-grid-row govuk-!-padding-bottom-3">
 
   <!-- BACK BUTTON -->
-  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
-      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> 
+    
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list">Guidance sections</a>
+        </li>
+      
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="est-q3">Employee conversations
+          </a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Conversations guidance</a>
+        </li>
+      </ol>
+    </div>
+
   </div>
   <!-- BACK BUTTON END -->
 
@@ -120,21 +136,15 @@ What to do if your employee has not told you about a health condition or disabil
       <p class="govuk-body">Excessive contact could give an employee grounds to complain of harassment <a href="https://www.legislation.gov.uk/ukpga/1997/40/contents" target="_blank">under the Protection From Harassment Act 1997 (opens in new tab)</a>.</p>
 
       <br />
-      <p class="govuk-body"><strong>Next section:</strong> considering adjustments and additional help</p>
-
-        {{ govukButton({
-          text: "Continue",
-          href: "com-g2"
-          }) 
-        }}
-
+    
+  
       {{ govukButton({
-        text: "Finish and go to summary",
-        classes: "govuk-button--secondary",
-        href: "skip-5"
+        text: "Continue",
+        href: "com-g3"
       }) }}
+
       
     </div>
   </div>
-
+  <script src="/public/javascripts/pageLinks.js" />
 {% endblock %}
