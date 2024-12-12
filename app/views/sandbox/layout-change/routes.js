@@ -132,7 +132,7 @@ router.post('/prototype-A/adj-q6-routing', function (req, res) {
     if (adjQ6 == 'yesTried'){
         res.redirect('dis-g1');
     } else {
-        res.redirect('sum-5');
+        res.redirect('task-list');
     }   
 });
 
