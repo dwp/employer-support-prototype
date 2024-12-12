@@ -23,8 +23,28 @@ Discussing changes to work environment {{ data['pageTitleAddOn'] }}
 <div class="govuk-grid-row govuk-!-padding-bottom-3">
 
   <!-- BACK BUTTON -->
-  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> <a href=""
-      onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-1"> 
+    
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list">Guidance sections</a>
+        </li>
+      
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="com-g2">Discussing changes
+          </a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href=""
+          onclick="window.history.go(-1); return false;" class="govuk-back-link">Possible examples</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="">Examples</a>
+        </li>
+      </ol>
+    </div>
+
   </div>
   <!-- BACK BUTTON END -->
 
@@ -230,11 +250,7 @@ Discussing changes to work environment {{ data['pageTitleAddOn'] }}
       }) 
     }}
 
-  {{ govukButton({
-    text: "Finish and go to summary",
-    classes: "govuk-button--secondary",
-    href: "skip-4"
-  }) }}
+
       
     </div>
   </div>

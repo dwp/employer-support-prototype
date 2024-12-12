@@ -167,7 +167,7 @@ router.post('/prototype-A/com-q5-checklist-routing', function (req, res) {
     let comQ5 = req.session.data.comQ5;
 
     if (comQ5 == 'noneOfThese') {
-        res.redirect('adj-g12');
+        res.redirect('task-list');
     } else {
         res.redirect('rea-c1');
     }  
