@@ -5,11 +5,11 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "@ministryofjustice/frontend": "^4.0.1",
-    "dayjs": "1.11.7",
-    "express": "4.20.0",
-    "govuk-frontend": "^5.10.0",
-    "govuk-prototype-kit": "13.16.2",
+    "@ministryofjustice/frontend": "4.0.1",
+    "dayjs": "1.11.13",
+    "express": "4.21.2",
+    "govuk-frontend": "5.10.0",
+    "govuk-prototype-kit": "13.17.0",
     "radio-button-redirect": "1.2.0"
   }
 }
